@@ -4,13 +4,13 @@ body{
 
 .sidebar{
     position: fixed;
-    width: 40px;
+    width: 60px;
     display: flex;
     justify-content: center;
     height: 100%;
     background: #FFD028;
     box-shadow: inset -4px 0px 0px rgba(122, 122, 122, 0.25);
-    font-size: 1.5em;
+    font-size: 1.8em;
     padding-right: 4px;
 }
 
@@ -20,3 +20,6 @@ body{
     background: #FFD028;
 }
 
+.admin-pannel{
+    margin-left: 60px;
+}
