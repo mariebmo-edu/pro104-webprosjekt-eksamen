@@ -1,0 +1,22 @@
+body{
+    min-height: 100vh;
+}
+
+.sidebar{
+    position: fixed;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    background: #FFD028;
+    box-shadow: inset -4px 0px 0px rgba(122, 122, 122, 0.25);
+    font-size: 1.5em;
+    padding-right: 4px;
+}
+
+.topbar{
+    width: 100%;
+    height: 80px;
+    background: #FFD028;
+}
+
