@@ -1,0 +1,10 @@
+html {
+    background-image: url('GyldnePizza.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+  }
+  .loginCard {
+    margin-top: 30vh;
+    border-radius: 10%;
+  }
