@@ -1,0 +1,60 @@
+.project-button{
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.rounded-corners-5{
+    border-radius: 50px;
+}
+
+
+/*Used for daglig-leder, ok/yes/valid-type of answers*/
+.green-background{
+    background-color: #7FC576;
+}
+
+/*primary website color*/
+.yellow-background{
+    background-color:  #FFD028;;
+}
+
+/*used for no/error/alert-type of notices, as well as sick-leave*/
+.red-background{
+    background-color: #FF2828;
+}
+
+.card-size{
+    width: 200px;
+    height: 100%;
+}
+
+.margin-5{
+    margin: 20px;
+}
+
+
+
+.information-content{
+    position: relative;
+    left: 80px;
+    bottom: 0px;
+    width: fit-content;
+    height: fit-content;
+}
+
+.circular-portrait{
+    position: relative;
+    left: 50px;
+    top: 10px;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 100%;
+}
+
+.circular-portrait img{
+    width: 100%;
+    height: auto;
+}
+
