@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" style="background: linear-gradient(353.83deg, rgba(65, 69, 79, 0.15) 5.43%, rgba(131, 116, 88, 0.15) 29.81%, rgba(248, 242, 235, 0.15) 91.24%);">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHANGE ME NOW!!!!!!!</title>
+    <link rel="stylesheet" href="/bulma/css/bulma.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    
+    <link rel="stylesheet" href="ansatte.css">
+    <link rel="stylesheet" href="../sitewide.css">
+    <script type="module" src="ansatte.js"></script>
+
+
+</head>
+
+<body>
+
+    <div class="topbar"></div>
+
+    <nav class="sidebar">
+        <ul>
+            <li>
+                <span class="icon">
+                    <i class="bi bi-speedometer2"></i>
+                </span>
+            </li>
+            <li>
+                <span class="icon">
+                    <i class="bi bi-cash-stack"></i>
+                </span>
+            </li>
+            <li>
+                <span class="icon">
+                    <i class="bi bi-people"></i>
+                </span>
+            </li>
+            <li>
+                <span class="icon">
+                    <i class="bi bi-journal-bookmark-fill"></i>
+                </span>
+            </li>
+            <li>
+                <span class="icon">
+                    <i class="bi bi-shop-window"></i>
+                </span>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="admin-pannel">
+
+        <!-- ALT GÅR HIT HALLO FOLKENS! -->
+
+        <div class="columns mt-6">
+          <!-- Input felt for å skrive inn NAVN -->
+          <div class="column is-2 is-offset-1">
+            <input id="ansattNavnInput" class="input" type="text" placeholder="Navn">
+          </div>
+
+          <!-- Dropdown menu for å valge AVDELING -->
+          <div class="column is-2 is-flex is-justify-content-center">
+            <div class="select">
+              <select name="Avdeling" id="avdelingsMenu">
+                <option value="all">Alle Avdelinger</option>
+                <option value="oslo">Oslo</option>
+                <option value="bergen">Bergen</option>
+                <option value="stavanger">Stavanger</option>
+
+              </select>
+            </div>
+          </div>
+
+          <!-- Dropdown menu for å valge STILLING-->
+          <div class="column is-2 is-flex is-justify-content-center">
+            <div class="select">
+              <select name="Stilling" id="stillingsMenu">
+                <option value="all">Alle Stillinger</option>
+                <option value="dagligLeder">Daglig Leder</option>
+                <option value="slave">Slave</option>
+                <option>???</option>
+
+              </select>
+            </div>
+          </div>
+        </div> <!-- END OF FIRST ROW COLUMN -->
+
+        <!-- DETTE ER DET SOM MÅ GENERERES PÅ SIDEN-->
+        <div id="layoutAndAnsatt">
+
+          <div class="columns mt-2"> <!-- Topdelen av layoutet -->
+            <div class="column is-half is-offset-1">
+              <p class="has-text-weight-bold">[Avdeling] <span class="is-pulled-right">[Legg til]</span></p>
+              <hr style="border-top: 1px solid black;">
+            </div>
+          </div>
+          <div class="columns"><!-- Kortene av ansatte -->
+            <!-- ANSATT-KORT -->
+            <div class="column is-2 is-offset-1 card card-size">
+              
+              <!-- Stillingstittel -->
+              <div class="card-header">
+                <p class="green-background card-header-title">
+                  DAGLIG LEDER
+                </p>
+              </div>
+              
+              <!-- Profilbilde -->
+              <div class="card-image">
+                <figure class="circular-portrait image">
+                  <img src="../images/people/boy_00.jpg" alt="profile picture of employee, John Doe">
+                </figure>
+              </div>
+              
+              <!-- Navn og ansattnummer-->
+              <div class="card-content">
+                <p class="title is-4">John Doe</p>
+                <p class="subtitle is-6">Anr. 20382</p>
+              </div>
+              
+              <!-- Stillingsprosent -->
+              <div class="information-content">
+                100%
+              </div>
+              
+              <!-- Footer -->
+              <div class="card-footer">
+                <a href="#" class="card-footer-item">Info</a>
+                <a href="#" class="card-footer-item">Edit</a>
+                <a href="#" class="card-footer-item">Delete</a>
+              </div>
+              
+            </div>
+            
+          </div>
+        </div>
+          <!-- SLUTT PÅ DET SOM MÅ GENERERES -->
+        </div>
+        
+        
+      </body>
+      
+      </html>
