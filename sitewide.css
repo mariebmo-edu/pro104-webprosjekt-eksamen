@@ -29,7 +29,6 @@ body {
     padding-top: 80px;
 }
 
-<<<<<<< HEAD
 .project-button {
     border: none;
     padding: 5px;
@@ -37,25 +36,19 @@ body {
 }
 
 .rounded-corners-15 {
-=======
-
-.rounded-corners-15{
->>>>>>> 2e368fddeb8cc854323a9b2ba58d04accd8cba9b
     border-radius: 15px;
     overflow: hidden;
 }
 
-<<<<<<< HEAD
-=======
 .no-padding{
     padding: 0px;
 }
 
 .overflow-scroll{
+
     overflow: scroll;
 }
 
->>>>>>> 2e368fddeb8cc854323a9b2ba58d04accd8cba9b
 /*Used for daglig-leder, ok/yes/valid-type of answers*/
 .green-background {
     background-color: #7fc576;
@@ -71,13 +64,8 @@ body {
     background-color: #ff2828;
 }
 
-<<<<<<< HEAD
-.card-size {
-    width: 200px;
-=======
 .card-size{
-    width: 150x;
->>>>>>> 2e368fddeb8cc854323a9b2ba58d04accd8cba9b
+    width: 200px;
     height: 100%;
 }
 
