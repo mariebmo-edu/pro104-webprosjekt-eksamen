@@ -1,5 +1,6 @@
 body{
     min-height: 100vh;
+    background-color: #f6f6f6;
 }
 
 .sidebar{
@@ -30,19 +31,18 @@ z-index: 1000;
 }
 
 
-
-.project-button{
-    border: none;
-    padding: 5px;
-    border-radius: 5px;
-}
-
 .rounded-corners-15{
     border-radius: 15px;
     overflow: hidden;
 }
 
+.no-padding{
+    padding: 0px;
+}
 
+.overflow-scroll{
+    overflow: scroll;
+}
 
 /*Used for daglig-leder, ok/yes/valid-type of answers*/
 .green-background{
@@ -60,7 +60,7 @@ z-index: 1000;
 }
 
 .card-size{
-    width: 200px;
+    width: 150x;
     height: 100%;
 }
 
