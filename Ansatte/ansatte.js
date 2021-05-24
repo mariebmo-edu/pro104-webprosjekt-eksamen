@@ -15,7 +15,7 @@ document.querySelector('#searchBtn').addEventListener('click', function() {
     // inni her er det som skjer når knappen er trykket på
     let htmlAnsattTxt ="";
 
-    //Lager hovedlayout for det som er valgt i AVDELING dropdown menu
+    //Lager HOVEDLAYOUT for det som er valgt i AVDELING dropdown menu
     //Når ingen AVDELING er valgt i AVDELING
     if("Alle Avdelinger" == avdelingsNavn.options[avdelingsNavn.selectedIndex].text){
         window.alert(avdelingsNavn.options[avdelingsNavn.selectedIndex].text + " MÅ FIKSES PÅ!!");
@@ -46,9 +46,9 @@ document.querySelector('#searchBtn').addEventListener('click', function() {
     }
     
     
-    //Setter inn ansatte basert på valgte stillinger
+    window.alert("Setter in ansatte fra " + avdelingsNavn.options[avdelingsNavn.selectedIndex].text);
+    //Setter inn ANSATTE basert på valgte AVDELINGER 
     AnsattModule.getEmployeeByRestaurant(avdelingsNavn.options[avdelingsNavn.selectedIndex].text).forEach(ansatte =>{
-        window.alert("Setter in ansatte fra " + avdelingsNavn.options[avdelingsNavn.selectedIndex].text);
         
         htmlAnsattTxt += `
             
@@ -94,7 +94,7 @@ document.querySelector('#searchBtn').addEventListener('click', function() {
 
     htmlAnsattTxt += `
         </div>
-        `
+        `;
 
 
 
