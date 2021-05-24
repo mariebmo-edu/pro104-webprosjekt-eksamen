@@ -1,41 +1,90 @@
-.project-button{
+body {
+    min-height: 100vh;
+    background-color: #f6f6f6;
+}
+
+.sidebar {
+    position: fixed;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    background: #ffd028;
+    box-shadow: inset -4px 0px 0px rgba(122, 122, 122, 0.25);
+    font-size: 1.8em;
+    padding-right: 4px;
+    padding-top: 80px;
+}
+
+.topbar {
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    height: 80px;
+    background: #ffd028;
+}
+
+.admin-pannel {
+    margin-left: 60px;
+    padding-top: 80px;
+}
+
+.project-button {
     border: none;
     padding: 5px;
     border-radius: 5px;
 }
 
-.rounded-corners-5{
-    border-radius: 50px;
+.rounded-corners-15 {
+    border-radius: 15px;
+    overflow: hidden;
 }
 
+.no-padding {
+    padding: 0px;
+}
+
+.overflow-scroll {
+    overflow: scroll;
+}
 
 /*Used for daglig-leder, ok/yes/valid-type of answers*/
-.green-background{
-    background-color: #7FC576;
+.green-background {
+    background-color: #7fc576;
 }
 
 /*primary website color*/
-.yellow-background{
-    background-color:  #FFD028;;
+.yellow-background {
+    background-color: #ffd028;
 }
 
 /*used for no/error/alert-type of notices, as well as sick-leave*/
-.red-background{
-    background-color: #FF2828;
+.red-background {
+    background-color: #ff2828;
 }
 
-.card-size{
+.card-size {
     width: 200px;
     height: 100%;
 }
 
-.margin-5{
+.margin-20 {
     margin: 20px;
 }
 
+.full-height {
+    height: 100%;
+}
 
+.full-width {
+    width: 100%;
+}
 
-.information-content{
+.card-padding {
+    margin: 10px;
+}
+
+.information-content {
     position: relative;
     left: 80px;
     bottom: 0px;
@@ -43,7 +92,7 @@
     height: fit-content;
 }
 
-.circular-portrait{
+.circular-portrait {
     position: relative;
     left: 50px;
     top: 10px;
@@ -53,8 +102,33 @@
     border-radius: 100%;
 }
 
-.circular-portrait img{
+.circular-portrait img {
     width: 100%;
     height: auto;
 }
 
+.list-module {
+    width: 100%;
+}
+
+.date-info-card {
+    position: relative;
+    text-align: center;
+    font-weight: bold;
+}
+
+.ranking-info-card {
+    text-align: left;
+}
+
+.border-between-grey .column {
+    border-right: 1px solid lightgrey;
+}
+
+.border-between-grey .column:last-child {
+    border-right: 0;
+}
+
+.card-title-padding {
+    padding: 0.2em;
+}

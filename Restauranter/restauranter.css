@@ -1,0 +1,27 @@
+#store-container{
+    position: fixed;
+    z-index: 100;
+}
+
+.restaurant-button{
+    border:hidden;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    width: 100px;
+    height: 30px;
+    background-color: white;
+    box-shadow: 5px 5px 29px 5px rgba(0,0,0,0.2);
+
+}
+
+.restaurant-button:hover{
+    border:5px solid #bbbbbb;
+    border-top: 5px solid white;
+}
+
+.selected-restaurant{
+
+    border: 5px solid #FFD028;
+    border-top: 5px solid white;
+    font-weight: bold;
+}
