@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restauranter</title>
+    <link rel="stylesheet" href="/bulma/css/bulma.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../sitewide.css">
+    <link rel="stylesheet" href="/Restauranter/restauranter.css">
+
+
+</head>
+
+<body>
+
+    <div class="topbar"></div>
+
+    <nav class="sidebar">
+        <ul>
+            <li>
+                <span class="icon">
+                    <i class="bi bi-speedometer2"></i>
+                </span>
+            </li>
+            <li>
+                <span class="icon">
+                    <i class="bi bi-cash-stack"></i>
+                </span>
+            </li>
+            <li>
+                <span class="icon">
+                    <i class="bi bi-people"></i>
+                </span>
+            </li>
+            <li>
+                <span class="icon">
+                    <i class="bi bi-journal-bookmark-fill"></i>
+                </span>
+            </li>
+            <li>
+                <a href="/Restauranter/restauranter_oslo.html">
+                    <span class="icon">
+                        <i class="bi bi-shop-window"></i>
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="admin-pannel">
+
+        <!-- ALT GÅR HIT HALLO FOLKENS! -->
+
+        <div id="store-container">
+            <button class="selected-restaurant restaurant-button">OSLO</button>
+            <button class="restaurant-button"> BERGEN</button>
+            <button class="restaurant-button">STAVANGER</button>
+            <button class="restaurant-button">LOFOTEN</button>
+            <button class="restaurant-button"><i class="bi bi-plus-lg"></i>
+            </button>
+        </div>
+
+        <div class="restaurant-content container section">
+            
+            <div class="columns is-multiline">
+                <div class="column is-half">
+                    <div class="columns is-multiline">
+
+                        <!--NOTIFICATIONS-->
+                        <div class="column is-full">
+                            <div class="card">
+                                <h2 class="card-header title yellow-background">
+                                    Notifications
+                                </h2>
+
+                                <!-- LIST-MODULE -->
+                            <div class="card-content list-module">
+                                <div class="columns is-multiline">
+                                    <div class="column is-full">
+                                        <div class="columns">
+                                            <div class="date-info-card column is-one-fifth card">
+                                                12.12.21
+                                            </div>
+                                            <div class="info-text-card column is-four-fifths card">
+                                                Dette er tekst om hva man skal gjøre i dag
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column is-full">
+                                        <div class="columns">
+                                            <div class="date-info-card column is-one-fifth card">
+                                                12.12.21
+                                            </div>
+                                            <div class="info-text-card column is-four-fifths card">
+                                                Dette er tekst om hva man skal gjøre i dag
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column is-full">
+                                        <div class="columns">
+                                            <div class="date-info-card column is-one-fifth card">
+                                                12.12.21
+                                            </div>
+                                            <div class="info-text-card column is-four-fifths card">
+                                                Dette er tekst om hva man skal gjøre i dag
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column is-full">
+                                        <div class="columns">
+                                            <div class="date-info-card column is-one-fifth card">
+                                                12.12.21
+                                            </div>
+                                            <div class="info-text-card column is-four-fifths card">
+                                                Dette er tekst om hva man skal gjøre i dag
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column is-full">
+                                        <div class="columns">
+                                            <div class="date-info-card column is-one-fifth card">
+                                                12.12.21
+                                            </div>
+                                            <div class="info-text-card column is-four-fifths card">
+                                                Dette er tekst om hva man skal gjøre i dag
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            </div>
+                        </div>
+
+                        <!--ANSATTE-->
+                        <div class="column is-full">
+
+                            <div class="card">
+                                <h2 class="card-header yellow-background title">
+                                    Ansatte
+                                </h2>
+                                
+                                
+                                <div class="columns is-multiline card-content overflow-scroll">
+                                    <!-- ANSATT-KORT -->
+                                    <div class="card card-size card-padding">
+    
+                                        <!-- Stillingstittel -->
+                                        <div class="card-header">
+                                            <p class="red-background card-header-title">
+                                                Kokk, SYKEMELDT
+                                            </p>
+                                        </div>
+    
+                                        <!-- Profilbilde -->
+                                        <div class="card-image">
+                                            <figure class="circular-portrait image">
+                                                <img src="../images/people/boy_01.jpg" alt="profile picture of employee, John Doe">
+                                            </figure>
+                                        </div>
+    
+                                        <!-- Navn og ansattnummer-->
+                                        <div class="card-content">
+                                            <p class="title is-4">John Doe</p>
+                                            <p class="subtitle is-6">Anr. 20382</p>
+                                        </div>
+    
+                                        <!-- Stillingsprosent -->
+                                        <div class="information-content">
+                                            100%
+                                        </div>
+    
+                                        <!-- Footer -->
+                                        <div class="card-footer">
+                                            <a href="#" class="card-footer-item">Info</a>
+                                            <a href="#" class="card-footer-item">Edit</a>
+                                            <a href="#" class="card-footer-item">Delete</a>
+                                        </div>
+    
+                                    </div><!-- ANSATT-KORT -->
+                                    <div class="card card-size card-padding">
+    
+                                        <!-- Stillingstittel -->
+                                        <div class="card-header">
+                                            <p class="green-background card-header-title">
+                                                DAGLIG LEDER
+                                            </p>
+                                        </div>
+    
+                                        <!-- Profilbilde -->
+                                        <div class="card-image">
+                                            <figure class="circular-portrait image">
+                                                <img src="../images/people/girl_02.jpg" alt="profile picture of employee, John Doe">
+                                            </figure>
+                                        </div>
+    
+                                        <!-- Navn og ansattnummer-->
+                                        <div class="card-content">
+                                            <p class="title is-4">John Doe</p>
+                                            <p class="subtitle is-6">Anr. 20382</p>
+                                        </div>
+    
+                                        <!-- Stillingsprosent -->
+                                        <div class="information-content">
+                                            100%
+                                        </div>
+    
+                                        <!-- Footer -->
+                                        <div class="card-footer">
+                                            <a href="#" class="card-footer-item">Info</a>
+                                            <a href="#" class="card-footer-item">Edit</a>
+                                            <a href="#" class="card-footer-item">Delete</a>
+                                        </div>
+    
+                                    </div><!-- ANSATT-KORT -->
+                                    <div class="card card-size card-padding">
+    
+                                        <!-- Stillingstittel -->
+                                        <div class="card-header">
+                                            <p class="yellow-background card-header-title">
+                                                SERVITØR
+                                            </p>
+                                        </div>
+    
+                                        <!-- Profilbilde -->
+                                        <div class="card-image">
+                                            <figure class="circular-portrait image">
+                                                <img src="../images/people/girl_03.jpg" alt="profile picture of employee, John Doe">
+                                            </figure>
+                                        </div>
+    
+                                        <!-- Navn og ansattnummer-->
+                                        <div class="card-content">
+                                            <p class="title is-4">John Doe</p>
+                                            <p class="subtitle is-6">Anr. 20382</p>
+                                        </div>
+    
+                                        <!-- Stillingsprosent -->
+                                        <div class="information-content">
+                                            60%
+                                        </div>
+    
+                                        <!-- Footer -->
+                                        <div class="card-footer">
+                                            <a href="#" class="card-footer-item">Info</a>
+                                            <a href="#" class="card-footer-item">Edit</a>
+                                            <a href="#" class="card-footer-item">Delete</a>
+                                        </div>
+    
+                                    </div><!-- ANSATT-KORT -->
+                                    <div class="card card-size card-padding">
+    
+            <!-- Stillingstittel -->
+            <div class="card-header">
+                <p class="yellow-background card-header-title">
+                    Kokk, Vikar
+                </p>
+            </div>
+    
+            <!-- Profilbilde -->
+            <div class="card-image">
+                <figure class="circular-portrait image">
+                    <img src="../images/people/boy_02.jpg" alt="profile picture of employee, John Doe">
+                </figure>
+            </div>
+    
+            <!-- Navn og ansattnummer-->
+            <div class="card-content">
+                <p class="title is-4">John Doe</p>
+                <p class="subtitle is-6">Anr. 20382</p>
+            </div>
+    
+            <!-- Stillingsprosent -->
+            <div class="information-content">
+                100%
+            </div>
+    
+            <!-- Footer -->
+            <div class="card-footer">
+                <a href="#" class="card-footer-item">Info</a>
+                <a href="#" class="card-footer-item">Edit</a>
+                <a href="#" class="card-footer-item">Delete</a>
+            </div>
+    
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                        
+                    </div>
+                </div>
+
+                <div class="column is-one-quarter">
+                    <div class="columns">   
+                        <!--ØKONOMI-->
+                        <div class="column is-full">
+                            <div class="card">
+                                <h2 class="card-header yellow-background title">
+                                    Økonomi
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="column is-one-quarter">
+                    <div class="columns is-multiline">
+
+                        <!--ADRESSE-->
+                        <div class="column is-full">
+                            <div class="card">
+                            <h2 class="no-padding card-header yellow-background title">
+                                Adresse
+                            </h2>
+                            
+                            <div class="card-image">
+                                <figure class="image"></figure>
+                                    <img src="../images/maps/map_oslo.png" alt="image of map with the address Adresse adresse 123, 0123 Oslo">
+                                </figure>
+                            </div>
+
+                            <div class="card-content">
+                                <p>
+                                    Adresse adresse 87, <br>    
+                                    0123 Oslo
+                                </p>
+                                <p>
+                                    +47 123 45 678
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                        <!--TOPPSALG-->
+                        <div class="column is-full">
+                            <div class="card">
+                            <h2 class="card-header yellow-background title">
+                                Toppsalg
+                            </h2>
+
+                            <!-- One column LIST-MODULE-->
+                            <div class="card-content list-module">
+                                <div class="columns is-multiline">
+                                    <div class="ranking-info-card card column is-full">
+                                        1. Pizza 
+                                    </div>
+                                    <div class="ranking-info-card card column is-full">
+                                        1. Pizza 
+                                    </div>
+                                    <div class="ranking-info-card card column is-full">
+                                        1. Pizza 
+                                    </div>
+                                    <div class="ranking-info-card card column is-full">
+                                        1. Pizza 
+                                    </div>
+                                    <div class="ranking-info-card card column is-full">
+                                        1. Pizza 
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+
+                        <!--KAMPANJE-->
+                        <div class="column is-full">
+                            <div class="card">
+                            <h2 class="card-header yellow-background title">
+                                Kampanjer
+                            </h2>
+
+                            <!-- One column LIST-MODULE-->
+                            <div class="card-content list-module">
+                                <div class="columns is-multiline">
+                                    <div class="ranking-info-card card column is-full">
+                                        2 for 1 på Coca Cola 
+                                    </div>
+                                    <div class="ranking-info-card card column is-full">
+                                        Familiepakke for 249,-
+                                    </div>
+                                    <div class="ranking-info-card card column is-full">
+                                        Meatball Monday
+                                    </div>
+                                    <div class="ranking-info-card card column is-full">
+                                        Taco Tuestay 
+                                    </div>
+                                    <div class="ranking-info-card card column is-full">
+                                        Fishy Friday 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
