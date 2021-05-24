@@ -29,6 +29,12 @@ body {
     padding-top: 80px;
 }
 
+.project-button {
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+}
+
 .rounded-corners-15 {
     border-radius: 15px;
     overflow: hidden;
@@ -58,7 +64,7 @@ body {
 }
 
 .card-size {
-    width: 150x;
+    width: 200px;
     height: 100%;
 }
 
