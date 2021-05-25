@@ -11,9 +11,9 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 
-    <link rel="stylesheet" href="Meny.css">
+    <link rel="stylesheet" href="Menu.css">
     <link rel="stylesheet" href="../sitewide.css">
-    <script type="module" src="Meny.js"></script>
+    <script type="module" src="Menu.js"></script>
 
 
 </head>
@@ -85,7 +85,7 @@
             </div>
 
 
-            <!-- Dropdown menu for å valge pris-->
+            <!-- Dropdown menu for å valge pris VURDERE Å SLETTE-->
             <div class="column is-2 is-flex is-justify-content-center">
                 <div class="select">
                     <select name="Stilling" id="stillingsMenu">
@@ -102,7 +102,7 @@
         <!-- SLUTT PÅ ØVERSTE "SØKE" KOLONNE -->
 
         <!-- DETTE ER DET SOM MÅ GENERERES PÅ SIDEN-->
-        <div id="menyLayout">
+        <div id="menuLayout">
 
             <div class="columns mt-2">
                 <!-- Topdelen av layoutet -->
@@ -112,9 +112,11 @@
                 </div>
             </div>
             <div class="columns is-multiline" id="Pizza">
+            
+            </div>
                 
 
-            <div>
+            <div class="columns mt-2">
                 <div class="column is-half is-offset-1">
                     <p class="has-text-weight-bold">DRIKKE<span class="is-pulled-right">[Legg til]</span></p>
                     <hr style="border-top: 1px solid black;">
@@ -126,7 +128,7 @@
                 </div>
             </div>
 
-            <div>
+            <div class="columns mt-2">
                 <div class="column is-half is-offset-1">
                     <p class="has-text-weight-bold">Extra<span class="is-pulled-right">[Legg til]</span></p>
                     <hr style="border-top: 1px solid black;">
