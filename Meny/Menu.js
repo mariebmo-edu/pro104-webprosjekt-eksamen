@@ -1,6 +1,7 @@
 import MenuModule from '../Modules/MenuModule.js';
 const pizzaNameCont = document.querySelector('#Pizza');
 const drinkNameCont = document.querySelector('#Drink');
+const extraNameCont = document.querySelector('#Extra');
 
 
 
@@ -15,5 +16,11 @@ menuItems.forEach(element => {
 menuItems.forEach(element => {
     if(element.category == "Drink"){
         drinkNameCont.innerHTML += MenuModule.printMenuItem(element);
+    }
+});
+
+menuItems.forEach(element => {
+    if(element.category == "Extra"){
+        extraNameCont.innerHTML += MenuModule.printMenuItem(element);
     }
 });
