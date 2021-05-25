@@ -9,11 +9,13 @@ const SalesModule = function(){
     const getSalesByRestaurant =(restaurant)=> sales.filter(sales => sales.restaurant === restaurant);
 
     const getSalesByEarnings =(earnings)=> meny.filter(sales => sales.earnings === earnings);
+
+    const addSale = (newDate, newRestaurant, newTransactions, newEarnings) => sales.push({date: new Date(newDate), restaurant:newRestaurant, transactions:newTransactions, earnings:newEarnings})
     const printSalesItem =(salesItem)=> {return `
    
         `} 
 
-        return{getAllSales, getSalesByDate, getSalesByEarnings, printSalesItem, getSalesByRestaurant}
+        return{getAllSales, getSalesByDate, getSalesByEarnings, printSalesItem, getSalesByRestaurant, addSale}
 }()
 
 export default MenyModule;

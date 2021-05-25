@@ -14,6 +14,8 @@ const AnsattModule = function(){
     const getAllEmployees =()=> ansatte;
     const getEmployeeByRestaurant =(restaurant)=> ansatte.filter(ansatte => ansatte.restaurant === restaurant);
     const getEmployeeByAnr =(anr)=> ansatte.filter(ansatte => ansatte.anr === anr);
+    const addEmployee = (newName, newAnr, newRestaurant, newPercentage, newPosition, newStatus, newImage) => ansatte.push({name:newName, anr:newAnr, restaurant:newRestaurant, percentage:newPercentage, position:newPosition, status:newStatus, image:newImage}) 
+
     const printemployee =(ansatt)=> {
         
         const backgroundColor = checkColor(ansatt.position, ansatt.status)
@@ -68,7 +70,7 @@ const AnsattModule = function(){
    
         `} 
 
-        return{getAllEmployees, getEmployeeByAnr, getEmployeeByRestaurant, printemployee}
+        return{getAllEmployees, getEmployeeByAnr, getEmployeeByRestaurant, printemployee, addEmployee}
 }()
 
 export default AnsattModule;

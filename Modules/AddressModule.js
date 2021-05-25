@@ -9,6 +9,8 @@ const AddressModule = function(){
 
     const getAllAddresses =()=> address;
     const getAddressByRestaurant =(restaurant)=> address.filter(address => address.restaurant === restaurant);
+    const addAddress = (newName, newMap, newAddress, newPostalCode, newCity, newPhoneNumber) => address.push({name:newName, map:newMap, address:newAddress, postalCode:newPostalCode, city:newCity, phoneNumber:newPhoneNumber}) 
+
     const printAddressItem =(addressItem)=> {return `
 
                             <div class="card-image">
@@ -29,7 +31,7 @@ const AddressModule = function(){
    
         `} 
 
-        return{getAllAddresses, getAddressByRestaurant, printAddressItem}
+        return{getAllAddresses, getAddressByRestaurant, printAddressItem, addAddress}
 }()
 
 export default AddressModule;

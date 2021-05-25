@@ -17,6 +17,7 @@ const NotificationModule = function(){
     const getAllNotifications =()=> notification;
     const getNotificationByRestaurant =(restaurant)=> notification.filter(notification => notification.restaurant === restaurant);
     const getNotificationByDate =(date)=> notification.filter(notification => notification.date.toString === date);
+    const addNotification =(newDate, newRestaurant, newMessage) => notification.push({date: new Date(newDate), restaurant:newRestaurant, message:newMessage})
     const printNotificationItem =(notificationItem)=> {return `
    
         <div class="column is-full">
@@ -31,7 +32,7 @@ const NotificationModule = function(){
         </div>
         `} 
 
-        return{getAllNotifications, getNotificationByRestaurant, getNotificationByDate, printNotificationItem}
+        return{getAllNotifications, getNotificationByRestaurant, getNotificationByDate, printNotificationItem, addNotification}
 }()
 
 export default NotificationModule;

@@ -19,6 +19,7 @@ const MenuModule = function(){
     const getAllMenuItems =()=> menu;
     const getMenuItemByName =(name)=> menu.filter(menu => menu.name === name);
     const getMenuItemByPrice =(price)=> menu.filter(menu => menu.price === price);
+    const addMenuItem =(newCategory, newImage, newName, newPrice, newDescription, newIngredients, newAllergies) => menu.push({category:newCategory, image:newImage, name:newName, price:newPrice, description:newDescription, ingredients:newIngredients, allergies:newAllergies})
     const printMenuItem =(menuItem)=> {return `
         <div>
             <div class="card card-size ml-6">
@@ -54,7 +55,7 @@ const MenuModule = function(){
    
     } 
 
-        return{getAllMenuItems, getMenuItemByName, getMenuItemByPrice, printMenuItem}
+        return{getAllMenuItems, getMenuItemByName, getMenuItemByPrice, printMenuItem, addMenuItem}
 }()
 
 export default MenuModule;
