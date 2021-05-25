@@ -6,14 +6,14 @@ const MenyModule = function(){
         {category: "Pizza", image:"pizza_02.jpg",name: "Pepperoni", price: 159.99, description:"pizza med tomatsaus, ost og pepperoni", ingredients:["kebabkjøtt", "ost", "tomatsaus"], allergies:["melk, nøtter"]},
         {category: "Pizza", image:"pizza_03.jpg",name: "Skinke", price: 149.99, description:"pizza med tomatsaus, ost og skinke", ingredients:["kebabkjøtt", "ost", "tomatsaus"], allergies:["hvete, melk"]},
         {category: "Pizza", image:"pizza_04.jpg",name: "Maragrita", price: 129.99, description:"pizza med tomatsaus og ost", ingredients:["kebabkjøtt", "ost", "tomatsaus"], allergies:["hvete, melk"]},
-        {category: "Pizza", image:"pizza_00.jpg",name: "Meat heaven", price: 299.99, description:"pizza med kebabkjøtt og ost", ingredients:["kebabkjøtt", "ost", "tomatsaus"]},
-        {category: "Drink", image:"pizza_00.jpg",name: "0.5L Coca Cola", price: 29.99, description:"pizza med tomatsaus, ost, marinert biff/kylling og løk", ingredients:["kebabkjøtt", "ost", "tomatsaus"]},
-        {category: "Drink", image:"pizza_00.jpg",name: "0.5L Coca Cola Zero", price: 29.99, description:"pizza med kebabkjøtt og ost", ingredients:["kebabkjøtt", "ost", "tomatsaus"]},
-        {category: "Drink", image:"pizza_00.jpg",name: "0.5L Sjokomelk", price: 29.99, description:"pizza med kebabkjøtt og ost", ingredients:["kebabkjøtt", "ost", "tomatsaus"]},
-        {category: "Drink", image:"pizza_00.jpg",name: "0.5L Farris Naturell", price: 29.99, description:"pizza med kebabkjøtt og ost", ingredients:["kebabkjøtt", "ost", "tomatsaus"]},
-        {category: "Extra", image:"pizza_00.jpg",name: "Hvitløksdressing", price: 29.99, description:"pizza med kebabkjøtt og ost", ingredients:["kebabkjøtt", "ost", "tomatsaus"]},
-        {category: "Extra", image:"pizza_00.jpg",name: "Hvitløk- og chillidressing", price: 39.99, description:"pizza med kebabkjøtt og ost", ingredients:["kebabkjøtt", "ost", "tomatsaus"]},
-        {category: "Extra", image:"pizza_00.jpg",name: "Oregano", price: 9.99, description:"pizza med kebabkjøtt og ost", ingredients:["kebabkjøtt", "ost", "tomatsaus"]},
+        {category: "Pizza", image:"pizza_00.jpg",name: "Meat heaven", price: 299.99, description:"pizza med kebabkjøtt og ost", ingredients:["kebabkjøtt", "ost", "tomatsaus"], allergies:["hvete"]},
+        {category: "Drink", image:"cola.jpg",name: "0.5L Coca Cola", price: 29.99, description:"Coca Cola", ingredients:[], allergies:[]},
+        {category: "Drink", image:"zero.jpg",name: "0.5L Coca Cola Zero", price: 29.99, description:"Coca Cola Zero", ingredients:[], allergies:[]},
+        {category: "Drink", image:"sjoko.jpg",name: "0.5L Sjokomelk", price: 29.99, description:"Hjemmelaget sjokolademelk", ingredients:[], allergies:[]},
+        {category: "Drink", image:"farris.jpg",name: "0.5L Farris Naturell", price: 29.99, description:"Farris Naturell", ingredients:[], allergies:[]},
+        {category: "Extra", image:"hvitløk.jpg",name: "Hvitløksdressing", price: 29.99, description:"Hjemmelaget hvitløksdressing", ingredients:["hvitløk, rømme"],  allergies:[]},
+        {category: "Extra", image:"chilli.jpg",name: "Hvitløk- og chillidressing", price: 39.99, description:"Hjemmelaget hvitløk- og chillidressing", ingredients:["hvitløk, chilli, rømme"],  allergies:[]},
+        {category: "Extra", image:"oregano",name: "Oregano", price: 9.99, description:"Oregano", ingredients:["kebabkjøtt", "ost", "tomatsaus"],  allergies:[]},
     ]
 
     const getAllMenyItems =()=> meny;
