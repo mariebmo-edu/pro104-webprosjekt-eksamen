@@ -1,6 +1,9 @@
 import AnsattModule from "../Modules/AnsattModule.js";
 import NotificationModule from "../Modules/NotificationModule.js"
 import AddressModule from "../Modules/AddressModule.js"
+import { AddBasics } from './../javascript/index.js'
+
+AddBasics();
 
 
 
