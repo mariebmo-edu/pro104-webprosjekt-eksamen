@@ -37,12 +37,12 @@ const MenuModule = function(){
 
                 <div class="card-content-centered-left">
                 <br>
-                <p class="title is-4">${menuItem.name}</p>
-                <p class="subtitle is-6">Beskrivelse: ${menuItem.description}.<br><br> Ingredienser: ${menuItem.ingredients}</p>
+                <p class="title is-4 has-text-centered">${menuItem.name}</p>
+                <p class="subtitle is-6">Beskrivelse: ${menuItem.description}.<br><br> Ingredienser: ${menuItem.ingredients}<br><br></p>
                 </div>
 
                 <div class="information-content-centered-left">
-                Allergier: ${menuItem.allergies}
+                <p>Allergier: </p>${menuItem.allergies}
                 </div><br>
 
                 <div class="card-footer">
