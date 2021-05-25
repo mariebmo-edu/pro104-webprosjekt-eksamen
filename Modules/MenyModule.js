@@ -19,9 +19,39 @@ const MenyModule = function(){
     const getAllMenyItems =()=> meny;
     const getMenyItemByName =(name)=> meny.filter(meny => meny.name === name);
     const getMenyItemByPrice =(price)=> meny.filter(meny => meny.price === price);
-    const printMenyItem =(menyItem)=> {return `
+    const printMenyItem =(menuItem)=> {return `
+        <div class="columns is-multiline">
+            <div class="card card-size ml-6">
+                <div class="card-header">
+                <p class="grey-background card-header-title">
+                ${menuItem.name}
+                </p>
+                </div>
+
+                <div class="card-image">
+                <figure class="circular-portrait image">
+                ${menuItem.image}" alt="OsloPizza">
+                </figure>
+                </div>
+
+                <div class="card-content">
+                <p class="title is-4">${menuItem.name}</p>
+                <p class="subtitle is-6">${menuItem.description}, ${menuItem.ingredients}</p>
+                </div>
+
+                <div class="information-content">
+                ${menuItem.allergies}
+                </div>
+
+                <div class="card-footer">
+                <a href="#" class="card-footer-item">Edit</a>
+                <a href="#" class="card-footer-item">Delete</a>
+                </div>
+            </div>    
+        </div>
+        `
    
-        `} 
+    } 
 
         return{getAllMenyItems, getMenyItemByName, getMenyItemByPrice, printMenyItem}
 }()
