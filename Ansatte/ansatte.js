@@ -40,7 +40,7 @@ const HTMLStartUp = () => {
               <hr style="border-top: 1px solid black;">
             </div>
           </div>
-          <div class="columns"><!-- Kortene av ansatte -->
+          <div class="columns is-multiline ml-5"><!-- Kortene av ansatte -->
             <!-- ANSATT-KORT [alt under er fjernet]-->
             
           `;
@@ -67,9 +67,9 @@ const HTMLStartUp = () => {
 }
 
 HTMLStartUp();
-
-
 //                                                                    ------- HTML Startup End -------
+
+
 // Array med alle ansatte
 var ansattArray = AnsattModule.getAllEmployees();
 
@@ -80,37 +80,20 @@ document.querySelector('#searchBtn').addEventListener('click', function() {
     htmlAnsattTxt ="";
 
     //Lager HOVEDLAYOUT for det som er valgt i AVDELING dropdown menu
-    //Når ingen AVDELING er valgt i AVDELING
-    if("Alle Avdelinger" == avdelingsNavn.options[avdelingsNavn.selectedIndex].text){
-        
-        htmlAnsattTxt += `<div id="layoutAndAnsatt">
-
-        <div class="columns mt-2"> <!-- Topdelen av layoutet -->
-          <div class="column is-half is-offset-1">
-            <p class="has-text-weight-bold"> ${avdelingsNavn.options[avdelingsNavn.selectedIndex].text} <span class="is-pulled-right">[Legg til]</span></p>
-            <hr style="border-top: 1px solid black;">
-          </div>
-        </div>
-        <div class="columns"><!-- Kortene av ansatte -->
-          <!-- ANSATT-KORT [alt under er fjernet]-->
-        `;
-
-    //Når en AVDELING valgt i AVDELING    
-    } else {
        
-        htmlAnsattTxt += `<div class="columns mt-2"> <!-- Topdelen av layoutet -->
-        <div class="column is-half is-offset-1">
+    htmlAnsattTxt += `
+    
+    <div class="columns mt-2"> <!-- Topdelen av layoutet -->
+      <div class="column is-half is-offset-1">
         <p class="has-text-weight-bold"> ${avdelingsNavn.options[avdelingsNavn.selectedIndex].text} <span class="is-pulled-right">[Legg til]</span></p>
         <hr style="border-top: 1px solid black;">
-        </div>
+      </div>
     </div>
-    <div class="columns is-multiline"><!-- Kortene av ansatte -->
-        <!-- ANSATT-KORT [alt under er fjernet]-->
+    <div class="columns is-multiline ml-5"><!-- Kortene av ansatte -->
+      <!-- ANSATT-KORT [alt under er fjernet]-->
     `;
-    }
-    
-    
-    // Filter funksjoner for søke options!                            ----- FILTER START -----
+
+    // Filter funksjoner for søke options!                                     ----- FILTER START -----
     console.log(ansattArray);
     
     //Array med ansatte basert på STILLING
@@ -173,5 +156,4 @@ document.querySelector('#searchBtn').addEventListener('click', function() {
     ansattStillingArray = [];
     ansattAvdelingsArray = [];
     ansattNavnArray = [];
-  }); // Slutten av knappen             ----- KNAPP SLUTT -----
-  ///////////////////////
+  }); // Slutten av knappen                          ----- KNAPP SLUTT -----
