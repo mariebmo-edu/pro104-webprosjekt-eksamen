@@ -5,15 +5,17 @@ import AddressModule from "../Modules/AddressModule.js"
 
 
 //HTML-elements
-var ansattCardContainer = document.getElementById("ansattCardContainer");
-var notificationCardContainer = document.getElementById("notificationCardContainer")
-var addressCardContainer = document.getElementById("AddressCardContainer");
-var restaurantButtons = document.querySelectorAll(".restaurant-button");
+const storeButtonContainer = document.getElementById("storeButtonContainer");
+const ansattCardContainer = document.getElementById("ansattCardContainer");
+const notificationCardContainer = document.getElementById("notificationCardContainer")
+const addressCardContainer = document.getElementById("AddressCardContainer");
+const restaurantButtons = document.querySelectorAll(".restaurant-button");
 
 
 
 //variables
 let selectedLocation = "Oslo";
+addStoreButtons();
 updateWebpage(selectedLocation);
 
 function changeRestaurant(restaurantName){
@@ -28,31 +30,46 @@ document.querySelectorAll(".restaurant-button").forEach(restaurant => {
     })
 })
 
+function addStoreButtons(){
+    var addedLocations = AddressModule.getAllAddresses();
+    addedLocations.forEach(location => {
+        storeButtonContainer.innerHTML += ` <button class="restaurant-button" value="${location.restaurant.toLowerCase()}" alt="knapp som tar deg til restaurantsiden for ${location.restaurant}">${location.restaurant.toUpperCase()}</button>`
+    })
+
+    storeButtonContainer.innerHTML += ` <button class="restaurant-button" value="add-restaurant" alt="knapp som tar deg til "legg til restaurant"><i class="bi bi-plus-lg"></i>`
+}
 
 function updateWebpage(locationName){
 
-//Module-arrays
+    if(locationName === "add-restaurant"){
+        addRestaurant()
+    }else{
 
-AnsattModule.addEmployee("Jess", 30293, "Oslo", 99, "Kokk", "working", "girl_00.jpg");
-var employees = AnsattModule.getEmployeeByRestaurant(locationName);
-var notifications = NotificationModule.getNotificationByRestaurant(locationName)
-var address = AddressModule.getAddressByRestaurant(locationName);
+        //Module-arrays
 
+        var employees = AnsattModule.getEmployeeByRestaurant(locationName);
+        var notifications = NotificationModule.getNotificationByRestaurant(locationName)
+        var address = AddressModule.getAddressByRestaurant(locationName);
 
+        ansattCardContainer.innerHTML = "";
+        notificationCardContainer.innerHTML = "";
+        addressCardContainer.innerHTML = "";
 
-ansattCardContainer.innerHTML = "";
-notificationCardContainer.innerHTML = "";
-addressCardContainer.innerHTML = "";
+        address.forEach(address => {
+            addressCardContainer.innerHTML += AddressModule.printAddressItem(address);
+        })
 
-address.forEach(address => {
-    addressCardContainer.innerHTML += AddressModule.printAddressItem(address);
-})
+        employees.forEach(employee => {
+            ansattCardContainer.innerHTML += AnsattModule.printemployee(employee);
+        });
 
-employees.forEach(employee => {
-    ansattCardContainer.innerHTML += AnsattModule.printemployee(employee);
-});
+        notifications.forEach(notification => {
+            notificationCardContainer.innerHTML += NotificationModule.printNotificationItem(notification);
+        });
 
-notifications.forEach(notification => {
-    notificationCardContainer.innerHTML += NotificationModule.printNotificationItem(notification);
-});
+    }
+}
+
+function addRestaurant(){
+    console.log("added restaurant")
 }

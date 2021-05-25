@@ -6,14 +6,14 @@ const AnsattModule = function(){
         {name: "Maria Mena", anr: 32204, restaurant:"Stavanger", percentage:100, position:"Daglig leder", status:"sickleave", image:"girl_02.jpg"},
         {name: "Bob Bobby", anr: 23422, restaurant:"Oslo", percentage:60, position:"Servior", status:"sickleave", image:"boy_00.jpg"},
         {name: "Lars Larsson", anr: 23024, restaurant:"Oslo", percentage:10, position:"Kokk, Vikar", status:"working", image:"boy_01.jpg"},
-        {name: "", anr: 0, restaurant:"", percentage:100, position:"", status:"", image:""},
-        {name: "", anr: 0, restaurant:"", percentage:100, position:"", status:"", image:""},
+        {name: "Bjørn", anr: 12342, restaurant:"Bergen", percentage:100, position:"Kokk", status:"sickleave", image:""},
+        {name: "Bjarne", anr: 23123, restaurant:"Kristiansand", percentage:100, position:"Servitør", status:"working", image:""},
         {name: "", anr: 0, restaurant:"", percentage:100, position:"", status:"", image:""},
     ]
 
     const getAllEmployees =()=> ansatte;
-    const getEmployeeByRestaurant =(restaurant)=> ansatte.filter(ansatte => ansatte.restaurant === restaurant);
-    const getEmployeeByAnr =(anr)=> ansatte.filter(ansatte => ansatte.anr === anr);
+    const getEmployeeByRestaurant =(restaurant)=> ansatte.filter(ansatte => ansatte.restaurant.toLowerCase() === restaurant.toLowerCase());
+    const getEmployeeByAnr =(anr)=> ansatte.filter(ansatte => ansatte.anr === ParseInt(anr));
     const addEmployee = (newName, newAnr, newRestaurant, newPercentage, newPosition, newStatus, newImage) => ansatte.push({name:newName, anr:newAnr, restaurant:newRestaurant, percentage:newPercentage, position:newPosition, status:newStatus, image:newImage}) 
 
     const printemployee =(ansatt)=> {
