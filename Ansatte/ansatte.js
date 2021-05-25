@@ -80,7 +80,7 @@ document.querySelector('#searchBtn').addEventListener('click', function() {
     //Lager HOVEDLAYOUT for det som er valgt i AVDELING dropdown menu
     //Når ingen AVDELING er valgt i AVDELING
     if("Alle Avdelinger" == avdelingsNavn.options[avdelingsNavn.selectedIndex].text){
-        window.alert(avdelingsNavn.options[avdelingsNavn.selectedIndex].text + " MÅ FIKSES PÅ!!");
+        
         htmlAnsattTxt += `<div id="layoutAndAnsatt">
 
         <div class="columns mt-2"> <!-- Topdelen av layoutet -->
@@ -95,7 +95,7 @@ document.querySelector('#searchBtn').addEventListener('click', function() {
 
     //Når en AVDELING valgt i AVDELING    
     } else {
-        window.alert(avdelingsNavn.options[avdelingsNavn.selectedIndex].text);
+       
         htmlAnsattTxt += `<div class="columns mt-2"> <!-- Topdelen av layoutet -->
         <div class="column is-half is-offset-1">
         <p class="has-text-weight-bold"> ${avdelingsNavn.options[avdelingsNavn.selectedIndex].text} <span class="is-pulled-right">[Legg til]</span></p>
@@ -106,10 +106,6 @@ document.querySelector('#searchBtn').addEventListener('click', function() {
         <!-- ANSATT-KORT [alt under er fjernet]-->
     `;
     }
-    
-    
-    window.alert("Setter in ansatte fra " + avdelingsNavn.options[avdelingsNavn.selectedIndex].text);
-    
     
     
     // Filter funksjoner for søke options!                            ----- FILTER START -----
