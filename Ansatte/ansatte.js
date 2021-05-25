@@ -11,7 +11,10 @@ const searchResultDiv = document.querySelector('#layoutAndAnsatt');
 
 let htmlAnsattTxt= "";
 
-// Henter knappen og får knappen til å gjøre noe
+// Array med alle ansatte
+var ansattArray = AnsattModule.getAllEmployees();
+
+// Henter knappen og får knappen til å gjøre noe          ----- KNAPP START -----
 document.querySelector('#searchBtn').addEventListener('click', function() {
 
     // inni her er det som skjer når knappen er trykket på
@@ -49,16 +52,10 @@ document.querySelector('#searchBtn').addEventListener('click', function() {
     
     
     window.alert("Setter in ansatte fra " + avdelingsNavn.options[avdelingsNavn.selectedIndex].text);
-    //Setter inn ANSATTE basert på valgte AVDELINGER 
-    addAnsatteMedAvdeling();
-
-    //Brukes for å lukke columns
-    htmlAnsattTxt += `
-        </div>
-        `;
-
-    searchResultDiv.innerHTML = htmlAnsattTxt;
-
+    
+    
+    
+    // Filter funksjoner for søke options!      ----- FILTER START -----
     console.log(ansattArray);
     
     //Array med ansatte basert på STILLING
@@ -78,9 +75,9 @@ document.querySelector('#searchBtn').addEventListener('click', function() {
     }
     console.log(ansattStillingArray);
     
-
+    
     var ansattAvdelingsArray = [];
-
+    
     avdelingsFilter(ansattStillingArray);
     function avdelingsFilter(Array){
       for(var i = 0; i < ansattStillingArray.length; i++){
@@ -91,50 +88,67 @@ document.querySelector('#searchBtn').addEventListener('click', function() {
       }
     }
     console.log(ansattAvdelingsArray);
-
+    
     var ansattNavnArray = [];
     
     navnFilter(ansattAvdelingsArray)
     function navnFilter(Array){
       for(var i = 0; i < ansattAvdelingsArray.length; i++){
         if(Array[i].name.toLowerCase().includes(ansattNavn.value.toLowerCase()) ){
-    
+          
           ansattNavnArray.push(Array[i]);
         }
       }
     }
-
+    
     console.log(ansattNavnArray);
+    
+    // ansattNavnArray inneholder filtrert resultat basert på alle feltene!!!     ----- FILTER SLUTT -----
 
-    // ansattNavnArray inneholder filtrert resultat basert på alle feltene!!!
+    // Skriver inn ANSATTE etter søk har filtrert ansatte basert på valgte options
+    ansattNavnArray.forEach(ansatte =>{
+      
+      htmlAnsattTxt +=
+      
+      AnsattModule.printemployee(ansatte);
 
+    })
+    
+    
+    //Brukes for å lukke columns
+    htmlAnsattTxt += `
+    </div>
+    `;
+    
+    searchResultDiv.innerHTML = htmlAnsattTxt;
+    
     //For å resete arrays
     ansattStillingArray = [];
     ansattAvdelingsArray = [];
     ansattNavnArray = [];
-  }); // Slutten av knappen
+  }); // Slutten av knappen             ----- KNAPP SLUTT -----
   
-  // Array med alle ansatte
-  var ansattArray = AnsattModule.getAllEmployees();
-
-
-
-
-
-
-
-
-//funksjon for å legge til ansatte basert på Avdeling
-function addAnsatteMedAvdeling(){
+  
+  
+  
+  
+  
+  
+  
+  //Setter inn ANSATTE basert på valgte AVDELINGER 
+  //  addAnsatteMedAvdeling();
+  
+  //funksjon for å legge til ansatte basert på Avdeling
+  function addAnsatteMedAvdeling(){
     AnsattModule.getEmployeeByRestaurant(avdelingsNavn.options[avdelingsNavn.selectedIndex].text).forEach(ansatte =>{
-          
+      
       htmlAnsattTxt += `
-          
+      
       <div class="card card-size ml-4">
-            
+      
       <!-- Stillingstittel -->
       <div class="card-header">
-        <p class="green-background card-header-title">
+      <p class="green-background card-header-title">
           ${ansatte.position}
         </p>
       </div>
