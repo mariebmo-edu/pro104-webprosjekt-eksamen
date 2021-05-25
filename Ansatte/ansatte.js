@@ -11,6 +11,63 @@ const searchResultDiv = document.querySelector('#layoutAndAnsatt');
 
 let htmlAnsattTxt= "";
 
+// Genererer Siden på start med alle avdelings layout + ansatte       ------- HTML Startup ------ 
+
+const HTMLStartUp = () => {
+
+  for(var i = 0; i < 3; i++){
+  
+    var avdeling = checkNumber(i);
+    
+    function checkNumber(i){
+      if(i == 0){
+        return "Oslo"
+      } else if (i == 1){
+        return "Bergen"
+      } else if (i == 2){
+        return "Stavanger"
+      }
+    }
+
+      // Printer Layout for hver avdeling
+    htmlAnsattTxt += `<div id="layoutAndAnsatt">
+  
+          <div class="columns mt-2"> <!-- Topdelen av layoutet -->
+            <div class="column is-half is-offset-1">
+              <p class="has-text-weight-bold"> ${avdeling} <span class="is-pulled-right">[Legg til]</span></p>
+              <hr style="border-top: 1px solid black;">
+            </div>
+          </div>
+          <div class="columns"><!-- Kortene av ansatte -->
+            <!-- ANSATT-KORT [alt under er fjernet]-->
+            
+          `;
+
+      // Printer ansatte for tilhørende avdeling
+
+      const ansatte = AnsattModule.getEmployeeByRestaurant(avdeling);
+      
+      ansatte.forEach(ansatt => {
+
+        htmlAnsattTxt += AnsattModule.printemployee(ansatt); 
+
+      })
+
+    //Brukes for å lukke columns
+    htmlAnsattTxt += `
+    </div>
+    `;
+
+  }
+  
+  searchResultDiv.innerHTML = htmlAnsattTxt;
+
+}
+
+HTMLStartUp();
+
+
+//                                                                    ------- HTML Startup End -------
 // Array med alle ansatte
 var ansattArray = AnsattModule.getAllEmployees();
 
@@ -23,7 +80,7 @@ document.querySelector('#searchBtn').addEventListener('click', function() {
     //Lager HOVEDLAYOUT for det som er valgt i AVDELING dropdown menu
     //Når ingen AVDELING er valgt i AVDELING
     if("Alle Avdelinger" == avdelingsNavn.options[avdelingsNavn.selectedIndex].text){
-        window.alert(avdelingsNavn.options[avdelingsNavn.selectedIndex].text + " MÅ FIKSES PÅ!!");
+        
         htmlAnsattTxt += `<div id="layoutAndAnsatt">
 
         <div class="columns mt-2"> <!-- Topdelen av layoutet -->
@@ -38,7 +95,7 @@ document.querySelector('#searchBtn').addEventListener('click', function() {
 
     //Når en AVDELING valgt i AVDELING    
     } else {
-        window.alert(avdelingsNavn.options[avdelingsNavn.selectedIndex].text);
+       
         htmlAnsattTxt += `<div class="columns mt-2"> <!-- Topdelen av layoutet -->
         <div class="column is-half is-offset-1">
         <p class="has-text-weight-bold"> ${avdelingsNavn.options[avdelingsNavn.selectedIndex].text} <span class="is-pulled-right">[Legg til]</span></p>
@@ -51,11 +108,7 @@ document.querySelector('#searchBtn').addEventListener('click', function() {
     }
     
     
-    window.alert("Setter in ansatte fra " + avdelingsNavn.options[avdelingsNavn.selectedIndex].text);
-    
-    
-    
-    // Filter funksjoner for søke options!      ----- FILTER START -----
+    // Filter funksjoner for søke options!                            ----- FILTER START -----
     console.log(ansattArray);
     
     //Array med ansatte basert på STILLING
@@ -64,9 +117,6 @@ document.querySelector('#searchBtn').addEventListener('click', function() {
     stillingsFilter(ansattArray);
     function stillingsFilter(Array){
       for(var i = 0; i < Array.length; i++){
-        console.log(Array.length);
-        console.log(Array[i].position);
-        console.log(stillingsNavn.options[stillingsNavn.selectedIndex].text);
         if(Array[i].position.includes(stillingsNavn.options[stillingsNavn.selectedIndex].text) || "Alle Stillinger" === stillingsNavn.options[stillingsNavn.selectedIndex].text){
           
           ansattStillingArray.push(Array[i]);
@@ -87,7 +137,6 @@ document.querySelector('#searchBtn').addEventListener('click', function() {
         }
       }
     }
-    console.log(ansattAvdelingsArray);
     
     var ansattNavnArray = [];
     
@@ -100,18 +149,14 @@ document.querySelector('#searchBtn').addEventListener('click', function() {
         }
       }
     }
-    
     console.log(ansattNavnArray);
-    
-    // ansattNavnArray inneholder filtrert resultat basert på alle feltene!!!     ----- FILTER SLUTT -----
+    // ^ansattNavnArray^ inneholder filtrert resultat basert på alle feltene!!!     ----- FILTER SLUTT -----
 
     // Skriver inn ANSATTE etter søk har filtrert ansatte basert på valgte options
     ansattNavnArray.forEach(ansatte =>{
       
       htmlAnsattTxt +=
-      
       AnsattModule.printemployee(ansatte);
-
     })
     
     
@@ -127,65 +172,4 @@ document.querySelector('#searchBtn').addEventListener('click', function() {
     ansattAvdelingsArray = [];
     ansattNavnArray = [];
   }); // Slutten av knappen             ----- KNAPP SLUTT -----
-  
-  
-  
-  
-  
-  
-  
-  
-  //Setter inn ANSATTE basert på valgte AVDELINGER 
-  //  addAnsatteMedAvdeling();
-  
-  //funksjon for å legge til ansatte basert på Avdeling
-  function addAnsatteMedAvdeling(){
-    AnsattModule.getEmployeeByRestaurant(avdelingsNavn.options[avdelingsNavn.selectedIndex].text).forEach(ansatte =>{
-      
-      htmlAnsattTxt += `
-      
-      <div class="card card-size ml-4">
-      
-      <!-- Stillingstittel -->
-      <div class="card-header">
-      <p class="green-background card-header-title">
-          ${ansatte.position}
-        </p>
-      </div>
-      
-      <!-- Profilbilde -->
-      <div class="card-image">
-        <figure class="circular-portrait image">
-          <img src="../images/people/${ansatte.image}" alt="profile picture of employee, ${ansatte.name}">
-        </figure>
-      </div>
-      
-      <!-- Navn og ansattnummer-->
-      <div class="card-content">
-        <p class="title is-4">${ansatte.name}</p>
-        <p class="subtitle is-6">Anr. ${ansatte.anr}</p>
-      </div>
-      
-      <!-- Stillingsprosent -->
-      <div class="information-content">
-        ${ansatte.percentage}%
-      </div>
-      
-      <!-- Footer -->
-      <div class="card-footer">
-        <a href="#" class="card-footer-item">Info</a>
-        <a href="#" class="card-footer-item">Edit</a>
-        <a href="#" class="card-footer-item">Delete</a>
-      </div>
-      
-    </div>
-    
-  <!-- til hit var det kuttet [må kanskje ha med en /div ?]-->
-      `
-  })
-}
-
-
-
-
-
+  ///////////////////////
