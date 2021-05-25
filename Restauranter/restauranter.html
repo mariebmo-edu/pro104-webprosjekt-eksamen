@@ -57,10 +57,10 @@
         <!-- ALT GÅR HIT HALLO FOLKENS! -->
 
         <div id="store-container">
-            <button class="selected-restaurant restaurant-button">OSLO</button>
-            <button class="restaurant-button"> BERGEN</button>
-            <button class="restaurant-button">STAVANGER</button>
-            <button class="restaurant-button">LOFOTEN</button>
+            <button class="selected-restaurant restaurant-button" value="Oslo">OSLO</button>
+            <button class="restaurant-button" value="Bergen"> BERGEN</button>
+            <button class="restaurant-button" value="Stavanger">STAVANGER</button>
+            <button class="restaurant-button" value="Kristiansand">KRISTIANSAND</button>
             <button class="restaurant-button"><i class="bi bi-plus-lg"></i>
             </button>
         </div>
@@ -80,57 +80,9 @@
 
                                 <!-- LIST-MODULE -->
                             <div class="card-content list-module">
-                                <div class="columns is-multiline">
-                                    <div class="column is-full">
-                                        <div class="columns">
-                                            <div class="date-info-card column is-one-fifth card">
-                                                12.12.21
-                                            </div>
-                                            <div class="info-text-card column is-four-fifths card">
-                                                Dette er tekst om hva man skal gjøre i dag
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="column is-full">
-                                        <div class="columns">
-                                            <div class="date-info-card column is-one-fifth card">
-                                                12.12.21
-                                            </div>
-                                            <div class="info-text-card column is-four-fifths card">
-                                                Dette er tekst om hva man skal gjøre i dag
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="column is-full">
-                                        <div class="columns">
-                                            <div class="date-info-card column is-one-fifth card">
-                                                12.12.21
-                                            </div>
-                                            <div class="info-text-card column is-four-fifths card">
-                                                Dette er tekst om hva man skal gjøre i dag
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="column is-full">
-                                        <div class="columns">
-                                            <div class="date-info-card column is-one-fifth card">
-                                                12.12.21
-                                            </div>
-                                            <div class="info-text-card column is-four-fifths card">
-                                                Dette er tekst om hva man skal gjøre i dag
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="column is-full">
-                                        <div class="columns">
-                                            <div class="date-info-card column is-one-fifth card">
-                                                12.12.21
-                                            </div>
-                                            <div class="info-text-card column is-four-fifths card">
-                                                Dette er tekst om hva man skal gjøre i dag
-                                            </div>
-                                        </div>
-                                    </div>
+
+                                <!--Her legges notification-kortene for lokasjonen-->
+                                <div id="notificationCardContainer" class="columns is-multiline">
                                 </div>
                             </div>
 
@@ -145,14 +97,12 @@
                                     Ansatte
                                 </h2>
                         
+                                <!--Her legges ansatt-kortene for lokasjonen-->
                                 <div id="ansattCardContainer" class="columns is-multiline card-content overflow-scroll">
                                     
                                 </div>
                             </div>
-                            
                         </div>
-
-                        
                     </div>
                 </div>
 
@@ -174,26 +124,10 @@
 
                         <!--ADRESSE-->
                         <div class="column is-full">
-                            <div class="card">
-                            <h2 class="card-title-padding no-padding card-header yellow-background title">
-                                Adresse
-                            </h2>
-                            
-                            <div class="card-image">
-                                <figure class="image"></figure>
-                                    <img src="../images/maps/map_oslo.png" alt="image of map with the address Adresse adresse 123, 0123 Oslo">
-                                </figure>
-                            </div>
-
-                            <div class="card-content">
-                                <p>
-                                    Adresse adresse 87, <br>    
-                                    0123 Oslo
-                                </p>
-                                <p>
-                                    +47 123 45 678
-                                </p>
-                            </div>
+                            <div id="AddressCardContainer" class="card">
+                                <h2 class="card-title-padding no-padding card-header yellow-background title">
+                                    Adresse
+                                </h2>
                         </div>
                     </div>
 

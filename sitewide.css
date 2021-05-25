@@ -48,6 +48,10 @@ body {
     overflow: scroll;
 }
 
+.black-text {
+    color: black;
+}
+
 /*Used for daglig-leder, ok/yes/valid-type of answers*/
 .green-background {
     background-color: #7fc576;
@@ -61,6 +65,10 @@ body {
 /*used for no/error/alert-type of notices, as well as sick-leave*/
 .red-background {
     background-color: #ff2828;
+}
+
+.grey-background{
+    background-color: #d1d1d1;
 }
 
 .card-content-size{
@@ -123,6 +131,10 @@ body {
 
 .ranking-info-card {
     text-align: left;
+}
+
+.center-text {
+    text-align: center;
 }
 
 .border-between-grey .column {

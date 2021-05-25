@@ -7,7 +7,7 @@
     border:hidden;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-    width: 100px;
+    width: 150px;
     height: 30px;
     background-color: white;
     box-shadow: 5px 5px 29px 5px rgba(0,0,0,0.2);
@@ -23,5 +23,5 @@
 
     border: 5px solid #FFD028;
     border-top: 5px solid white;
-    font-weight: bold;
+    font-weight: bold
 }
