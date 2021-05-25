@@ -6,6 +6,4 @@ export const AddBasics = () => {
 	addSidebar();
 };
 
-AddBasics();
-
 //PGA conventions
