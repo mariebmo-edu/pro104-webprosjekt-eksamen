@@ -63,7 +63,11 @@ body {
     background-color: #ff2828;
 }
 
-.card-size {
+.card-content-size{
+    height: 150px;
+}
+
+.card-size{
     width: 200px;
     height: 100%;
 }

@@ -9,11 +9,13 @@ const stillingsNavn = document.querySelector('#stillingsMenu');
 //Henter container for layout til .innerHTML
 const searchResultDiv = document.querySelector('#layoutAndAnsatt');
 
+let htmlAnsattTxt= "";
+
 // Henter knappen og får knappen til å gjøre noe
 document.querySelector('#searchBtn').addEventListener('click', function() {
 
     // inni her er det som skjer når knappen er trykket på
-    let htmlAnsattTxt ="";
+    htmlAnsattTxt ="";
 
     //Lager HOVEDLAYOUT for det som er valgt i AVDELING dropdown menu
     //Når ingen AVDELING er valgt i AVDELING
@@ -48,58 +50,128 @@ document.querySelector('#searchBtn').addEventListener('click', function() {
     
     window.alert("Setter in ansatte fra " + avdelingsNavn.options[avdelingsNavn.selectedIndex].text);
     //Setter inn ANSATTE basert på valgte AVDELINGER 
-    AnsattModule.getEmployeeByRestaurant(avdelingsNavn.options[avdelingsNavn.selectedIndex].text).forEach(ansatte =>{
-        
-        htmlAnsattTxt += `
-            
-        <div class="card card-size ml-4">
-              
-        <!-- Stillingstittel -->
-        <div class="card-header">
-          <p class="green-background card-header-title">
-            ${ansatte.position}
-          </p>
-        </div>
-        
-        <!-- Profilbilde -->
-        <div class="card-image">
-          <figure class="circular-portrait image">
-            <img src="${ansatte.bilde}" alt="profile picture of employee, ${ansatte.name}">
-          </figure>
-        </div>
-        
-        <!-- Navn og ansattnummer-->
-        <div class="card-content">
-          <p class="title is-4">${ansatte.name}</p>
-          <p class="subtitle is-6">Anr. ${ansatte.anr}</p>
-        </div>
-        
-        <!-- Stillingsprosent -->
-        <div class="information-content">
-          ${ansatte.percentage}
-        </div>
-        
-        <!-- Footer -->
-        <div class="card-footer">
-          <a href="#" class="card-footer-item">Info</a>
-          <a href="#" class="card-footer-item">Edit</a>
-          <a href="#" class="card-footer-item">Delete</a>
-        </div>
-        
-      </div>
-      
-     <!-- til hit var det kuttet [må kanskje ha med en /div ?]-->
-        `
-    })
+    addAnsatteMedAvdeling();
 
+    //Brukes for å lukke columns
     htmlAnsattTxt += `
         </div>
         `;
 
-
-
-
-
     searchResultDiv.innerHTML = htmlAnsattTxt;
 
-}); // Slutten av knappen
+    console.log(ansattArray);
+    
+    //Array med ansatte basert på STILLING
+    var ansattStillingArray = [];
+    
+    stillingsFilter(ansattArray);
+    function stillingsFilter(Array){
+      for(var i = 0; i < Array.length; i++){
+        console.log(Array.length);
+        console.log(Array[i].position);
+        console.log(stillingsNavn.options[stillingsNavn.selectedIndex].text);
+        if(Array[i].position.includes(stillingsNavn.options[stillingsNavn.selectedIndex].text) || "Alle Stillinger" === stillingsNavn.options[stillingsNavn.selectedIndex].text){
+          
+          ansattStillingArray.push(Array[i]);
+        }
+      }
+    }
+    console.log(ansattStillingArray);
+    
+
+    var ansattAvdelingsArray = [];
+
+    avdelingsFilter(ansattStillingArray);
+    function avdelingsFilter(Array){
+      for(var i = 0; i < ansattStillingArray.length; i++){
+        if(Array[i].restaurant.includes(avdelingsNavn.options[avdelingsNavn.selectedIndex].text) || "Alle Avdelinger" === avdelingsNavn.options[avdelingsNavn.selectedIndex].text){
+          
+          ansattAvdelingsArray.push(Array[i]);
+        }
+      }
+    }
+    console.log(ansattAvdelingsArray);
+
+    var ansattNavnArray = [];
+    
+    navnFilter(ansattAvdelingsArray)
+    function navnFilter(Array){
+      for(var i = 0; i < ansattAvdelingsArray.length; i++){
+        if(Array[i].name.toLowerCase().includes(ansattNavn.value.toLowerCase()) ){
+    
+          ansattNavnArray.push(Array[i]);
+        }
+      }
+    }
+
+    console.log(ansattNavnArray);
+
+    // ansattNavnArray inneholder filtrert resultat basert på alle feltene!!!
+
+    //For å resete arrays
+    ansattStillingArray = [];
+    ansattAvdelingsArray = [];
+    ansattNavnArray = [];
+  }); // Slutten av knappen
+  
+  // Array med alle ansatte
+  var ansattArray = AnsattModule.getAllEmployees();
+
+
+
+
+
+
+
+
+//funksjon for å legge til ansatte basert på Avdeling
+function addAnsatteMedAvdeling(){
+    AnsattModule.getEmployeeByRestaurant(avdelingsNavn.options[avdelingsNavn.selectedIndex].text).forEach(ansatte =>{
+          
+      htmlAnsattTxt += `
+          
+      <div class="card card-size ml-4">
+            
+      <!-- Stillingstittel -->
+      <div class="card-header">
+        <p class="green-background card-header-title">
+          ${ansatte.position}
+        </p>
+      </div>
+      
+      <!-- Profilbilde -->
+      <div class="card-image">
+        <figure class="circular-portrait image">
+          <img src="../images/people/${ansatte.image}" alt="profile picture of employee, ${ansatte.name}">
+        </figure>
+      </div>
+      
+      <!-- Navn og ansattnummer-->
+      <div class="card-content">
+        <p class="title is-4">${ansatte.name}</p>
+        <p class="subtitle is-6">Anr. ${ansatte.anr}</p>
+      </div>
+      
+      <!-- Stillingsprosent -->
+      <div class="information-content">
+        ${ansatte.percentage}%
+      </div>
+      
+      <!-- Footer -->
+      <div class="card-footer">
+        <a href="#" class="card-footer-item">Info</a>
+        <a href="#" class="card-footer-item">Edit</a>
+        <a href="#" class="card-footer-item">Delete</a>
+      </div>
+      
+    </div>
+    
+  <!-- til hit var det kuttet [må kanskje ha med en /div ?]-->
+      `
+  })
+}
+
+
+
+
+
