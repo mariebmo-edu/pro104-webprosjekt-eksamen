@@ -24,24 +24,32 @@
     <nav class="sidebar">
         <ul>
             <li>
+              <a>
                 <span class="icon">
-                    <i class="bi bi-speedometer2"></i>
+                  <i class="bi bi-speedometer2"></i>
                 </span>
+              </a>
             </li>
             <li>
+              <a>
                 <span class="icon">
-                    <i class="bi bi-cash-stack"></i>
+                  <i class="bi bi-cash-stack"></i>
                 </span>
+              </a>
             </li>
             <li>
+              <a>
                 <span class="icon">
-                    <i class="bi bi-people"></i>
+                  <i class="bi bi-people"></i>
                 </span>
+              </a>
             </li>
             <li>
+              <a>
                 <span class="icon">
-                    <i class="bi bi-journal-bookmark-fill"></i>
+                  <i class="bi bi-journal-bookmark-fill"></i>
                 </span>
+              </a>
             </li>
             <li>
               <a href="/Restauranter/restauranter_oslo.html">
@@ -54,7 +62,7 @@
     </nav>
 
     <div class="admin-pannel">
-
+      
         <!-- ALT GÅR HIT HALLO FOLKENS! -->
 
         <div class="columns mt-6">
@@ -81,12 +89,17 @@
             <div class="select">
               <select name="Stilling" id="stillingsMenu">
                 <option value="all">Alle Stillinger</option>
-                <option value="dagligLeder">Daglig Leder</option>
-                <option value="slave">Slave</option>
+                <option value="dagligLeder">Daglig leder</option>
+                <option value="kokk">Kokk</option>
                 <option>???</option>
 
               </select>
             </div>
+          </div>
+
+          <!-- SØK NÅ button -->
+          <div class="column is-2 is-flex is-justify-content-center">
+            <button id="searchBtn" class="button">Søk nå</button>
           </div>
         </div> <!-- END OF FIRST ROW COLUMN -->
 
@@ -99,9 +112,9 @@
               <hr style="border-top: 1px solid black;">
             </div>
           </div>
-          <div class="columns"><!-- Kortene av ansatte -->
+          <div class="columns is-multiline"><!-- Kortene av ansatte -->
             <!-- ANSATT-KORT -->
-            <div class="column is-2 is-offset-1 card card-size">
+            <div class="card card-size ml-4">
               
               <!-- Stillingstittel -->
               <div class="card-header">
@@ -137,12 +150,12 @@
               
             </div>
             
-          </div>
+            
+          </div> <!-- til hit var det kuttet [må kanskje ha med en /div ?]-->
         </div>
           <!-- SLUTT PÅ DET SOM MÅ GENERERES -->
         </div>
         
-        
-      </body>
+</body>
       
-      </html>
+</html>
