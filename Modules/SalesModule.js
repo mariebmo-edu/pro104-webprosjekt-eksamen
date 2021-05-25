@@ -16,4 +16,4 @@ const SalesModule = function(){
         return{getAllSales, getSalesByDate, getSalesByEarnings, printSalesItem, getSalesByRestaurant}
 }()
 
-export default MenyModule;
+export default SalesModule;

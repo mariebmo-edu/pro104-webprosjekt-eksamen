@@ -7,7 +7,7 @@ body {
     width: 60px;
     display: flex;
     justify-content: center;
-    height: 100%;
+    height: 89vh;
     background: #ffd028;
     box-shadow: inset -4px 0px 0px rgba(122, 122, 122, 0.25);
     font-size: 1.8em;
@@ -15,11 +15,19 @@ body {
 }
 
 .topbar {
-    width: 100%;
-    height: 80px;
+    width: 100vw;
+    height: 11vh;
     background: #ffd028;
 }
 
 .admin-pannel {
     margin-left: 60px;
+}
+
+.root {
+    height: 89vh;
+    width: 100%;
+    display: flex;
+    position: relative;
+    flex-direction: row;
 }
