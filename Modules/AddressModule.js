@@ -9,7 +9,7 @@ const AddressModule = function(){
 
     const getAllAddresses =()=> address;
     const getAddressByRestaurant =(restaurant)=> address.filter(address => address.restaurant.toLowerCase() === restaurant.toLowerCase());
-    const addAddress = (newName, newMap, newAddress, newPostalCode, newCity, newPhoneNumber) => address.push({name:newName, map:newMap, address:newAddress, postalCode:newPostalCode, city:newCity, phoneNumber:newPhoneNumber}) 
+    const addAddress = (newName, newMap, newAddress, newPostalCode, newCity, newPhoneNumber) => address.push({restaurant:newName, map:newMap, address:newAddress, postalCode:newPostalCode, city:newCity, phoneNumber:newPhoneNumber}) 
 
     const printAddressItem =(addressItem)=> {return `
 

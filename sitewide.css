@@ -29,6 +29,12 @@ body {
     padding-top: 80px;
 }
 
+.pop-up-card {
+    z-index: 1001;
+    position: fixed;
+
+}
+
 .project-button {
     border: none;
     padding: 5px;
