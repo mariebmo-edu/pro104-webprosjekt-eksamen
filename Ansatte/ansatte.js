@@ -15,7 +15,7 @@ let htmlAnsattTxt= "";
 
 const HTMLStartUp = () => {
 
-  for(var i = 0; i < 3; i++){
+  for(var i = 0; i < 4; i++){
   
     var avdeling = checkNumber(i);
     
@@ -26,6 +26,8 @@ const HTMLStartUp = () => {
         return "Bergen"
       } else if (i == 2){
         return "Stavanger"
+      } else if (i == 3){
+        return "Kristiansand"
       }
     }
 

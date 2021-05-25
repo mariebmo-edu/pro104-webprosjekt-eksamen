@@ -4,11 +4,21 @@ const AnsattModule = function(){
         {name: "Jenny Jenny", anr: 73823, restaurant:"Oslo", percentage:100, position:"Daglig leder", status:"working", image:"girl_00.jpg"},
         {name: "Trude Trudesen", anr: 12032, restaurant:"Oslo", percentage:100, position:"Kokk", status:"working", image:"girl_01.jpg"},
         {name: "Maria Mena", anr: 32204, restaurant:"Stavanger", percentage:100, position:"Daglig leder", status:"sickleave", image:"girl_02.jpg"},
-        {name: "Bob Bobby", anr: 23422, restaurant:"Oslo", percentage:60, position:"Servior", status:"sickleave", image:"boy_00.jpg"},
+        {name: "Bob Bobby", anr: 23422, restaurant:"Oslo", percentage:60, position:"Servitør", status:"sickleave", image:"boy_00.jpg"},
         {name: "Lars Larsson", anr: 23024, restaurant:"Oslo", percentage:10, position:"Kokk, Vikar", status:"working", image:"boy_01.jpg"},
-        {name: "Bjørn", anr: 12342, restaurant:"Bergen", percentage:100, position:"Kokk", status:"sickleave", image:""},
-        {name: "Bjarne", anr: 23123, restaurant:"Kristiansand", percentage:100, position:"Servitør", status:"working", image:""},
+        {name: "Tix", anr: 12342, restaurant:"Bergen", percentage:100, position:"Kokk", status:"sickleave", image:"Tix.jpg"},
+        {name: "Bjarne", anr: 23123, restaurant:"Kristiansand", percentage:100, position:"Servitør", status:"working", image:"Asmongold.png"},
+        {name: "DrDisrespect", anr: 2, restaurant:"Oslo", percentage:100, position:"Servitør", status:"working", image:"DrDisrespect.jpg"},
+        {name: "Erna Solborg", anr: 5423, restaurant:"Oslo", percentage:100, position:"Kokk", status:"sickleave", image:"ErnaSolberg.jpg"},
+        {name: "Holk Hugan", anr: 1643, restaurant:"Kristiansand", percentage:70, position:"Kokk", status:"working", image:"HulkHogan.jpg"},
+        {name: "Jeff Jeffsen", anr: 52, restaurant:"Kristiansand", percentage:100, position:"Daglig leder", status:"working", image:"InternettHistorian.jpg"},
+        {name: "Luke Groundrunner", anr: 6243, restaurant:"Stavanger", percentage:30, position:"Servitør", status:"working", image:"LukeSkywalker.jpg"},
+        {name: "Pepe", anr: 420, restaurant:"Bergen", percentage:100, position:"Daglig leder", status:"working", image:"Pepe.png"},
+        {name: "Scarlett Johansen", anr: 69, restaurant:"Bergen", percentage:10, position:"Servitør", status:"sickleave", image:"ScarlettJohanson.jpg"},
+        {name: "Solid Snek", anr: 20, restaurant:"Stavanger", percentage:100, position:"Kokk", status:"sickleave", image:"SolidSnake.jpg"},
+        {name: "Sylva Lasthaug", anr: 6234, restaurant:"Kristiansand", percentage:100, position:"Servitør", status:"working", image:"SylviListhaug.jpg"},
         {name: "", anr: 0, restaurant:"", percentage:100, position:"", status:"", image:""},
+
     ]
 
     const getAllEmployees =()=> ansatte;
