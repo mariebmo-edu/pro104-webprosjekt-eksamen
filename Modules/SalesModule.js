@@ -1,7 +1,7 @@
 const SalesModule = function(){
 
     const sales = [
-        {date: new Date("2021-05-10"), restaurant: "Oslo", transactions: 155, earnings: 20394.93,},
+        {date: new Date("2021-05-10"), restaurant: "Oslo", transactions: 155, itemsSold:{oslopizza:12, kebabpizza:14, pepperonipizza:11, cocacola:2}, earnings: 20394.93,},
     ]
 
     const getAllSales =()=> sales;

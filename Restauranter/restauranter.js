@@ -32,9 +32,13 @@ document.querySelectorAll(".restaurant-button").forEach(restaurant => {
 function updateWebpage(locationName){
 
 //Module-arrays
+
+AnsattModule.addEmployee("Jess", 30293, "Oslo", 99, "Kokk", "working", "girl_00.jpg");
 var employees = AnsattModule.getEmployeeByRestaurant(locationName);
 var notifications = NotificationModule.getNotificationByRestaurant(locationName)
 var address = AddressModule.getAddressByRestaurant(locationName);
+
+
 
 ansattCardContainer.innerHTML = "";
 notificationCardContainer.innerHTML = "";
