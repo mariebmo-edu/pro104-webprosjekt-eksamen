@@ -2,7 +2,7 @@ const MenuModule = function(){
 
     const menu = [
         {category: "Pizza", image:"pizza_00.jpg", name: "OsloPizza", price: 199.99, description:"pizza med tomatsaus, ost, kebabkjøtt og mais", ingredients:["kebabkjøtt", "ost", "tomatsaus"], allergies:["hvete, melk, nøtter"]},
-        {category: "Pizza", image:"pizza_01.png",name: "Hawaii", price: 149.99, description:"pizza med tomatsaus, ost, ananas, løk og kylling", ingredients:["kebabkjøtt", "ost", "tomatsaus"], allergies:["hvete, melk"]},
+        {category: "Pizza", image:"pizza_01.jpg",name: "Hawaii", price: 149.99, description:"pizza med tomatsaus, ost, ananas, løk og kylling", ingredients:["kebabkjøtt", "ost", "tomatsaus"], allergies:["hvete, melk"]},
         {category: "Pizza", image:"pizza_02.jpg",name: "Pepperoni", price: 159.99, description:"pizza med tomatsaus, ost og pepperoni", ingredients:["kebabkjøtt", "ost", "tomatsaus"], allergies:["melk, nøtter"]},
         {category: "Pizza", image:"pizza_03.jpg",name: "Skinke", price: 149.99, description:"pizza med tomatsaus, ost og skinke", ingredients:["kebabkjøtt", "ost", "tomatsaus"], allergies:["hvete, melk"]},
         {category: "Pizza", image:"pizza_04.jpg",name: "Maragrita", price: 129.99, description:"pizza med tomatsaus og ost", ingredients:["kebabkjøtt", "ost", "tomatsaus"], allergies:["hvete, melk"]},
@@ -13,12 +13,13 @@ const MenuModule = function(){
         {category: "Drink", image:"farris.jpg",name: "0.5L Farris Naturell", price: 29.99, description:"Farris Naturell", ingredients:[], allergies:[]},
         {category: "Extra", image:"hvitløk.jpg",name: "Hvitløksdressing", price: 29.99, description:"Hjemmelaget hvitløksdressing", ingredients:["hvitløk, rømme"],  allergies:[]},
         {category: "Extra", image:"chilli.jpg",name: "Hvitløk- og chillidressing", price: 39.99, description:"Hjemmelaget hvitløk- og chillidressing", ingredients:["hvitløk, chilli, rømme"],  allergies:[]},
-        {category: "Extra", image:"oregano",name: "Oregano", price: 9.99, description:"Oregano", ingredients:["Oregano"],  allergies:[]},
+        {category: "Extra", image:"oregano.jpg",name: "Oregano", price: 9.99, description:"Oregano", ingredients:["Oregano"],  allergies:[]},
     ]
 
     const getAllMenuItems =()=> menu;
     const getMenuItemByName =(name)=> menu.filter(menu => menu.name === name);
     const getMenuItemByPrice =(price)=> menu.filter(menu => menu.price === price);
+    const addMenuItem =(newCategory, newImage, newName, newPrice, newDescription, newIngredients, newAllergies) => menu.push({category:newCategory, image:newImage, name:newName, price:newPrice, description:newDescription, ingredients:newIngredients, allergies:newAllergies})
     const printMenuItem =(menuItem)=> {return `
         <div>
             <div class="card card-size ml-6">
@@ -30,18 +31,19 @@ const MenuModule = function(){
 
                 <div class="card-image">
                 <figure class="circular-portrait image">
-                <img src= "../images/pizza/${menuItem.image}" "alt="OsloPizza">
+                <img src= "../images/menu/${menuItem.image}" "alt="OsloPizza">
                 </figure>
                 </div>
 
-                <div class="card-content">
-                <p class="title is-4">${menuItem.name}</p>
-                <p class="subtitle is-6">${menuItem.description}, ${menuItem.ingredients}</p>
+                <div class="card-content-centered-left">
+                <br>
+                <p class="title is-4 has-text-centered">${menuItem.name}</p>
+                <p class="subtitle is-6">Beskrivelse: ${menuItem.description}.<br><br> Ingredienser: ${menuItem.ingredients}<br><br></p>
                 </div>
 
                 <div class="information-content-centered-left">
-                Allergier: ${menuItem.allergies}
-                </div>
+                <p>Allergier: </p>${menuItem.allergies}
+                </div><br>
 
                 <div class="card-footer">
                 <a href="#" class="card-footer-item">Edit</a>
@@ -53,7 +55,7 @@ const MenuModule = function(){
    
     } 
 
-        return{getAllMenuItems, getMenuItemByName, getMenuItemByPrice, printMenuItem}
+        return{getAllMenuItems, getMenuItemByName, getMenuItemByPrice, printMenuItem, addMenuItem}
 }()
 
 export default MenuModule;
