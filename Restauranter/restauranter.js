@@ -35,6 +35,7 @@ function updateWebpage(locationName){
 var employees = AnsattModule.getEmployeeByRestaurant(locationName);
 var notifications = NotificationModule.getNotificationByRestaurant(locationName)
 var address = AddressModule.getAddressByRestaurant(locationName);
+
 ansattCardContainer.innerHTML = "";
 notificationCardContainer.innerHTML = "";
 addressCardContainer.innerHTML = "";

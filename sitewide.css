@@ -48,6 +48,10 @@ body {
     overflow: scroll;
 }
 
+.black-text {
+    color: black;
+}
+
 /*Used for daglig-leder, ok/yes/valid-type of answers*/
 .green-background {
     background-color: #7fc576;
@@ -63,13 +67,17 @@ body {
     background-color: #ff2828;
 }
 
+.grey-background{
+    background-color: #d1d1d1;
+}
+
 .card-content-size{
     height: 150px;
 }
 
 .card-size{
     width: 200px;
-    height: 100%;""
+    height: 100%;
 }
 
 .margin-20 {
@@ -123,6 +131,10 @@ body {
 
 .ranking-info-card {
     text-align: left;
+}
+
+.center-text {
+    text-align: center;
 }
 
 .border-between-grey .column {
