@@ -67,39 +67,28 @@
         <div class="columns mt-6">
             <!-- Input field to enter goods -->
             <div class="column is-2 is-offset-1">
-                <input id="goodsInput" class="input" type="text" placeholder="Varenavn">
+                <input id="stockInput" class="input" type="text" placeholder="Varenavn">
             </div>
 
-            <!-- Dropdown menu for å valge ALLERGI -->
+            <!-- Dropdown menu for allergies -->
             <div class="column is-2 is-flex is-justify-content-center">
                 <div class="select">
-                    <select name="alergies" id="avdelingsMenu">
+                    <select name="alergies" id="allergieDropdown">
                         <option value="all">Allergier</option>
                         <option value="Melk">Melk</option>
                         <option value="Hvete">Hvete</option>
                         <option value="Nøtter">Nøtter</option>
 
-
                     </select>
                 </div>
             </div>
 
-
-            <!-- Dropdown menu for å valge pris VURDERE Å SLETTE-->
-            <div class="column is-2 is-flex is-justify-content-center">
-                <div class="select">
-                    <select name="Stilling" id="stillingsMenu">
-                        <option value="all">Pris</option>
-                    </select>
-                </div>
-            </div>
-
-            <!-- SØK NÅ button -->
+            <!-- SEARCH button button -->
             <div class="column is-2 is-flex is-justify-content-center">
                 <button id="searchBtn" class="button">Søk nå</button>
             </div>
         </div>
-        <!-- SLUTT PÅ ØVERSTE "SØKE" KOLONNE -->
+    
 
         <!-- DETTE ER DET SOM MÅ GENERERES PÅ SIDEN-->
         <div id="menuLayout">
@@ -128,14 +117,14 @@
 
             <div class="columns mt-2">
                 <div class="column is-half is-offset-1">
-                    <p class="has-text-weight-bold">DRIKKE<span class="is-pulled-right">[Legg til]</span></p>
+                    <p class="has-text-weight-bold">Tilbehør<span class="is-pulled-right">[Legg til]</span></p>
                     <hr style="border-top: 1px solid black;">
                 </div>
             </div>
             <div class="columns is-multiline" id="Extra">
                     
             </div>
-            <!-- SLUTT PÅ DET SOM MÅ GENERERES -->
+    
         </div>
 
 </body>
