@@ -23,7 +23,7 @@ const MenuModule = function () {
     const printMenuItem = (menuItem) => {
         return `
         <div>
-            <div class="card card-size ml-6">
+            <div class="card card-size card-padding ml-6">
                 <div class="card-header">
                 <p class="grey-background card-header-title">
                 ${menuItem.name}

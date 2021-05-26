@@ -160,15 +160,3 @@ body {
 .card-height{
     height: 400px;
 }
-
-#addExtraBtn{
-    left: 600px;
-}
-
-#addPizzaBtn{
-    left: 600px;
-}
-
-#addSodaBtn{
-    left: 600px;
-}
