@@ -1,4 +1,7 @@
 import MenuModule from '../Modules/MenuModule.js';
+import { AddBasics } from './../javascript/index.js'
+
+AddBasics();
 const pizzaNameCont = document.querySelector('#Pizza');
 const drinkNameCont = document.querySelector('#Drink');
 const extraNameCont = document.querySelector('#Extra');
