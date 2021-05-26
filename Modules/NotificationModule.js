@@ -15,7 +15,7 @@ const NotificationModule = function(){
     ]
 
     const getAllNotifications =()=> notification;
-    const getNotificationByRestaurant =(restaurant)=> notification.filter(notification => notification.restaurant === restaurant);
+    const getNotificationByRestaurant =(restaurant)=> notification.filter(notification => notification.restaurant.toLowerCase() === restaurant.toLowerCase());
     const getNotificationByDate =(date)=> notification.filter(notification => notification.date.toString === date);
     const addNotification =(newDate, newRestaurant, newMessage) => notification.push({date: new Date(newDate), restaurant:newRestaurant, message:newMessage})
     const printNotificationItem =(notificationItem)=> {return `

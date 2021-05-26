@@ -6,9 +6,9 @@ const SalesModule = function(){
 
     const getAllSales =()=> sales;
     const getSalesByDate =(date)=> sales.filter(sales => sales.date.toDateString() === date);
-    const getSalesByRestaurant =(restaurant)=> sales.filter(sales => sales.restaurant === restaurant);
+    const getSalesByRestaurant =(restaurant)=> sales.filter(sales => sales.restaurant.toLowerCase() === restaurant.toLowerCase());
 
-    const getSalesByEarnings =(earnings)=> meny.filter(sales => sales.earnings === earnings);
+    const getSalesByEarnings =(earnings)=> meny.filter(sales => sales.earnings === ParseInt(earnings));
 
     const addSale = (newDate, newRestaurant, newTransactions, newEarnings) => sales.push({date: new Date(newDate), restaurant:newRestaurant, transactions:newTransactions, earnings:newEarnings})
     const printSalesItem =(salesItem)=> {return `
