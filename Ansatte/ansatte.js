@@ -33,11 +33,11 @@ const HTMLStartUp = () => {
     }
 
       // Printer Layout for hver avdeling
-      htmlEmployeeTxt += `<div id="layoutAndEmployee">
+      htmlEmployeeTxt += `
   
           <div class="columns mt-2"> <!-- Topdelen av layoutet -->
             <div class="column is-half is-offset-1">
-              <p class="has-text-weight-bold"> ${avdeling} <span id="addEmployee" class="button is-pulled-right">[Legg til]</span></p>
+              <p class="has-text-weight-bold"> ${avdeling} <span id="add${avdeling}Employee" class="button is-pulled-right">[Legg til]</span></p>
               <hr style="border-top: 1px solid black;">
             </div>
           </div>
@@ -90,7 +90,7 @@ document.querySelector('#searchBtn').addEventListener('click', function() {
         <hr style="border-top: 1px solid black;">
       </div>
     </div>
-    <div class="columns is-multiline ml-5"><!-- Kortene av ansatte -->
+    <div id="employeesContainer" class="columns is-multiline ml-5"><!-- Kortene av ansatte -->
       <!-- ANSATT-KORT [alt under er fjernet]-->
     `;
 
@@ -103,7 +103,7 @@ document.querySelector('#searchBtn').addEventListener('click', function() {
     stillingsFilter(ansattArray);
     function stillingsFilter(Array){
       for(var i = 0; i < Array.length; i++){
-        if(Array[i].position.includes(positionName.options[positionName.selectedIndex].text) || "Alle Stillinger" === positionName.options[positionName.selectedIndex].text){
+        if(Array[i].position.toLowerCase().includes(positionName.options[positionName.selectedIndex].text.toLowerCase()) || "Alle Stillinger" === positionName.options[positionName.selectedIndex].text){
           
           ansattStillingArray.push(Array[i]);
         }
@@ -158,24 +158,50 @@ document.querySelector('#searchBtn').addEventListener('click', function() {
     ansattAvdelingsArray = [];
     employeeNameArray = [];
 
+    let employeesDiv = document.querySelector('#employeesContainer');
+    document.querySelector('#addEmployee').addEventListener('click', function(){
+
+      popUpContainer.innerHTML = newEmployeePopUp();
+      addEmployee(employeesDiv, "oslo"); // Kan ikke legge til ny ansatt til en annen avdeling enn den en har oppe uten at den legges til for øyeblikket i feil avdeling derfor er OSLO default :c
+    })
 
     
   }); // Slutten av søk knappen                          ----- KNAPP SLUTT -----
 
 
-  // Henter å får hver LEGG TIL knapp til å gjøre noe     ----- LEGG TIL KNAPP START -----
-
-  // NB!! MÅ LEGGES TIL PÅ SLUTTEN AV KNAPPEN FOR Å FUNKE ETTER Å HA SØKT!!
-  document.querySelectorAll('#addEmployee').forEach(button => {
-    button.addEventListener("click", (b)=>{
-      
-      window.alert("To be implemented ...");
-
-      popUpContainer.innerHTML = newEmployeePopUp();
-      addEmployee();
-
-    })
+  // Henter å får hver LEGG TIL knapp til å gjøre noe     ----- LEGG TIL ANSATT KNAPP START -----
+  //Leggtil for Oslo
+  const osloDiv = document.querySelector("#OsloContainer");
+  document.querySelector('#addOsloEmployee').addEventListener('click', function() {
+  
+  popUpContainer.innerHTML = newEmployeePopUp();
+  addEmployee(osloDiv, "Oslo"); 
   })
+
+  //Leggtil for Bergen
+  const bergenDiv = document.querySelector("#BergenContainer");
+  document.querySelector('#addBergenEmployee').addEventListener('click', function() {
+  
+  popUpContainer.innerHTML = newEmployeePopUp();
+  addEmployee(bergenDiv, "Bergen"); 
+  })
+
+  //Leggtil for Kristiansand
+  const kristiansandDiv = document.querySelector('#KristiansandContainer');
+  document.querySelector('#addKristiansandEmployee').addEventListener('click', function() {
+  
+  popUpContainer.innerHTML = newEmployeePopUp();
+  addEmployee(kristiansandDiv, "Kristiansand");
+  })
+
+  //Leggtil for Stavanger
+  const stavangerDiv = document.querySelector('#StavangerContainer');
+  document.querySelector('#addStavangerEmployee').addEventListener('click', function() {
+  
+  popUpContainer.innerHTML = newEmployeePopUp();
+  addEmployee(stavangerDiv, "Stavanger");
+  })
+
 
   function newEmployeePopUp(){
     return `<div class="card pop-up-card">
@@ -193,7 +219,7 @@ document.querySelector('#searchBtn').addEventListener('click', function() {
         `
   }
 
-  function addEmployee(){
+  function addEmployee(divContainer, Avdeling){
     document.querySelector('#submitEmployeePopUpBtn').addEventListener('click', function(){
 
       let addEmployeeName = document.getElementById("addEmployeeNameField").value;
@@ -201,13 +227,17 @@ document.querySelector('#searchBtn').addEventListener('click', function() {
       let addEmployeeNumber = document.getElementById("addEmployeeNumberField").value;
       let addEmployeePercent = document.getElementById("addEmployeePercentField").value;
 
-      
-      // MÅ KANSKJE BRUKE DATASET FOR Å HENTE DEN RIKTIGE AVDELINGEN BASERT PÅ DATASET
+      AnsattModule.addEmployee(addEmployeeName, addEmployeeNumber, Avdeling, addEmployeePercent, addEmployeePosition, "working", "");
+
+      let newestEmployee = AnsattModule.getAllEmployees()[AnsattModule.getAllEmployees().length - 1];
+
+      divContainer.innerHTML += AnsattModule.printemployee(newestEmployee); 
 
       popUpContainer.innerHTML = "";
+
 
     })
 
   }
 
-  // Slutten av legg til knapp                          ----- LEGG TIL KNAPP SLUTT -----
+  // Slutten av legg til knapp                          ----- LEGG TIL ANSATT KNAPP SLUTT -----
