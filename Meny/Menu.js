@@ -108,7 +108,7 @@ document.querySelector('#searchBtn').addEventListener('click', function () {
                 </figure>
                 </div>
 
-                <div class="card-content card-height">
+                <div class="card-content-size card-content card-height">
                 <br>
                 <p class="title is-4 has-text-centered">${pizzaName}</p>
                 <p class="subtitle is-6 has-text-weight-bold">Beskrivelse: ${pizzaDescription}.<br><br> Ingredienser: ${pizzaIngredients}<br><br></p>
