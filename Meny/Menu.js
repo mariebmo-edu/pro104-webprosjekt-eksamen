@@ -3,6 +3,7 @@ const pizzaNameCont = document.querySelector('#Pizza');
 const drinkNameCont = document.querySelector('#Drink');
 const extraNameCont = document.querySelector('#Extra');
 const allergieDropDown = document.querySelector('#allergieDropDown');
+const popUpContainer = document.getElementById("popUpContainer");
 
 
 
@@ -43,7 +44,7 @@ document.querySelector('#searchBtn').addEventListener('click', function () {
     } else {
         menuItems.forEach(element => {
             for (let i = 0; i < element.allergies.length; i++) {
-                if (allergie == element.allergies[i]) {
+                if (allergie.includes(element.allergies[i])) {
                     pizzaNameCont.innerHTML += MenuModule.printMenuItem(element);
 
                 }
@@ -53,3 +54,32 @@ document.querySelector('#searchBtn').addEventListener('click', function () {
     }
 
 });
+
+    document.querySelector('#addPizzaBtn').addEventListener('click', function(){
+        popUpContainer.innerHTML = newPizzaPopUp();
+
+    });
+
+    function newPizzaPopUp(){
+
+        return `<div class="card pop-up-card">
+            <div class="title card-title-padding card-header">
+                ADD PIZZA
+            </div>
+            <div class="card-content">
+                <input type="text" id="pizzaPicture" placeholder="Pizzabilde lastes opp autmoatisk" value="" class="input">
+                <input type="text" id="pizzaName" placeholder="Navn på pizza" value="" class="input">
+                <input type="text" id="pizzaDescription" placeholder="Beskrivelse av pizza" value="" class="input">
+                <input type="text" id="pizzaIngredients" placeholder="Ingredienser" value="" class="input">
+                <input type="text" id="pizzaAllergies" placeholder="Allergier" value="" class="input">
+                <button id="submitPizzaPopUpBtn" value="submitNewPizza" class="button">SUBMIT</button>
+            </div>
+        </div>`
+    
+       
+    };
+
+
+
+
+
