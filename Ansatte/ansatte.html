@@ -26,49 +26,51 @@
 
         <!-- ALT GÅR HIT HALLO FOLKENS! -->
 
-        <div class="columns mt-6">
-          <!-- Input felt for å skrive inn NAVN -->
-          <div class="column is-2 is-offset-1">
-            <input id="ansattNavnInput" class="input" type="text" placeholder="Navn">
-          </div>
-
-          <!-- Dropdown menu for å valge AVDELING -->
-          <div class="column is-2 is-flex is-justify-content-center">
-            <div class="select">
-              <select name="Avdeling" id="avdelingsMenu">
-                <option value="all">Alle Avdelinger</option>
-                <option value="oslo">Oslo</option>
-                <option value="bergen">Bergen</option>
-                <option value="stavanger">Stavanger</option>
-                <option value="kristiansand">Kristiansand</option>
-
-              </select>
+        <div class="ansatte-content container section">
+          <div class="columns">
+            <!-- Input felt for å skrive inn NAVN -->
+            <div class="column is-2">
+              <input id="ansattNavnInput" class="input" type="text" placeholder="Navn">
             </div>
-          </div>
 
-          <!-- Dropdown menu for å valge STILLING-->
-          <div class="column is-2 is-flex is-justify-content-center">
-            <div class="select">
-              <select name="Stilling" id="stillingsMenu">
-                <option value="all">Alle Stillinger</option>
-                <option value="dagligLeder">Daglig leder</option>
-                <option value="kokk">Kokk</option>
-                <option value="servitør">Servitør</option>
-                <option value="vikar">Vikar</option>
+            <!-- Dropdown menu for å valge AVDELING -->
+            <div class="column is-2 is-flex is-justify-content-center">
+              <div class="select">
+                <select name="Avdeling" id="avdelingsMenu">
+                  <option value="all">Alle Avdelinger</option>
+                  <option value="oslo">Oslo</option>
+                  <option value="bergen">Bergen</option>
+                  <option value="stavanger">Stavanger</option>
+                  <option value="kristiansand">Kristiansand</option>
 
-              </select>
+                </select>
+              </div>
             </div>
+
+            <!-- Dropdown menu for å valge STILLING-->
+            <div class="column is-2 is-flex is-justify-content-center">
+              <div class="select">
+                <select name="Stilling" id="stillingsMenu">
+                  <option value="all">Alle Stillinger</option>
+                  <option value="dagligLeder">Daglig leder</option>
+                  <option value="kokk">Kokk</option>
+                  <option value="servitør">Servitør</option>
+                  <option value="vikar">Vikar</option>
+
+                </select>
+              </div>
+            </div>
+
+            <!-- SØK NÅ button -->
+            <div class="column is-2 is-flex is-justify-content-center">
+              <button id="searchBtn" class="button">Søk nå</button>
+            </div>
+          </div> <!-- END OF FIRST ROW COLUMN -->
+
+          <div id="layoutAndEmployee">
+            <!-- DETTE INNI HER ER DET SOM GENERERES PÅ SIDEN-->
+
           </div>
-
-          <!-- SØK NÅ button -->
-          <div class="column is-2 is-flex is-justify-content-center">
-            <button id="searchBtn" class="button">Søk nå</button>
-          </div>
-        </div> <!-- END OF FIRST ROW COLUMN -->
-
-        <div id="layoutAndEmployee">
-          <!-- DETTE INNI HER ER DET SOM GENERERES PÅ SIDEN-->
-
         </div>
         
     </div>

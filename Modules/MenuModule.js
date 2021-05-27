@@ -23,24 +23,29 @@ const MenuModule = function () {
     const printMenuItem = (menuItem) => {
         return `
         <div>
-            <div class="card card-size card-padding ml-6">
+            <div class="card card-size card-padding">
                 <div class="card-header">
-                <p class="grey-background card-header-title">
-                ${menuItem.name}
-                </p>
+                    <p class="yellow-background card-header-title">
+                        ${menuItem.name}
+                    </p>
                 </div>
 
                 <div class="card-image">
-                <figure class="circular-portrait image">
-                <img src= "../images/menu/${menuItem.image}" "alt="Item">
-                </figure>
+                    <figure class="circular-portrait image">
+                        <img src= "../images/menu/${menuItem.image}" "alt="Item">
+                    </figure>
                 </div>
 
-                <div class="card-content card-height">
+                <div class="card-content card-content-size card-height">
                 <br>
-                <p class="subtitle is-6 has-text-weight-bold">Beskrivelse: ${menuItem.description}.<br><br> Ingredienser: ${menuItem.ingredients}<br><br></p>
-                <p class="has-text-weight-bold">Allergier: ${menuItem.allergies}</p><br><br>
-                <p class="has-text-weight-bold">Pris: ${menuItem.price},-</p>
+                <p class="subtitle is-6 has-text-weight-bold">
+                    Beskrivelse: ${menuItem.description}.<br><br> Ingredienser: ${menuItem.ingredients}<br><br>
+                    </p>
+                <p class="has-text-weight-bold">
+                    Allergier: ${menuItem.allergies}
+                </p><br><br>
+                <p class="has-text-weight-bold">
+                    Pris: ${menuItem.price},-</p>
                 </div>
 
                 <div class="card-footer">

@@ -41,7 +41,7 @@ const HTMLStartUp = () => {
       htmlEmployeeTxt += `
   
           <div class="columns mt-2"> <!-- Topdelen av layoutet -->
-            <div class="column is-half is-offset-1">
+            <div class="column is-full">
               <p class="has-text-weight-bold"> ${avdeling} <span id="add${avdeling}Employee" class="button is-pulled-right">[Legg til]</span></p>
               <hr style="border-top: 1px solid black;">
             </div>
