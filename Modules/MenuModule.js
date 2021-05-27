@@ -38,7 +38,6 @@ const MenuModule = function () {
 
                 <div class="card-content card-height">
                 <br>
-                <p class="title is-4 has-text-centered">${menuItem.name}</p>
                 <p class="subtitle is-6 has-text-weight-bold">Beskrivelse: ${menuItem.description}.<br><br> Ingredienser: ${menuItem.ingredients}<br><br></p>
                 <p class="has-text-weight-bold">Allergier: ${menuItem.allergies}</p><br><br>
                 <p class="has-text-weight-bold">Pris: ${menuItem.price},-</p>
