@@ -1,10 +1,12 @@
 import AnsattModule from "../Modules/AnsattModule.js";
 import NotificationModule from "../Modules/NotificationModule.js"
 import AddressModule from "../Modules/AddressModule.js"
+import LayoutModule from "../Modules/LayoutModule.js"
 
 
 
 //HTML-elements
+const topAndSideBar = document.getElementById("topAndSideBar")
 const storeButtonContainer = document.getElementById("storeButtonContainer");
 const ansattCardContainer = document.getElementById("ansattCardContainer");
 const notificationCardContainer = document.getElementById("notificationCardContainer")
@@ -15,12 +17,15 @@ const popUpContainer = document.getElementById("popUpContainer");
 
 //variables
 let selectedLocation = "Oslo";
+
+
 addStoreButtons();
 updateWebpage(selectedLocation);
 
 function changeRestaurant(restaurantName){
     console.log(restaurantName.value)
 }
+
 
 
 
@@ -44,6 +49,9 @@ function addStoreButtons(){
 }
 
 function updateWebpage(locationName){
+
+    topAndSideBar.innerHTML = LayoutModule.printBaseLayout(`Restauranter > ${locationName}`);
+
 
     if(locationName === "add-restaurant"){
         addRestaurant()
