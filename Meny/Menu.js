@@ -7,6 +7,7 @@ const popUpContainer = document.getElementById("popUpContainer");
 
 
 
+//Print pizza, drinks, and extra on main page.
 let menuItems = MenuModule.getAllMenuItems();
 
 menuItems.forEach(element => {
@@ -26,9 +27,11 @@ menuItems.forEach(element => {
         extraNameCont.innerHTML += MenuModule.printMenuItem(element);
     }
 });
+//END
 
+
+//"SØK NÅ" button with working functions
 document.querySelector('#searchBtn').addEventListener('click', function () {
-
 
     let allergieDropDown = document.querySelector('#allergieDropdown');
     let allergie = allergieDropDown.value;
@@ -65,7 +68,7 @@ document.querySelector('#addPizzaBtn').addEventListener('click', function () {
 
 function newPizzaPopUp() {
 
-     //POP UP CARDET
+    //POP UP CARDET
 
     return `<div class="card pop-up-card">
             <div class="title card-title-padding card-header">
@@ -85,7 +88,7 @@ function newPizzaPopUp() {
 
 };
 
-
+//addPizza function linked with addPizzaBtn 
 function addPizza() {
     document.querySelector('#submitPizzaPopUpBtn').addEventListener('click', function () {
         let pizzaName = document.getElementById("pizzaName").value;
@@ -140,7 +143,7 @@ document.querySelector('#addSodaBtn').addEventListener('click', function () {
 
 function newSodaPopUp() {
 
-     //POP UP CARDET
+    //POP UP CARDET
 
     return `<div class="card pop-up-card">
         <div class="title card-title-padding card-header">
@@ -201,6 +204,7 @@ function addSoda() {
         popUpContainer.innerHTML = "";
     })
 }
+
 
 
 //EXTRA FUNCTIONS
