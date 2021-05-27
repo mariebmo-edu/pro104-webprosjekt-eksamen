@@ -3,6 +3,15 @@ body {
     background-color: #f6f6f6;
 }
 
+.light-grey-background{
+    background-color: #f6f6f6;
+}
+
+.transparant-background{
+    background-color: #ffffff00;
+}
+
+
 .sidebar {
     position: fixed;
     width: 60px;
