@@ -18,21 +18,32 @@
     <div class="admin-pannel">
 
         <!-- ALT GÅR HIT HALLO FOLKENS! -->
+        <div class="container section">
 
-		<!-- INPUT FIELDS -->
-		<input type="date" id="fromDateSales" alt="fra dato for økonomisøk" value="2021-05-01">
-		<label>to</label>
-		<input type="date" id="toDateSales" alt="til dato for økonomisøk" value="2021-06-01">
-		<button id="salesSearchBtn" class="button">SØK</button>
-
-
-		<!-- RESTAURANT COLUMNS -->
-		<div class="sales-content container section">
-			<div id="salesCardContainer" class="columns">
-			</div>
-		</div>
-		
+            <!-- INPUT FIELDS -->
+            <div class="columns">
+                <div class="column is-2 is-flex is-justify-content-center">
+                    <input type="date" id="fromDateSales" alt="fra dato for økonomisøk" value="2021-05-01">
+                </div>
+                <label class="has-text-weight-bold pt-4">til</label>
+                <div class="column is-2 is-flex is-justify-content-center">
+                    <input type="date" id="toDateSales" alt="til dato for økonomisøk" value="2021-06-01">
+                </div>
+                <div class="column is-2 is-flex is-justify-content-center">
+                    <button id="salesSearchBtn" class="button">Søk</button>
+                </div>
+                
+            </div>
+            
+            <!-- RESTAURANT COLUMNS -->
+            <div class="sales-content">
+                <div id="salesCardContainer" class="columns">
+                </div>
+            </div>
+            
+        </div>
     </div>
     
 </body>
 </html>
+<!-- ----- -->
