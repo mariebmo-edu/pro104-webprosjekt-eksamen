@@ -114,7 +114,6 @@ function addPizza() {
 
                 <div class="card-content-size card-content card-height">
                 <br>
-                <p class="title is-4 has-text-centered">${pizzaName}</p>
                 <p class="subtitle is-6 has-text-weight-bold">Beskrivelse: ${pizzaDescription}.<br><br> Ingredienser: ${pizzaIngredients}<br><br></p>
                 <p class="has-text-weight-bold">Allergier: ${pizzaAllergies}</p><br><br>
                 <p class="has-text-weight-bold">Pris: ${pizzaPrice},-</p>
@@ -188,7 +187,6 @@ function addSoda() {
 
             <div class="card-content-size card-content card-height">
             <br>
-            <p class="title is-4 has-text-centered">${sodaName}</p>
             <p class="subtitle is-6 has-text-weight-bold">Beskrivelse: ${sodaDescription}.<br><br> Ingredienser: ${sodaIngredients}<br><br></p>
             <p class="has-text-weight-bold">Allergier: ${sodaAllergies}</p><br><br>
             <p class="has-text-weight-bold">Pris: ${sodaPrice},-</p>
@@ -224,7 +222,7 @@ function newExtraPopUp() {
             LEGG TIL NY EKSTRAVARE
         </div>
         <div class="card-content">
-            <input type="text" id="extraName" placeholder="Type vare" value="" class="input">
+            <input type="text" id="extraName" placeholder="Varenavn" value="" class="input">
             <input type="text" id="extraDescription" placeholder="Beskrivelse av varen" value="" class="input">
             <input type="text" id="extraIngredients" placeholder="Ingredienser" value="" class="input">
             <input type="text" id="extraAllergies" placeholder="Allergier" value="" class="input">
@@ -262,7 +260,6 @@ function addExtra() {
 
             <div class="card-content-size card-content card-height">
             <br>
-            <p class="title is-4 has-text-centered">${extraName}</p>
             <p class="subtitle is-6 has-text-weight-bold">Beskrivelse: ${extraDescription}.<br><br> Ingredienser: ${extraIngredients}<br><br></p>
             <p class="has-text-weight-bold">Allergier: ${extraAllergies}</p><br><br>
             <p class="has-text-weight-bold">Pris: ${extraPrice},-</p>
