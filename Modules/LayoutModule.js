@@ -3,7 +3,7 @@ const LayoutModule = function () {
     const printBaseLayout = (siteName) => {
         return `
         <div class="topbar">
-            <h1 class="title">
+            <h1 class="title margin-20">
                 ${siteName}
             </h1>
 
