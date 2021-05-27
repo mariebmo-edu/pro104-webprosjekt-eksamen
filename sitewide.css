@@ -29,6 +29,14 @@ body {
     padding-top: 80px;
 }
 
+.icon{
+    color: #363636;
+}
+
+.icon:hover{
+color: white;
+}
+
 .pop-up-card {
     z-index: 1001;
     position: fixed;

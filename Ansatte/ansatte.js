@@ -1,4 +1,5 @@
 import AnsattModule from '../Modules/AnsattModule.js';
+import LayoutModule from '../Modules/LayoutModule.js'
 
 const employeeName = document.querySelector('#ansattNavnInput');
 const avdelingsNavn = document.querySelector('#avdelingsMenu');
@@ -6,6 +7,10 @@ const positionName = document.querySelector('#stillingsMenu');
 const popUpContainer = document.getElementById("popUpContainer");
 // [avdelingsNavn/positionName].options[avdelingsNavn/positionName.selectedIndex].text;
 // for å hente det som er valgt i selve valg boksen^
+
+//For å generere topp- og sidebar
+const topAndSideBar = document.getElementById("topAndSideBar");
+topAndSideBar.innerHTML = LayoutModule.printBaseLayout("Ansatte");
 
 //Henter container for layout til .innerHTML
 const searchResultDiv = document.querySelector('#layoutAndEmployee');

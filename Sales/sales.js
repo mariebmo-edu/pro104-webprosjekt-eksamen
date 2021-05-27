@@ -1,8 +1,10 @@
 import SalesModule from "../Modules/SalesModule.js"
 import MenuModule from "../Modules/MenuModule.js"
+import LayoutModule from "../Modules/LayoutModule.js"
 
 
 //HTML-Variables
+const topAndSideBar = document.getElementById("topAndSideBar");
 const salesCardContainer = document.getElementById("salesCardContainer");
 const fromDateSales = document.getElementById("fromDateSales");
 const toDateSales = document.getElementById("toDateSales");
@@ -14,6 +16,8 @@ const allMenu = MenuModule.getAllMenuItems();
 const restaurantWithSale = new Set()
 const menuItems = new Set();
 let salesInfo = updateSalesInfo();
+
+topAndSideBar.innerHTML = LayoutModule.printBaseLayout("Salg");
 
 allSales.forEach(sales => {
     restaurantWithSale.add(sales.restaurant)
@@ -29,11 +33,12 @@ function printHTMLCards(array){
     salesCardContainer.innerHTML = "";
 
     restaurantWithSale.forEach(restaurant => {
-        salesCardContainer.innerHTML += `<div class="column is-one-quarter">
+        salesCardContainer.innerHTML += `
+        <div class="column is-one-quarter">
         <div class="card">
-            <div class="card-header title card-title-padding">
+            <h2 class="card-header title yellow-background card-title-padding">
                 ${restaurant.toUpperCase()}
-            </div>					
+            </h2>					
         </div>
     
         <div class="columns is-multiline">

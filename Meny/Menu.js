@@ -1,12 +1,17 @@
 import MenuModule from '../Modules/MenuModule.js';
+import LayoutModule from '../Modules/LayoutModule.js'
+
 const pizzaNameCont = document.querySelector('#Pizza');
 const drinkNameCont = document.querySelector('#Drink');
 const extraNameCont = document.querySelector('#Extra');
 const allergieDropDown = document.querySelector('#allergieDropDown');
 const popUpContainer = document.getElementById("popUpContainer");
 const stocckInput = document.getElementById('#stockInput');
+const topAndSideBar = document.getElementById("topAndSideBar");
 
+//Print Top and sidebar
 
+topAndSideBar.innerHTML = LayoutModule.printBaseLayout("Meny");
 
 //Print pizza, drinks, and extra on main page.
 let menuItems = MenuModule.getAllMenuItems();
