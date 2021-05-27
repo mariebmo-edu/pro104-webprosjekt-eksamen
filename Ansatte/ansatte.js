@@ -46,7 +46,7 @@ const HTMLStartUp = () => {
               <hr style="border-top: 1px solid black;">
             </div>
           </div>
-          <div id="${avdeling}Container" class="columns is-multiline ml-5"><!-- Kortene av ansatte -->
+          <div id="${avdeling}Container" class="columns is-multiline"><!-- Kortene av ansatte -->
             <!-- ANSATT-KORT [alt under er fjernet]-->
             
           `;
@@ -91,7 +91,9 @@ document.querySelector('#searchBtn').addEventListener('click', function() {
     
     <div class="columns mt-2"> <!-- Topdelen av layoutet -->
       <div class="column is-half is-offset-1">
-        <p class="has-text-weight-bold"> ${avdelingsNavn.options[avdelingsNavn.selectedIndex].text} <span id="addEmployee" class="button is-pulled-right">[Legg til]</span></p>
+        <p class="has-text-weight-bold"> 
+        ${avdelingsNavn.options[avdelingsNavn.selectedIndex].text} 
+        <span id="addEmployee" class="button is-pulled-right">[Legg til]</span></p>
         <hr style="border-top: 1px solid black;">
       </div>
     </div>
