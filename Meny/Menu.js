@@ -153,7 +153,7 @@ function addPizza() {
 
         pizzaNameCont.innerHTML += `
         <div>
-            <div class="card card-size card-padding ml-6">
+            <div class="card-padding card card-size ">
                 <div class="card-header">
                 <p class="grey-background card-header-title">
                 ${pizzaName}

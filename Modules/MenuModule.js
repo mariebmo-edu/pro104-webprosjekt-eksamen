@@ -22,7 +22,6 @@ const MenuModule = function () {
     const addMenuItem = (newCategory, newImage, newName, newPrice, newDescription, newIngredients, newAllergies) => menu.push({ category: newCategory, image: newImage, name: newName, price: newPrice, description: newDescription, ingredients: newIngredients, allergies: newAllergies })
     const printMenuItem = (menuItem) => {
         return `
-        <div>
             <div class="card card-size card-padding">
                 <div class="card-header">
                     <p class="yellow-background card-header-title">
@@ -32,7 +31,7 @@ const MenuModule = function () {
 
                 <div class="card-image">
                     <figure class="circular-portrait image">
-                        <img src= "../images/menu/${menuItem.image}" "alt="Item">
+                        <img src= "../images/menu/${menuItem.image}" "alt="picture of menu item, ${menuItem.name}">
                     </figure>
                 </div>
 
@@ -53,7 +52,6 @@ const MenuModule = function () {
                 <a href="#" class="card-footer-item">Delete</a>
                 </div>
             </div>    
-        </div>
         `
 
     }
