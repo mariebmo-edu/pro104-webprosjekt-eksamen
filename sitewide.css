@@ -98,6 +98,10 @@ color: white;
     height: 150px;
 }
 
+.card-content-size-250{
+    height: 250px;
+}
+
 .card-size{
     width: 200px;
     height: 100%;
@@ -125,6 +129,12 @@ color: white;
     bottom: 0px;
     width: fit-content;
     height: fit-content;
+}
+
+.information-content-menu{
+    position: absolute;
+    text-align: center;
+    bottom: 60px;
 }
 
 .circular-portrait {

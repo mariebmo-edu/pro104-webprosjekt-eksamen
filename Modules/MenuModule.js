@@ -21,12 +21,25 @@ const MenuModule = function () {
     const getMenuItemByAllergie = (allergie) => menu.filter(menu => menu.allergie === allergie);
     const addMenuItem = (newCategory, newImage, newName, newPrice, newDescription, newIngredients, newAllergies) => menu.push({ category: newCategory, image: newImage, name: newName, price: newPrice, description: newDescription, ingredients: newIngredients, allergies: newAllergies })
     const printMenuItem = (menuItem) => {
+
+        function splitArrays(inp){
+            let stringOutput = ""
+            if(inp === "i"){
+                menuItem.ingredients.forEach(item => {stringOutput += (item + ", ")})
+            }
+            else if(inp === "a"){
+                menuItem.allergies.forEach(item => {stringOutput += (item + ", ")})
+            }
+            
+            return stringOutput.slice(0, stringOutput.length-2);
+        }
+
         return `
             <div class="card card-size card-padding">
                 <div class="card-header">
-                    <p class="yellow-background card-header-title">
+                    <h3 class="yellow-background card-header-title">
                         ${menuItem.name}
-                    </p>
+                    </h3>
                 </div>
 
                 <div class="card-image">
@@ -35,16 +48,25 @@ const MenuModule = function () {
                     </figure>
                 </div>
 
-                <div class="card-content card-content-size card-height">
+                <div class="card-content card-content-size-250 card-height">
+                <p class="">
+                    ${menuItem.description}.
+                </p>
                 <br>
-                <p class="subtitle is-6 has-text-weight-bold">
-                    Beskrivelse: ${menuItem.description}.<br><br> Ingredienser: ${menuItem.ingredients}<br><br>
-                    </p>
-                <p class="has-text-weight-bold">
-                    Allergier: ${menuItem.allergies}
-                </p><br><br>
-                <p class="has-text-weight-bold">
-                    Pris: ${menuItem.price},-</p>
+                <h4 class="has-text-weight-bold">
+                    Ingredienser
+                </h4>
+                <p>${splitArrays("i")}</p>
+                <br>
+
+                <h4 class="has-text-weight-bold">
+                    Allergier
+                </h4>
+                <p>
+                ${splitArrays("a")}
+                </p>
+                <p class="information-content-menu">
+                    ${menuItem.price},-</p>
                 </div>
 
                 <div class="card-footer">
