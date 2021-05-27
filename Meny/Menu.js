@@ -4,6 +4,7 @@ const drinkNameCont = document.querySelector('#Drink');
 const extraNameCont = document.querySelector('#Extra');
 const allergieDropDown = document.querySelector('#allergieDropDown');
 const popUpContainer = document.getElementById("popUpContainer");
+const stocckInput = document.getElementById('#stockInput');
 
 
 
@@ -33,6 +34,7 @@ menuItems.forEach(element => {
 //"SØK NÅ" button with working functions
 document.querySelector('#searchBtn').addEventListener('click', function () {
 
+
     let allergieDropDown = document.querySelector('#allergieDropdown');
     let allergie = allergieDropDown.value;
     allergie = allergie.toLowerCase();
@@ -56,7 +58,54 @@ document.querySelector('#searchBtn').addEventListener('click', function () {
         })
     }
 
+                                    //FILTER START
+
+    //FILTER FOR ALLERGIES
+    let menuArray = [];
+    console.log(menuItems)
+    allergiFilter(menuItems);
+
+    function allergiFilter(Array){
+      for(let i = 0; i < Array.length; i++){
+          if(allergieDropDown.value == "all"){
+                menuArray.push(Array[i]);
+          }
+            for(let j = 0; j<Array[i].allergies.length; j++){
+                if(Array[i].allergies[j].toLowerCase().includes(allergieDropDown.options[allergieDropDown.selectedIndex].text.toLowerCase())){
+          
+                    menuArray.push(Array[i]);
+                  
+                  }
+            }
+        
+      }
+    }
+
+    //Filter for PIZZANAME
+    let nameArray = [];
+    nameFiler(menuArray);
+
+    function nameFiler(Array){
+        for(let i = 0; i < Array.length; i++){
+            if(Array[i].name.toLowerCase().includes(stockInput.value.toLowerCase())){
+                nameArray.push(Array[i]);
+            }
+        }
+    }
+    console.log(nameArray);
+
+    pizzaNameCont.innerHTML = "";
+
+    nameArray.forEach(pizza => {
+
+        pizzaNameCont.innerHTML += MenuModule.printMenuItem(pizza);
+       
+    });
+   
+
+
 });
+                                //FILTER END
 
 //ADD PIZZA FUNCTIONS
 
@@ -108,7 +157,7 @@ function addPizza() {
 
                 <div class="card-image">
                 <figure class="circular-portrait image">
-                <img src= "../images/menu/newPizza.jpg" "alt="OsloPizza">
+                <img src= "../images/menu/newPizza.jpg" "alt="Item">
                 </figure>
                 </div>
 
@@ -181,7 +230,7 @@ function addSoda() {
 
             <div class="card-image">
             <figure class="circular-portrait image">
-            <img src= "../images/menu/newSoda.jpg" "alt="OsloPizza">
+            <img src= "../images/menu/newSoda.jpg" "alt="Item">
             </figure>
             </div>
 
@@ -254,7 +303,7 @@ function addExtra() {
 
             <div class="card-image">
             <figure class="circular-portrait image">
-            <img src= "../images/menu/newExtra.jpg" "alt="OsloPizza">
+            <img src= "../images/menu/newExtra.jpg" "alt="Item">
             </figure>
             </div>
 

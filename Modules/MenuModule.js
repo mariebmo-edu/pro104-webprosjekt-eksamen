@@ -32,7 +32,7 @@ const MenuModule = function () {
 
                 <div class="card-image">
                 <figure class="circular-portrait image">
-                <img src= "../images/menu/${menuItem.image}" "alt="OsloPizza">
+                <img src= "../images/menu/${menuItem.image}" "alt="Item">
                 </figure>
                 </div>
 
