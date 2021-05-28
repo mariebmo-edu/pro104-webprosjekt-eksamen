@@ -49,15 +49,15 @@ function printHTMLCards(array) {
     restaurantWithSale.forEach(restaurant => {
         salesCardContainer.innerHTML += `
         <div class="column is-one-quarter">
-        <div class="card-yellow">
-            <h2 class="card-header title card-title-padding">
+        <div class="card">
+            <div class="card-header title card-title-padding yellow-background">
                 ${restaurant.toUpperCase()}
-            </h2>					
+            </div>					
         </div>
     
         <div class="columns is-multiline">
             <div class="column is-full">
-                <div class="card height-200 center-text has-text-weight-semibold ">
+                <div class="card height-200 center-text has-text-weight-semibold is-size-4">
                     ${returnCorrectObject(array, restaurant).restaurant}
                 </div>
             </div>
