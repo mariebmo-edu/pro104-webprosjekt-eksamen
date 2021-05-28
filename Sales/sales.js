@@ -37,13 +37,13 @@ updateSalesPage();
 salesSearchBtn.onclick = updateSalesPage
 
 
-function updateSalesPage(){
+function updateSalesPage() {
     printHTMLCards(updateSalesInfo());
 }
 
 
 //printer HTML-layoutet til nettsiden, tar inn et array den bruker for de forskjellige elementene.
-function printHTMLCards(array){
+function printHTMLCards(array) {
     salesCardContainer.innerHTML = "";
 
     restaurantWithSale.forEach(restaurant => {
@@ -89,24 +89,26 @@ function printHTMLCards(array){
 
 
 //returnerer et objekt som en string
-function printObject(obj){
+function printObject(obj) {
     let output = ""
-    Object.entries(obj).filter((arr) => arr[1] != 0).forEach(([a,b]) => {output+= `${a} : ${b} <br>`})
+    Object.entries(obj).filter((arr) => arr[1] != 0).forEach(([a, b]) => { output += `${a} : ${b} <br>` })
     return output
 }
 
 //returnerer riktig objekt basert på restaurantnavnet
-function returnCorrectObject(arr, restaurant){
+function returnCorrectObject(arr, restaurant) {
     let selectedObj = {}
-    arr.forEach(obj => {if (obj.restaurant.toLowerCase() === restaurant.toLowerCase()){
-        selectedObj = obj;
-        console.log(obj)
-    }})
+    arr.forEach(obj => {
+        if (obj.restaurant.toLowerCase() === restaurant.toLowerCase()) {
+            selectedObj = obj;
+            console.log(obj)
+        }
+    })
     return selectedObj;
 }
 
 //oppdaterer salgsinformasjonen basert på til og fra-dato
-function updateSalesInfo(){
+function updateSalesInfo() {
     const fromDateValue = new Date(fromDateSales.value);
     const toDateValue = new Date(toDateSales.value);
     let salesInfo = []
@@ -121,11 +123,11 @@ function updateSalesInfo(){
         })
 
         //laget et tomt objekt med nullstilte verdier 
-        let tempObj = {restaurant, transactions:0, itemsSold:initItemSold, earnings:0}
+        let tempObj = { restaurant, transactions: 0, itemsSold: initItemSold, earnings: 0 }
 
         //for hvert salg sjekkes det om det er innenfor valgte datoer, og i den valgte restauranten. Hvis den er det legges plusses verdiene til det tomme arrayet
         allSales.forEach(sale => {
-            if(sale.date >= fromDateValue && sale.date <= toDateValue && sale.restaurant == restaurant){
+            if (sale.date >= fromDateValue && sale.date <= toDateValue && sale.restaurant == restaurant) {
                 tempObj.transactions += sale.transactions;
                 tempObj.earnings += sale.earnings;
 
@@ -134,16 +136,16 @@ function updateSalesInfo(){
 
                 //for hver item i arrayet, ser man om temp-objektets nøkkel eksisterer, og hvis det gjør det plusses verdien på verdien som er i salget.
                 items.forEach(key => {
-                    if(Object.keys(tempObj.itemsSold).indexOf(key)!=-1){
+                    if (Object.keys(tempObj.itemsSold).indexOf(key) != -1) {
                         tempObj.itemsSold[key] += sale.itemsSold[key]
                     }
-                })              
+                })
             }
         })
 
         //legger til tempObj i salesInfo-arrayet
-        salesInfo.push(tempObj)  
+        salesInfo.push(tempObj)
     })
     //returnerer salesInfo-arrayet med salgsdata for alle transaksjoner innen gitt tidsrom
- return salesInfo;
+    return salesInfo;
 }
