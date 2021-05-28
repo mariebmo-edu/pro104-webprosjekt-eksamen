@@ -36,7 +36,7 @@
 
 
                 <!-- RIGHT SIDE OF DASHBOARD -->
-                <div class="column is-6 right-side">
+                <div class="column is-6 right-side" id="right">
 
                     <div class="box yellow-background">
                         <h2 class="title">Salg</h2>
@@ -80,45 +80,7 @@
                             </div>
 
                             <canvas id="myChart" width="400" height="200"></canvas>
-                            <script>
 
-                                const labels = [
-                                    'January',
-                                    'February',
-                                    'March',
-                                    'April',
-                                    'May',
-                                    'June',
-                                ];
-                                const data = {
-                                    labels: labels,
-                                    datasets: [{
-                                        label: 'Salg',
-                                        backgroundColor: 'rgb(255, 99, 132)',
-                                        borderColor: 'rgb(255, 99, 132)',
-                                        data: [0, 10, 5, 2, 20, 30, 45],
-                                    }]
-                                };
-                                const config = {
-                                    type: 'line',
-                                    data,
-                                    options: {}
-                                };
-
-                                var myChart = new Chart(
-                                    document.getElementById('myChart'),
-                                    config
-                                );
-                            </script>
-
-                        </div>
-                    </div>
-
-                    <div class="card mt-5">
-                        <div class="card-content">
-                            <div class="content">
-                                <h2>i dont know whats going here</h2>
-                            </div>
                         </div>
                     </div>
                 </div>

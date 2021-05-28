@@ -11,6 +11,7 @@ let notifications = NotificationModule.getAllNotifications();
 let restaurants = AddressModule.getAllAddresses();
 
 let leftsideHTML = ``;
+let rightsideHTML = ``;
 
 leftsideHTML += `<div class="card restaurants mb-5">
                         <div class="card-header card-title-padding title yellow-background">
@@ -32,7 +33,7 @@ leftsideHTML += `
                             </div>
                 </div>
 
-                <div class="card">
+                <div class="card mt-5">
                     <div class="card-header card-title-padding title yellow-background">Ansatte</div>
                     <div class="card-content">
                                     <div class="content">
@@ -48,9 +49,9 @@ leftsideHTML += `
                                         <p>Julie jul</p>
                                     </div>
                                 </div>
-                </div>
+                </div>`;
 
-                <div class="card">
+rightsideHTML += `<div class="card mt-5">
                     <div class="card-header card-title-padding title yellow-background">Kampanjer</div>
                     <div class="card-content">
                         <div class="content">
@@ -63,3 +64,32 @@ leftsideHTML += `
 
 
 document.getElementById("left").innerHTML = leftsideHTML;
+document.getElementById("right").innerHTML += rightsideHTML;
+
+const labels = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+];
+const data = {
+    labels: labels,
+    datasets: [{
+        label: 'Salg',
+        backgroundColor: 'rgb(255, 99, 132)',
+        borderColor: 'rgb(255, 99, 132)',
+        data: [0, 10, 5, 2, 20, 30, 45],
+    }]
+};
+const config = {
+    type: 'line',
+    data,
+    options: {}
+};
+
+var myChart = new Chart(
+    document.getElementById('myChart'),
+    config
+);
