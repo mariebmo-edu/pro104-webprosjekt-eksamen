@@ -1,24 +1,25 @@
-const NotificationModule = function(){
+const NotificationModule = function () {
 
     const notification = [
-        {date: new Date("2021-06-01"), restaurant:"Oslo", message:"Kjøleskap byttes"},
-        {date: new Date("2021-06-02"), restaurant:"Bergen", message:"Ny ansatt (daglig leder) Julie Julie starter"},
-        {date: new Date("2021-06-04"), restaurant:"Oslo", message:"Ny kampanje setter i gang (To for To Torsdag)"},
-        {date: new Date("2021-06-05"), restaurant:"Kristiansand", message:"Ansatt (kokk) Bob Bob slutter"},
-        {date: new Date("2021-06-05"), restaurant:"Oslo", message:"Sommervikar Trine Trine starter"},
-        {date: new Date("2021-06-08"), restaurant:"Oslo", message:"Kampanje Tacotorsdag slutter"},
-        {date: new Date("2021-06-08"), restaurant:"Stavanger", message:""},
-        {date: new Date("2021-06-13"), restaurant:"Stavanger", message:""},
-        {date: new Date("2021-06-16"), restaurant:"Oslo", message:""},
-        {date: new Date("2021-06-16"), restaurant:"Oslo", message:""}
+        { date: new Date("2021-06-01"), restaurant: "Oslo", message: "Kjøleskap byttes" },
+        { date: new Date("2021-06-02"), restaurant: "Bergen", message: "Ny ansatt (daglig leder) Julie Julie starter" },
+        { date: new Date("2021-06-04"), restaurant: "Oslo", message: "Ny kampanje setter i gang (To for To Torsdag)" },
+        { date: new Date("2021-06-05"), restaurant: "Kristiansand", message: "Ansatt (kokk) Bob Bob slutter" },
+        { date: new Date("2021-06-05"), restaurant: "Oslo", message: "Sommervikar Trine Trine starter" },
+        { date: new Date("2021-06-08"), restaurant: "Oslo", message: "Kampanje Tacotorsdag slutter" },
+        { date: new Date("2021-06-08"), restaurant: "Stavanger", message: "" },
+        { date: new Date("2021-06-13"), restaurant: "Stavanger", message: "" },
+        { date: new Date("2021-06-16"), restaurant: "Oslo", message: "" },
+        { date: new Date("2021-06-16"), restaurant: "Oslo", message: "" }
 
     ]
 
-    const getAllNotifications =()=> notification;
-    const getNotificationByRestaurant =(restaurant)=> notification.filter(notification => notification.restaurant.toLowerCase() === restaurant.toLowerCase());
-    const getNotificationByDate =(date)=> notification.filter(notification => notification.date.toString === date);
-    const addNotification =(newDate, newRestaurant, newMessage) => notification.push({date: new Date(newDate), restaurant:newRestaurant, message:newMessage})
-    const printNotificationItem =(notificationItem)=> {return `
+    const getAllNotifications = () => notification;
+    const getNotificationByRestaurant = (restaurant) => notification.filter(notification => notification.restaurant.toLowerCase() === restaurant.toLowerCase());
+    const getNotificationByDate = (date) => notification.filter(notification => notification.date.toString === date);
+    const addNotification = (newDate, newRestaurant, newMessage) => notification.push({ date: new Date(newDate), restaurant: newRestaurant, message: newMessage })
+    const printNotificationItem = (notificationItem) => {
+        return `
    
         <div class="column is-full">
             <div class="columns">
@@ -30,9 +31,9 @@ const NotificationModule = function(){
                 </div>
             </div>
         </div>
-        `} 
+        `}
 
-        return{getAllNotifications, getNotificationByRestaurant, getNotificationByDate, printNotificationItem, addNotification}
+    return { getAllNotifications, getNotificationByRestaurant, getNotificationByDate, printNotificationItem, addNotification }
 }()
 
 export default NotificationModule;

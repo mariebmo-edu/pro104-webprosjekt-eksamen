@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="../sitewide.css">
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.3.0/dist/chart.min.js"></script>
-    <script type="module" src="dashboard.js"></script>
 </head>
 
 <body>
@@ -30,158 +29,7 @@
 
 
                 <!-- LEFT SIDE OF DASHBOARD -->
-                <div class="column is-6 left-side pl-6">
-
-
-                    <div class="box yellow-background">
-                        <h2 class="title">Notifications</h2>
-                    </div>
-
-                    <!-- ONE LOCATION NOTIFCICATION -->
-                    <div class="card Oslo mb-5">
-                        <div class="card-header card-title-padding title yellow-background">
-                            Oslo
-                        </div>
-                        <div class="card-content border-between-grey columns">
-                            <div class="column is-5">
-                                <div class="content">
-                                    <h5 class="subtitle">Nyansatt</h5>
-                                    <p>Julie jul</p>
-                                </div>
-                                <div class="content">
-                                    <h5 class="subtitle">Sykemeldt</h5>
-                                    <p>Julie jul</p>
-                                </div>
-                                <div class="content">
-                                    <h5 class="subtitle">Sluttet</h5>
-                                    <p>Julie jul</p>
-                                </div>
-                            </div>
-                            <div class="column is-3">
-                                <div class="content">
-                                    <p>Nytt drit</p>
-                                    <p>Nytt drit</p>
-                                    <p>Nytt drit</p>
-                                </div>
-                            </div>
-                            <div class="column is-4">
-                                <div class="content">
-                                    <h5 class="subtitle">Nåværende kampanjer</h5>
-                                    <p>Pizza og kos 199.-</p>
-                                    <p>Netflix and chilli 149.-</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card Oslo mb-5">
-                        <div class="card-header card-title-padding title yellow-background">
-                            Oslo
-                        </div>
-                        <div class="card-content border-between-grey columns">
-                            <div class="column is-5">
-                                <div class="content">
-                                    <h5 class="subtitle">Nyansatt</h5>
-                                    <p>Julie jul</p>
-                                </div>
-                                <div class="content">
-                                    <h5 class="subtitle">Sykemeldt</h5>
-                                    <p>Julie jul</p>
-                                </div>
-                                <div class="content">
-                                    <h5 class="subtitle">Sluttet</h5>
-                                    <p>Julie jul</p>
-                                </div>
-                            </div>
-                            <div class="column is-3">
-                                <div class="content">
-                                    <p>Nytt drit</p>
-                                    <p>Nytt drit</p>
-                                    <p>Nytt drit</p>
-                                </div>
-                            </div>
-                            <div class="column is-4">
-                                <div class="content">
-                                    <h5 class="subtitle">Nåværende kampanjer</h5>
-                                    <p>Pizza og kos 199.-</p>
-                                    <p>Netflix and chilli 149.-</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="card Oslo mb-5">
-                        <div class="card-header title card-title-padding yellow-background">
-                            Oslo
-                        </div>
-                        <div class="card-content border-between-grey columns">
-                            <div class="column is-5">
-                                <div class="content">
-                                    <h5 class="subtitle">Nyansatt</h5>
-                                    <p>Julie jul</p>
-                                </div>
-                                <div class="content">
-                                    <h5 class="subtitle">Sykemeldt</h5>
-                                    <p>Julie jul</p>
-                                </div>
-                                <div class="content">
-                                    <h5 class="subtitle">Sluttet</h5>
-                                    <p>Julie jul</p>
-                                </div>
-                            </div>
-                            <div class="column is-3">
-                                <div class="content">
-                                    <p>Nytt drit</p>
-                                    <p>Nytt drit</p>
-                                    <p>Nytt drit</p>
-                                </div>
-                            </div>
-                            <div class="column is-4">
-                                <div class="content">
-                                    <h5 class="subtitle">Nåværende kampanjer</h5>
-                                    <p>Pizza og kos 199.-</p>
-                                    <p>Netflix and chilli 149.-</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card Oslo mb-5">
-                        <div class="card-header title card-title-padding yellow-background">
-                            Oslo
-                        </div>
-                        <div class="card-content border-between-grey columns">
-                            <div class="column is-5">
-                                <div class="content">
-                                    <h5 class="subtitle">Nyansatt</h5>
-                                    <p>Julie jul</p>
-                                </div>
-                                <div class="content">
-                                    <h5 class="subtitle">Sykemeldt</h5>
-                                    <p>Julie jul</p>
-                                </div>
-                                <div class="content">
-                                    <h5 class="subtitle">Sluttet</h5>
-                                    <p>Julie jul</p>
-                                </div>
-                            </div>
-                            <div class="column is-3">
-                                <div class="content">
-                                    <p>Nytt drit</p>
-                                    <p>Nytt drit</p>
-                                    <p>Nytt drit</p>
-                                </div>
-                            </div>
-                            <div class="column is-4">
-                                <div class="content">
-                                    <h5 class="subtitle">Nåværende kampanjer</h5>
-                                    <p>Pizza og kos 199.-</p>
-                                    <p>Netflix and chilli 149.-</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="column is-6 left-side pl-6" id="left">
 
                 </div>
 
@@ -283,6 +131,8 @@
 
 
     </div>
+
+    <script type="module" src="dashboard.js"></script>
 
 </body>
 
