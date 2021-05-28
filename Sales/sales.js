@@ -57,8 +57,14 @@ function printHTMLCards(array) {
     
         <div class="columns is-multiline">
             <div class="column is-full">
-                <div class="card height-200 center-text has-text-weight-semibold is-size-4">
-                    ${returnCorrectObject(array, restaurant).restaurant}
+                <div class="card height-200">
+                    <canvas id="myChart" width="10" height="6"></canvas>
+                </div>
+            </div>
+            <div class="column is-full">
+                <div class="card height-50 center-text">
+                <p class="has-text-weight-semibold">Antall transaksjoner:</p>
+                ${returnCorrectObject(array, restaurant).transactions}
                 </div>
             </div>
             <div class="column is-full">
@@ -68,18 +74,15 @@ function printHTMLCards(array) {
                 </div>
             </div>
             <div class="column is-full">
-                <div class="card height-50 center-text">
-                ${returnCorrectObject(array, restaurant).transactions}
-                </div>
-            </div>
-            <div class="column is-full">
-                <div class="card height-100 center-text">
-                ${returnCorrectObject(array, restaurant).earnings}
+                <div class="card height-100 center-text green-background">
+                <br>
+                <p class="has-text-weight-semibold">Inntekter NOK:</p>
+                ${returnCorrectObject(array, restaurant).earnings},-
                 </div>
             </div>
             <div class="column is-full">
                 <div class="card height-50 center-text">
-                    hello
+                    Uforutsette utgifter:
                 </div>
             </div>
         </div>
@@ -91,7 +94,7 @@ function printHTMLCards(array) {
 //returnerer et objekt som en string
 function printObject(obj) {
     let output = ""
-    Object.entries(obj).filter((arr) => arr[1] != 0).forEach(([a, b]) => { output += `${a} : ${b} <br>` })
+    Object.entries(obj).filter((arr) => arr[1] != 0).forEach(([a, b]) => { output += `<b>${a}</b> : ${b} <br>` })
     return output
 }
 
@@ -149,3 +152,26 @@ function updateSalesInfo() {
     //returnerer salesInfo-arrayet med salgsdata for alle transaksjoner innen gitt tidsrom
     return salesInfo;
 }
+
+var ctx = document.getElementById('myChart').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ['Mandag', 'Tirsdag', 'Onsdag', 'Torsdag', 'Fredag', 'Lørdag', 'Søndag'],
+        datasets: [{
+            label: 'Antall transaksjoner',
+            data: [38,42 ,58, 51, 102, 203, 152],
+            backgroundColor: ['rgba(255, 99, 132, 0.2)'],
+            borderColor: [''],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+
