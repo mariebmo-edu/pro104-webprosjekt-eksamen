@@ -13,11 +13,7 @@ let restaurants = AddressModule.getAllAddresses();
 let leftsideHTML = ``;
 let rightsideHTML = ``;
 
-leftsideHTML += `<div class="card restaurants mb-5">
-                        <div class="card-header card-title-padding title yellow-background">
-                            Notifications!
-                        </div>
-                </div>
+leftsideHTML += `
                 <div class="card">
                     <div class="card-header card-title-padding title yellow-background">Notes</div>
                     <div class="card-content">
