@@ -69,7 +69,7 @@ function updateWebpage(locationName){
         var sales = SalesModule.getSalesByRestaurant(locationName);
         var campaigns = CampaignModule.getAllCampaigns();
         var topSales = ""
-        
+
         if(sales.length != 0){
              topSales = Object.keys(sales[0].itemsSold);
         }
@@ -135,7 +135,7 @@ function addRestaurant(){
     popUpContainer.innerHTML = newRestaurantPopup();
 
     //gjør bakgrunnen litt fadet
-    popUpContainer.style.backgroundColor = "rgba(255, 255, 255, 0.7)"
+    popUpContainer.style.backgroundColor = "rgba(0, 0, 0, 0.7)"
 
     document.querySelectorAll("#submitRestaurantPopUpBtn").forEach(button => {
         button.addEventListener("click", (b)=>{
