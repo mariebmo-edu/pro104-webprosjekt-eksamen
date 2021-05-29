@@ -38,6 +38,8 @@ function updateSalesPage() {
 	printHTMLCards(updateSalesInfo());
 }
 
+
+
 //returnerer et objekt som en string
 function printObject(obj) {
 	let output = "";
@@ -55,7 +57,6 @@ function returnCorrectObject(arr, restaurant) {
 	arr.forEach((obj) => {
 		if (obj.restaurant.toLowerCase() === restaurant.toLowerCase()) {
 			selectedObj = obj;
-			console.log(obj);
 		}
 	});
 	return selectedObj;
@@ -64,9 +65,7 @@ function returnCorrectObject(arr, restaurant) {
 //printer HTML-layoutet til nettsiden, tar inn et array den bruker for de forskjellige elementene.
 function printHTMLCards(array) {
 	salesCardContainer.innerHTML = "";
-    
 
-	console.log(restaurantWithSale);
 	restaurantWithSale.forEach((restaurant) => {
         const resturantObject = returnCorrectObject(array, restaurant);
 		salesCardContainer.innerHTML += `

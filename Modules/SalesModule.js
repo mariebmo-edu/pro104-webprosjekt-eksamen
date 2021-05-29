@@ -18,7 +18,54 @@ const SalesModule = function(){
 
 
     const addSale = (newDate, newRestaurant, newTransactions, newEarnings) => sales.push({date: new Date(newDate), restaurant:newRestaurant, transactions:newTransactions, earnings:newEarnings})
-    const printSalesItem =(salesItem)=> {return `
+    const printSalesItem =(salesItem)=> {
+
+        //returnerer et objekt som en string
+function printObject(obj) {
+	let output = "";
+	Object.entries(obj)
+		.filter((arr) => arr[1] != 0)
+		.forEach(([a, b]) => {
+			output += `<b>${a}</b> : ${b} <br>`;
+		});
+	return output;
+}
+
+        return `
+
+    <div class="column is-full">
+        <div class="columns is-multiline">
+            <div class="column is-full">
+                <div class="card height-200">
+                    <canvas id="myChart${salesItem.restaurant}" width="10" height="6"></canvas>
+                </div>
+            </div>
+            <div class="column is-full">
+                <div class="card height-50 center-text">
+                <p class="has-text-weight-semibold">Antall transaksjoner:</p>
+                ${salesItem.transactions}
+                </div>
+            </div>
+            <div class="column is-full">
+                <div class="card height-200 center-text">
+                <br>
+                ${printObject(salesItem.itemsSold)}
+                </div>
+            </div>
+            <div class="column is-full">
+                <div class="card height-100 center-text green-background">
+                <br>
+                <p class="has-text-weight-semibold">Inntekter NOK:</p>
+                ${salesItem.earnings},-
+                </div>
+            </div>
+            <div class="column is-full">
+                <div class="card height-50 center-text">
+                    Uforutsette utgifter:
+                </div>
+            </div>
+        </div>
+    </div>
    
         `} 
 

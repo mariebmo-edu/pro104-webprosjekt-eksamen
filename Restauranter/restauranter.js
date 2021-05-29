@@ -2,7 +2,8 @@ import AnsattModule from "../Modules/AnsattModule.js";
 import NotificationModule from "../Modules/NotificationModule.js"
 import AddressModule from "../Modules/AddressModule.js"
 import LayoutModule from "../Modules/LayoutModule.js"
-
+import SalesModule from "../Modules/SalesModule.js"
+import CampaignModule from "../Modules/CampaignModule.js"
 
 
 //HTML-elements
@@ -11,9 +12,10 @@ const storeButtonContainer = document.getElementById("storeButtonContainer");
 const ansattCardContainer = document.getElementById("ansattCardContainer");
 const notificationCardContainer = document.getElementById("notificationCardContainer")
 const addressCardContainer = document.getElementById("AddressCardContainer");
+const salesCardContainer = document.getElementById("salesCardContainer");
+const campaignCardContainer = document.getElementById("campaignCardContainer");
+const topListCardContainer = document.getElementById("topListCardContainer");
 const popUpContainer = document.getElementById("popUpContainer");
-
-
 
 //variables
 let selectedLocation = "Oslo";
@@ -64,11 +66,20 @@ function updateWebpage(locationName){
         var employees = AnsattModule.getEmployeeByRestaurant(locationName);
         var notifications = NotificationModule.getNotificationByRestaurant(locationName)
         var address = AddressModule.getAddressByRestaurant(locationName);
+        var sales = SalesModule.getSalesByRestaurant(locationName);
+        var campaigns = CampaignModule.getAllCampaigns();
+        var topSales = Object.keys(sales[0].itemsSold);
+
+        console.log(campaigns)
 
         //nullstiller HTML
         ansattCardContainer.innerHTML = "";
         notificationCardContainer.innerHTML = "";
         addressCardContainer.innerHTML = "";
+        salesCardContainer.innerHTML = "";
+        campaignCardContainer.innerHTML = "";
+        topListCardContainer.innerHTML = "";
+
 
         //legger til adresse
         address.forEach(address => {
@@ -84,6 +95,27 @@ function updateWebpage(locationName){
         notifications.forEach(notification => {
             notificationCardContainer.innerHTML += NotificationModule.printNotificationItem(notification);
         });
+
+        //legger til salg
+        sales.forEach(sale => {
+
+            if(salesCardContainer.innerHTML === ""){
+                salesCardContainer.innerHTML += SalesModule.printSalesItem(sale);
+            }
+        })
+
+        //legger til kampanjer
+        campaigns.forEach(campaign => {
+            campaignCardContainer.innerHTML += CampaignModule.printCampaign(campaign)
+        })
+
+
+        //legger til toppsalg for restaurant
+        topSales.forEach(sale => topListCardContainer.innerHTML += `
+        <div class="ranking-info-card card column is-full">
+            ${sale}
+        </div>`)
+        
 
         //oppdaterer knapper
         addStoreButtons();
