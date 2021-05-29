@@ -10,7 +10,7 @@ document.querySelector('#loginBtn').addEventListener('click', function() {
     const password = document.querySelector('#passwordField').value;
 
     if(username == adminbrukernavn && password == adminpassord){
-        window.location.replace("https://www.google.com/search?q=scarlett+johansson");
+        window.location.replace("../Dashboard/dashboard.html");
     } else{
         alert("Incorret brukernavn eller passord");
         
