@@ -68,9 +68,13 @@ function updateWebpage(locationName){
         var address = AddressModule.getAddressByRestaurant(locationName);
         var sales = SalesModule.getSalesByRestaurant(locationName);
         var campaigns = CampaignModule.getAllCampaigns();
-        var topSales = Object.keys(sales[0].itemsSold);
+        var topSales = ""
+        
+        if(sales.length != 0){
+             topSales = Object.keys(sales[0].itemsSold);
+        }
+        
 
-        console.log(campaigns)
 
         //nullstiller HTML
         ansattCardContainer.innerHTML = "";
@@ -111,10 +115,12 @@ function updateWebpage(locationName){
 
 
         //legger til toppsalg for restaurant
+        if(topSales.length != 0){
         topSales.forEach(sale => topListCardContainer.innerHTML += `
         <div class="ranking-info-card card column is-full">
             ${sale}
         </div>`)
+    }
         
 
         //oppdaterer knapper
@@ -127,30 +133,78 @@ function updateWebpage(locationName){
 function addRestaurant(){
 
     popUpContainer.innerHTML = newRestaurantPopup();
+
+    //gjør bakgrunnen litt fadet
+    popUpContainer.style.backgroundColor = "rgba(255, 255, 255, 0.7)"
+
     document.querySelectorAll("#submitRestaurantPopUpBtn").forEach(button => {
         button.addEventListener("click", (b)=>{
             addNewAddress();
             
         })
     })
-    
+
+    document.querySelectorAll("#closePopUpIcon").forEach(button => {
+        button.addEventListener("click", (b) =>{
+            popUpContainer.innerHTML = ""
+            popUpContainer.style.backgroundColor = "rgba(255, 255, 255, 0)"
+        })
+    })
 }
+
+
 
 
 //pop-up som genereres når knappen trykkes på
 function newRestaurantPopup(){
 
-    return `<div class="card pop-up-card">
-        <div class="title card-title-padding card-header">
+    return `<div class="card pop-up-card clickable">
+                <button id="closePopUpIcon" alt="lukk pop-up knapp" class="right-align hidden-button">
+                    <i class="bi bi-x-circle"></i>
+                </button>
+        <div class="title yellow-background card-title-padding card-header">
+        
             ADD RESTAURANT
+            
         </div>
         <div class="card-content">
-            <input type="text" id="locationNamePopUpInput" placeholder="Restaurant" value="Lofoten" class="input">
-            <input type="text" id="streetPopUpInput" placeholder="Gatenavn" value="Lofotveien 123" class="input">
-            <input type="text" id="postalPopUpInput" placeholder="Postkode" value="4567" class="input">
-            <input type="text" id="cityPopUpInput" placeholder="By" value="Lofoten" class="input">
-            <input type="text" id="phonePopUpInput" placeholder="Mobilnummer" value="+48 673 82 938" class="input">
-            <button id="submitRestaurantPopUpBtn" value="submitNewRestaurant" class="button">SUBMIT</button>
+            <p>
+                Restaurantnavn
+            </p>
+            
+            <input type="text" id="locationNamePopUpInput" placeholder="Restaurant" value="Lofoten" class="input-width-300 input">
+            <br>
+            <br>
+
+            <p>
+                Gatenavn
+            </p>
+            <input type="text" id="streetPopUpInput" placeholder="Gatenavn" value="Lofotveien 123" class="input-width-300 input">
+            <br>
+            <br>
+
+            <p>
+                Postkode
+            </p>
+            <input type="text" id="postalPopUpInput" placeholder="Postkode" value="4567" class="input-width-300 input">
+            <br>
+            <br>
+
+            <p>
+                By
+            </p>
+            <input type="text" id="cityPopUpInput" placeholder="By" value="Lofoten" class="input-width-300 input">
+            <br>
+            <br>
+
+            <p>
+                Telefon
+            </p>
+            <input type="text" id="phonePopUpInput" placeholder="Mobilnummer" value="+48 673 82 938" class="input-width-300 input">
+            <br>
+            <br>
+
+            <button id="submitRestaurantPopUpBtn" value="submitNewRestaurant" class="green-background button">SUBMIT</button>
         </div>
     </div>`
 
@@ -173,5 +227,6 @@ function addNewAddress(){
     addStoreButtons();
     updateWebpage(locationNamePopUp);
     popUpContainer.innerHTML = ""
+    popUpContainer.style.backgroundColor = "rgba(255, 255, 255, 0)"
 
 }

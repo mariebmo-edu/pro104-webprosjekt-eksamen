@@ -46,11 +46,13 @@ body {
 color: white;
 }
 
+
+
 .pop-up-card {
     z-index: 1001;
-    position: fixed;
-
-}
+    width: 400px;
+    position: relative;
+    margin: auto}
 
 .project-button {
     border: none;
@@ -121,6 +123,27 @@ color: white;
 
 .card-padding {
     margin: 10px;
+}
+
+.clickable {
+    pointer-events: visible;
+}
+
+.right-align {
+    position: absolute;
+    right: 0px;
+    top: 2px;
+}
+
+.hidden-button {
+    background-color: rgba(0,0,0,0);
+    border: none
+}
+
+
+
+.input-width-300 {
+    width: 200px;
 }
 
 .information-content {
