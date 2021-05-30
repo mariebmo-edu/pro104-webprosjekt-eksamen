@@ -34,6 +34,10 @@ body {
     margin-bottom: 20px;
 }
 
+.card{
+    color: #000000;
+}
+
 .topbar {
     position: fixed;
     z-index: 1000;
