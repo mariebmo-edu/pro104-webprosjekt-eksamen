@@ -1,11 +1,11 @@
 const MenuModule = function () {
 
     const menu = [
-        { category: "Pizza", image: "pizza_00.jpg", name: "OsloPizza", price: 199.99, description: "pizza med tomatsaus, ost, kebabkjøtt og mais", ingredients: ["kebabkjøtt", "ost", "tomatsaus"], allergies: ["hvete","melk","nøtter"] },
-        { category: "Pizza", image: "pizza_01.jpg", name: "Hawaii", price: 149.99, description: "pizza med tomatsaus, ost, ananas, løk og kylling", ingredients: ["kebabkjøtt", "ost", "tomatsaus"], allergies: ["hvete","melk"] },
-        { category: "Pizza", image: "pizza_02.jpg", name: "Pepperoni", price: 159.99, description: "pizza med tomatsaus, ost og pepperoni", ingredients: ["kebabkjøtt", "ost", "tomatsaus"], allergies: ["melk","nøtter"] },
-        { category: "Pizza", image: "pizza_03.jpg", name: "Skinke", price: 149.99, description: "pizza med tomatsaus, ost og skinke", ingredients: ["kebabkjøtt", "ost", "tomatsaus"], allergies: ["hvete","melk"] },
-        { category: "Pizza", image: "pizza_04.jpg", name: "Maragrita", price: 129.99, description: "pizza med tomatsaus og ost", ingredients: ["kebabkjøtt", "ost", "tomatsaus"], allergies: ["hvete","melk"] },
+        { category: "Pizza", image: "pizza_00.jpg", name: "OsloPizza", price: 199.99, description: "pizza med tomatsaus, ost, kebabkjøtt og mais", ingredients: ["kebabkjøtt", "ost", "tomatsaus"], allergies: ["hvete", "melk", "nøtter"] },
+        { category: "Pizza", image: "pizza_01.jpg", name: "Hawaii", price: 149.99, description: "pizza med tomatsaus, ost, ananas, løk og kylling", ingredients: ["kebabkjøtt", "ost", "tomatsaus"], allergies: ["hvete", "melk"] },
+        { category: "Pizza", image: "pizza_02.jpg", name: "Pepperoni", price: 159.99, description: "pizza med tomatsaus, ost og pepperoni", ingredients: ["kebabkjøtt", "ost", "tomatsaus"], allergies: ["melk", "nøtter"] },
+        { category: "Pizza", image: "pizza_03.jpg", name: "Skinke", price: 149.99, description: "pizza med tomatsaus, ost og skinke", ingredients: ["kebabkjøtt", "ost", "tomatsaus"], allergies: ["hvete", "melk"] },
+        { category: "Pizza", image: "pizza_04.jpg", name: "Maragrita", price: 129.99, description: "pizza med tomatsaus og ost", ingredients: ["kebabkjøtt", "ost", "tomatsaus"], allergies: ["hvete", "melk"] },
         { category: "Pizza", image: "pizza_00.jpg", name: "Meat heaven", price: 299.99, description: "pizza med kebabkjøtt og ost", ingredients: ["kebabkjøtt", "ost", "tomatsaus"], allergies: ["hvete"] },
         { category: "Drink", image: "cola.jpg", name: "0.5L Coca Cola", price: 29.99, description: "Coca Cola", ingredients: [], allergies: [] },
         { category: "Drink", image: "zero.jpg", name: "0.5L Coca Cola Zero", price: 29.99, description: "Coca Cola Zero", ingredients: [], allergies: [] },
@@ -22,16 +22,16 @@ const MenuModule = function () {
     const addMenuItem = (newCategory, newImage, newName, newPrice, newDescription, newIngredients, newAllergies) => menu.push({ category: newCategory, image: newImage, name: newName, price: newPrice, description: newDescription, ingredients: newIngredients, allergies: newAllergies })
     const printMenuItem = (menuItem) => {
 
-        function splitArrays(inp){
+        function splitArrays(inp) {
             let stringOutput = ""
-            if(inp === "i"){
-                menuItem.ingredients.forEach(item => {stringOutput += (item + ", ")})
+            if (inp === "i") {
+                menuItem.ingredients.forEach(item => { stringOutput += (item + ", ") })
             }
-            else if(inp === "a"){
-                menuItem.allergies.forEach(item => {stringOutput += (item + ", ")})
+            else if (inp === "a") {
+                menuItem.allergies.forEach(item => { stringOutput += (item + ", ") })
             }
-            
-            return stringOutput.slice(0, stringOutput.length-2);
+
+            return stringOutput.slice(0, stringOutput.length - 2);
         }
 
         return `
@@ -71,7 +71,7 @@ const MenuModule = function () {
 
                 <div class="card-footer">
                 <a href="#" class="card-footer-item">Edit</a>
-                <a href="#" class="card-footer-item">Delete</a>
+                <a href="#" class="card-footer-item" >Delete</a>
                 </div>
             </div>    
         `
