@@ -2,15 +2,9 @@ body {
     min-height: 100vh;
     background-color: #f6f6f6;
 }
-
-.light-grey-background{
-    background-color: #f6f6f6;
-}
-
-.transparant-background{
-    background-color: #ffffff00;
-}
-
+/*------------------*/
+/*SHARED UI ELEMENTS*/
+/*------------------*/
 
 .sidebar {
     position: fixed;
@@ -34,10 +28,6 @@ body {
     margin-bottom: 20px;
 }
 
-.card{
-    color: #000000;
-}
-
 .topbar {
     position: fixed;
     z-index: 1000;
@@ -45,6 +35,114 @@ body {
     height: 80px;
     background: #ffd028;
 }
+
+/*--------------*/
+/*CARD SPESIFICS*/
+/*--------------*/
+.card{
+    color: #000000;
+}
+
+.card-content-size{
+    height: 150px;
+}
+
+.card-content-size-250{
+    height: 250px;
+}
+
+.card-size{
+    width: 200px;
+    height: 100%;
+}
+
+.card-title-padding {
+    padding: 0.5em;
+}
+
+.card-height{
+    height: 400px;
+}
+
+.card-padding {
+    margin: 10px;
+}
+
+/*-----------------*/
+/*BACKGROUND COLORS*/
+/*-----------------*/
+.light-grey-background{
+    background-color: #f6f6f6;
+}
+
+.transparant-background{
+    background-color: #ffffff00;
+}
+
+/*Used for daglig-leder, ok/yes/valid-type of answers*/
+.green-background {
+    background-color: #7fc576;
+}
+
+/*primary website color*/
+.yellow-background {
+    background-color: #ffd028;
+}
+
+/*used for no/error/alert-type of notices, as well as sick-leave*/
+.red-background {
+    background-color: #FF6161;
+}
+
+.grey-background{
+    background-color: #d1d1d1;
+}
+/*----------------*/
+/*WIDTH AND HEIGHT*/
+/*----------------*/
+
+.full-height {
+    height: 100%;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.list-module {
+    width: 100%;
+}
+
+.input-width-300 {
+    width: 200px;
+}
+
+.height-200{
+    height: 200px;
+}
+
+.height-100{
+    height: 100px;
+}
+
+.height-50 {
+    height:50px;
+}
+
+/*------------------*/
+/*MARGIN AND PADDING*/
+/*------------------*/
+.margin-20 {
+    margin: 20px;
+}
+
+.no-padding {
+    padding: 0px;
+}
+
+/*----*/
+/*MISC*/
+/*----*/
 
 .admin-pannel {
     margin-left: 60px;
@@ -58,8 +156,6 @@ body {
 .icon:hover{
 color: white;
 }
-
-
 
 .pop-up-card {
     z-index: 1001;
@@ -79,64 +175,13 @@ color: white;
     overflow: hidden;
 }
 
-.no-padding {
-    padding: 0px;
-}
 
-.overflow-scroll {
-    overflow: scroll;
+.overflow-scroll::-webkit-scrollbar {
+    display: none;
 }
 
 .black-text {
     color: black;
-}
-
-/*Used for daglig-leder, ok/yes/valid-type of answers*/
-.green-background {
-    background-color: #7fc576;
-}
-
-/*primary website color*/
-.yellow-background {
-    background-color: #ffd028;
-}
-
-/*used for no/error/alert-type of notices, as well as sick-leave*/
-.red-background {
-    background-color: #ff7272;
-}
-
-.grey-background{
-    background-color: #d1d1d1;
-}
-
-.card-content-size{
-    height: 150px;
-}
-
-.card-content-size-250{
-    height: 250px;
-}
-
-.card-size{
-    width: 200px;
-    height: 100%;
-}
-
-.margin-20 {
-    margin: 20px;
-}
-
-.full-height {
-    height: 100%;
-}
-
-.full-width {
-    width: 100%;
-}
-
-.card-padding {
-    margin: 10px;
 }
 
 .clickable {
@@ -154,11 +199,6 @@ color: white;
     border: none
 }
 
-
-
-.input-width-300 {
-    width: 200px;
-}
 
 .information-content {
     position: relative;
@@ -189,9 +229,7 @@ color: white;
     height: auto;
 }
 
-.list-module {
-    width: 100%;
-}
+
 
 .date-info-card {
     position: relative;
@@ -215,22 +253,3 @@ color: white;
     border-right: 0;
 }
 
-.card-title-padding {
-    padding: 0.5em;
-}
-
-.card-height{
-    height: 400px;
-}
-
-.height-200{
-    height: 200px;
-}
-
-.height-100{
-    height: 100px;
-}
-
-.height-50 {
-    height:50px;
-}

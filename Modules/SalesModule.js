@@ -60,8 +60,10 @@ function printObject(obj) {
                 </div>
             </div>
             <div class="column is-full">
-                <div class="card height-50 center-text">
-                    Uforutsette utgifter:
+                <div class="card height-100 center-text red-background">
+                <br>
+                <p class="has-text-weight-semibold">Utgifter NOK:</p>
+                ${Math.floor(Math.random()*1000000)},-
                 </div>
             </div>
         </div>
