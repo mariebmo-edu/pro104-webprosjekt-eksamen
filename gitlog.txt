@@ -1,0 +1,807 @@
+commit 77d625547ac9763f72f2c55219e83c831117e010
+Author: mariestigen <marie.stigen@hotmail.com>
+Date:   Mon May 31 17:04:37 2021 +0200
+
+    I guess we are finished?
+
+commit c3fe3fa3de0f121fa263fb4a765ba77180c636ce
+Author: mariestigen <marie.stigen@hotmail.com>
+Date:   Mon May 31 16:11:27 2021 +0200
+
+    Commented modules, minor update to employee layout
+
+commit 823d3f5ba7d172942c638078128ff4399d2f9a76
+Author: mariestigen <marie.stigen@hotmail.com>
+Date:   Mon May 31 16:05:28 2021 +0200
+
+    Added dynamic economy for restaurant page
+
+commit ad4af190eaaaf287a41b969acdaf8e7ba290a387
+Author: mariestigen <marie.stigen@hotmail.com>
+Date:   Mon May 31 15:32:09 2021 +0200
+
+    Fixed bug with search on sales and it disappearing
+
+commit 1a199ac0ceebc12dcf6f39cc6497129f1f925209
+Author: ToMrArcher <syvertcollege@gmail.com>
+Date:   Sun May 30 23:25:55 2021 +0200
+
+    universal utforming endringer
+
+commit 3480ee7731a6e3e255ea6515d70f22c301c4af0e
+Author: ToMrArcher <syvertcollege@gmail.com>
+Date:   Sun May 30 23:20:50 2021 +0200
+
+    added logout button
+
+commit 2b9727d54a35271f36b6239a86b2c0f3502bcdf9
+Author: ToMrArcher <syvertcollege@gmail.com>
+Date:   Sun May 30 11:15:34 2021 +0200
+
+    yas
+
+commit b0e2bbe941798bf8bcbed68641c3914b9e2aa009
+Author: mariestigen <marie.stigen@hotmail.com>
+Date:   Sat May 29 14:35:26 2021 +0200
+
+    switched to black when pop-up
+
+commit 56f761f52dcd608e2e349d337e45164ebba07919
+Author: mariestigen <marie.stigen@hotmail.com>
+Date:   Sat May 29 14:33:02 2021 +0200
+
+    Added "X"-button to pop-up, made it look nicer
+
+commit 8dc0aaecfd9d24531dcebb1ed9e0eb70c7f31fc6
+Author: BaronVonHansa <72192066+BaronVonHansa@users.noreply.github.com>
+Date:   Sat May 29 13:57:46 2021 +0200
+
+    endret login til dashboard link
+
+commit ed1f3d2df4c5c4be6d89ab31ed336295c560eab3
+Author: mariestigen <marie.stigen@hotmail.com>
+Date:   Sat May 29 10:36:21 2021 +0200
+
+    Added dynamic economy, campaign, and top-list
+
+commit 65eebcff9788a63f063ae1083d224828c9eee995
+Author: BaronVonHansa <72192066+BaronVonHansa@users.noreply.github.com>
+Date:   Fri May 28 15:52:19 2021 +0200
+
+    Fixet på funksjoner og lagt til charts
+
+commit e107950bc82317caf482f0a06fa779bd4f516b10
+Author: BaronVonHansa <72192066+BaronVonHansa@users.noreply.github.com>
+Date:   Fri May 28 15:09:59 2021 +0200
+
+    lagt til chart på sales.js
+
+commit d04ce955110ad52ae80ad642fae7307dd7f7082a
+Author: ToMrArcher <syvertcollege@gmail.com>
+Date:   Fri May 28 14:31:08 2021 +0200
+
+    finish
+
+commit 427194d5af421c225125f7da423f47f3aa8f239a
+Merge: f77dd2b 6e08afa
+Author: ToMrArcher <syvertcollege@gmail.com>
+Date:   Fri May 28 14:29:48 2021 +0200
+
+    Merge branch 'main' of https://github.com/mariestigen/PRO104-EksamenV2021 into main
+
+commit f77dd2bfe4b55da5a9fc967f7d759bfdc728de3f
+Author: ToMrArcher <syvertcollege@gmail.com>
+Date:   Fri May 28 14:29:41 2021 +0200
+
+    added stuff
+
+commit 6e08afab5275498dfe12b24a360d4ebb2844ee56
+Merge: 33f72de f440cbb
+Author: BaronVonHansa <72192066+BaronVonHansa@users.noreply.github.com>
+Date:   Fri May 28 14:26:54 2021 +0200
+
+    Merge branch 'main' of https://github.com/mariestigen/PRO104-EksamenV2021
+
+commit 33f72debf6583783c6c674046fe82b190b573dc4
+Author: BaronVonHansa <72192066+BaronVonHansa@users.noreply.github.com>
+Date:   Fri May 28 14:26:51 2021 +0200
+
+    syvert er visst smartere enn meg
+
+commit f440cbbed523a793fb586f3961833e5d3839c95d
+Author: ToMrArcher <syvertcollege@gmail.com>
+Date:   Fri May 28 14:26:10 2021 +0200
+
+    fixed dashboard
+
+commit 16f5fcea0790beb1f37443475ab0a0f8038e25e7
+Author: BaronVonHansa <72192066+BaronVonHansa@users.noreply.github.com>
+Date:   Fri May 28 13:58:29 2021 +0200
+
+    for at syvert skal se
+
+commit 66cd36d27655cccf84bc7f8bdd7e82306b7dafee
+Author: ToMrArcher <syvertcollege@gmail.com>
+Date:   Fri May 28 13:15:01 2021 +0200
+
+    added dashboard fixes and new layout. Its not cool to Marie's liking
+
+commit 52346dd1d39a9ad2baf97002aaa60cd7c00d7ed8
+Author: ToMrArcher <syvertcollege@gmail.com>
+Date:   Fri May 28 12:40:01 2021 +0200
+
+    added stuff
+
+commit cfbd304f1c63443d9311ed92666cbb4dcff71b36
+Author: Steffan D. Klausen <sak.sakelig@gmail.com>
+Date:   Thu May 27 22:48:48 2021 +0200
+
+    [Ansatte] added right spacing
+
+commit ac261da27e0ddbb6f8ddc813bc1ecd0a358cd63c
+Merge: 95c3836 d52c425
+Author: mariestigen <marie.stigen@hotmail.com>
+Date:   Thu May 27 22:20:32 2021 +0200
+
+    Merge branch 'main' of https://github.com/mariestigen/PRO104-EksamenV2021 into main
+
+commit 95c3836a504b5f6fb2f842178d70733e77be296a
+Author: mariestigen <marie.stigen@hotmail.com>
+Date:   Thu May 27 22:20:25 2021 +0200
+
+    fixed weird menu square bug
+
+commit d52c425d7ddeffbf5b8c75bb828dd86e279475aa
+Author: Steffan D. Klausen <sak.sakelig@gmail.com>
+Date:   Thu May 27 22:18:04 2021 +0200
+
+    [Sales] Made one line
+    
+    Yes it looks better with this one line believe it or not
+
+commit d5cf9c68bd692f4c54a2878aca71fa0437a1cdb6
+Merge: 0d3b9e5 6611c7c
+Author: mariestigen <marie.stigen@hotmail.com>
+Date:   Thu May 27 22:16:13 2021 +0200
+
+    Merge branch 'main' of https://github.com/mariestigen/PRO104-EksamenV2021 into main
+
+commit 0d3b9e58874ab4b49bc255372efec0579fad8b43
+Author: mariestigen <marie.stigen@hotmail.com>
+Date:   Thu May 27 22:15:54 2021 +0200
+
+    Made the Menu Module more fancy
+
+commit 6611c7c9043bcf55c59320e32d04be6995dcda1c
+Author: Steffan D. Klausen <sak.sakelig@gmail.com>
+Date:   Thu May 27 22:11:41 2021 +0200
+
+    Update sales.html
+    
+    made div that had container and section to cover the background we use on the sites
+
+commit 59b4b99c270de29a4d6a8db1ee608b71d4cac22f
+Author: mariestigen <marie.stigen@hotmail.com>
+Date:   Thu May 27 21:56:26 2021 +0200
+
+    card position fix
+
+commit 83e6d02791f2caa27520f6fad3545a4bced8ec8e
+Author: mariestigen <marie.stigen@hotmail.com>
+Date:   Thu May 27 21:45:21 2021 +0200
+
+    added white selection box behind icon
+
+commit 45cd126cdb3b3608113aca72d8af26acf9386393
+Author: mariestigen <marie.stigen@hotmail.com>
+Date:   Thu May 27 21:16:57 2021 +0200
+
+    Added comments to restaurants and sales JS
+
+commit 3e5f9cd08462b38b44f8668cf5c8f60513f6e4a0
+Author: mariestigen <marie.stigen@hotmail.com>
+Date:   Thu May 27 20:59:35 2021 +0200
+
+    Fikset sånn at det aligner på ansatte
+
+commit a0e62e429f443a1f921d60c1e486a76ef87a2a5c
+Author: mariestigen <marie.stigen@hotmail.com>
+Date:   Thu May 27 20:53:27 2021 +0200
+
+    Minor adjustments to streamline design
+
+commit 6912922453db5b173d51e8674dc276c09bb3e49d
+Author: mariestigen <marie.stigen@hotmail.com>
+Date:   Thu May 27 20:30:56 2021 +0200
+
+    Fixed top margin for headers
+
+commit f09f68a70f48232f0553f66a8f128c315a17cb07
+Author: mariestigen <marie.stigen@hotmail.com>
+Date:   Thu May 27 20:30:02 2021 +0200
+
+    All pages uses the same top- and sidebar generation
+
+commit ae4e3bc76dd3be3271d4cfabeddf72b3853fcafa
+Author: mariestigen <marie.stigen@hotmail.com>
+Date:   Thu May 27 20:02:30 2021 +0200
+
+    Added Layout Module
+    
+    Quick add for side- and top bar
+
+commit dafb70a1ff4f4b1ea94f0bc64a170e9a9552cb3f
+Author: mariestigen <marie.stigen@hotmail.com>
+Date:   Thu May 27 19:48:03 2021 +0200
+
+    Added dynamic sales page
+
+commit 9682336af171a3b585b32bd5221ebad785d971bd
+Merge: 1759704 3d113fe
+Author: mariestigen <marie.stigen@hotmail.com>
+Date:   Thu May 27 12:24:27 2021 +0200
+
+    Merge branch 'main' of https://github.com/mariestigen/PRO104-EksamenV2021 into main
+
+commit 1759704702a687b598c4125f8e8a979e91988f7e
+Author: mariestigen <marie.stigen@hotmail.com>
+Date:   Thu May 27 12:24:19 2021 +0200
+
+    Koblet Sales-html til JS og Modul
+
+commit 3d113fe31e403e5bc28e71682249d5e8fc14adac
+Author: Jonas Bratt Hansen <69790914+JonasBrattHansen@users.noreply.github.com>
+Date:   Thu May 27 12:17:35 2021 +0200
+
+    Update
+    
+    Oppdaterte brukerinput for å søke med pizzanavn
+
+commit ff7570e0693b1d374e1aa0eb57325202d8c5fb59
+Merge: 10f49ee d45f3b5
+Author: mariestigen <marie.stigen@hotmail.com>
+Date:   Thu May 27 11:35:23 2021 +0200
+
+    Merge branch 'main' of https://github.com/mariestigen/PRO104-EksamenV2021 into main
+
+commit 10f49ee4e7ed0725a32446ca24113f0f8b7796b9
+Author: mariestigen <marie.stigen@hotmail.com>
+Date:   Thu May 27 11:35:11 2021 +0200
+
+    Added Columns to Sales
+
+commit d45f3b531f7ada47707405748111e5204b72a029
+Merge: 24f1e0a ab3336a
+Author: Jonas Bratt Hansen <69790914+JonasBrattHansen@users.noreply.github.com>
+Date:   Thu May 27 11:12:39 2021 +0200
+
+    Merge branch 'main' of https://github.com/mariestigen/PRO104-EksamenV2021 into main
+
+commit 24f1e0a6712f8e97229f17422b61fe4151e817a5
+Author: Jonas Bratt Hansen <69790914+JonasBrattHansen@users.noreply.github.com>
+Date:   Thu May 27 11:12:37 2021 +0200
+
+    Endret cardsa
+
+commit ab3336ad76c25f34a2f879d590cdc89f1c613f9c
+Author: BaronVonHansa <72192066+BaronVonHansa@users.noreply.github.com>
+Date:   Thu May 27 11:09:26 2021 +0200
+
+    hjelp.png
+
+commit 205978afcb8b7dcbf2858fe643ff039da1ac4658
+Author: Jonas Bratt Hansen <69790914+JonasBrattHansen@users.noreply.github.com>
+Date:   Thu May 27 10:58:38 2021 +0200
+
+    Update på meny
+    
+    Oppdaterte slik at knappene leder til de andres html sider
+
+commit 9f000e6835a434bee56e90dc04ca36db998e4f3e
+Author: Steffan D. Klausen <sak.sakelig@gmail.com>
+Date:   Thu May 27 00:26:31 2021 +0200
+
+    [Ansatte] Add button now working :D
+    
+    smol invisible bug, but no one will know PepeLaugh [would also be solved with backend anyway so its fine c: ]
+
+commit f71d6a2c0ea6e4a814fff744cecd1812b967c2f6
+Author: Steffan D. Klausen <sak.sakelig@gmail.com>
+Date:   Wed May 26 18:53:44 2021 +0200
+
+    [Ansatte] Added add button but not finished yet
+    
+    Må finne måte å legge til ansatte på riktig innerHTML, tenker dataset må brukes here :thinking:
+
+commit d5b078c22469ede2d16fc3ba46340dcd4dae8b0c
+Author: Jonas Bratt Hansen <69790914+JonasBrattHansen@users.noreply.github.com>
+Date:   Wed May 26 18:25:19 2021 +0200
+
+    Update
+    
+    La til bilder og mer kode i menu.js
+
+commit 918428b901c29a8c4ba20c4ee39def350b20d469
+Author: Jonas Bratt Hansen <69790914+JonasBrattHansen@users.noreply.github.com>
+Date:   Wed May 26 17:08:15 2021 +0200
+
+    Pictures
+    
+    La til bilder
+
+commit 0c2a937cb33a37fc48e6c2e26c62c02b00565255
+Author: Jonas Bratt Hansen <69790914+JonasBrattHansen@users.noreply.github.com>
+Date:   Wed May 26 16:44:53 2021 +0200
+
+    Meny oppdatering
+    
+    Funksjonell knapp for å legge til pizzza
+
+commit 6d7b33c560712e5db86eadc8347970ae56e10c07
+Author: Jonas Bratt Hansen <69790914+JonasBrattHansen@users.noreply.github.com>
+Date:   Wed May 26 16:28:04 2021 +0200
+
+    Update meny
+    
+    v.10.100000
+
+commit d0bb30a0de7e52316093e472a6665b151b5c6e73
+Author: Jonas Bratt Hansen <69790914+JonasBrattHansen@users.noreply.github.com>
+Date:   Wed May 26 15:57:25 2021 +0200
+
+    Update
+    
+    Oppdatert meny med knapper
+
+commit a05ba8e5427975eb26ec4d969297bf03fbd6f442
+Author: Jonas Bratt Hansen <69790914+JonasBrattHansen@users.noreply.github.com>
+Date:   Wed May 26 13:01:55 2021 +0200
+
+    Update
+    
+    Oppdaterte menysiden med sortering etter allergi
+
+commit 5678757bee20da0a86414b79b6ec9625e4b0acbc
+Author: BaronVonHansa <72192066+BaronVonHansa@users.noreply.github.com>
+Date:   Wed May 26 10:28:28 2021 +0200
+
+    whitespace
+
+commit 7a6ee9e1061e0a9212f710e55f3a80a8190f40a5
+Author: BaronVonHansa <72192066+BaronVonHansa@users.noreply.github.com>
+Date:   Wed May 26 10:27:51 2021 +0200
+
+    sales stuff
+
+commit 760471728bbfe39a00616710b4cad8b3f641fd9c
+Author: ToMrArcher <syvertcollege@gmail.com>
+Date:   Wed May 26 10:25:15 2021 +0200
+
+    fixes?
+
+commit 945039fbb1e7d607985763bd72bd37181eebb3ec
+Merge: bb3d0d5 339c964
+Author: ToMrArcher <syvertcollege@gmail.com>
+Date:   Wed May 26 09:19:21 2021 +0200
+
+    Merge branch 'main' of https://github.com/mariestigen/PRO104-EksamenV2021 into main
+
+commit bb3d0d5bd3332adc3f92e208e78f90eb14a235fe
+Author: ToMrArcher <syvertcollege@gmail.com>
+Date:   Wed May 26 09:19:17 2021 +0200
+
+    fixing
+
+commit 339c964d45a6bebb38178bda912aafdfc2edf0e6
+Author: Steffan D. Klausen <sak.sakelig@gmail.com>
+Date:   Wed May 26 01:20:42 2021 +0200
+
+    [Ansatte] Removed bad code + card fix
+
+commit 7eb8e28585d8c5716335ca63832a1a61fcfba138
+Author: Steffan D. Klausen <sak.sakelig@gmail.com>
+Date:   Tue May 25 21:38:19 2021 +0200
+
+    [Ansatte] Added more employers + Adjusted buttons
+
+commit d88beba58aa626d9ca3a68b5707bed2222c5ee15
+Author: mariestigen <marie.stigen@hotmail.com>
+Date:   Tue May 25 20:55:13 2021 +0200
+
+    Added dynamic "add store" option
+
+commit 6126ac2b954540741e8e4bc238fa4b11a0bd1ee3
+Author: mariestigen <marie.stigen@hotmail.com>
+Date:   Tue May 25 20:11:08 2021 +0200
+
+    Moduler søker i .toLowerCase(), knapper for restauranter opprettes dynamisk
+
+commit 8c32e255be6f15309dba903c239177bfbd08b531
+Merge: e6ae9dd 04d1ba4
+Author: Jonas Bratt Hansen <69790914+JonasBrattHansen@users.noreply.github.com>
+Date:   Tue May 25 19:15:16 2021 +0200
+
+    Merge branch 'main' of https://github.com/mariestigen/PRO104-EksamenV2021 into main
+
+commit e6ae9ddd60e2e8631b97448f1f52e6b17547384d
+Author: Jonas Bratt Hansen <69790914+JonasBrattHansen@users.noreply.github.com>
+Date:   Tue May 25 19:15:01 2021 +0200
+
+    Update
+    
+    Push f or syvert :)
+
+commit 04d1ba4385b16202c6824d55a81516f8a6a7891c
+Merge: f9bbef4 bfd939a
+Author: ToMrArcher <syvertcollege@gmail.com>
+Date:   Tue May 25 19:15:00 2021 +0200
+
+    Merge branch 'main' of https://github.com/mariestigen/PRO104-EksamenV2021 into main
+
+commit f9bbef45dfb61723a68cb5cda3950ead0e6ec109
+Author: ToMrArcher <syvertcollege@gmail.com>
+Date:   Tue May 25 19:14:56 2021 +0200
+
+    fixes
+
+commit bfd939a41bac9a54723eb3c9d150d0e77b728473
+Author: mariestigen <marie.stigen@hotmail.com>
+Date:   Tue May 25 17:26:55 2021 +0200
+
+    added more info to sales module
+
+commit 2dbd2576d1965e926d49c7cc5cd1eabf09f4f6fa
+Author: mariestigen <marie.stigen@hotmail.com>
+Date:   Tue May 25 16:21:45 2021 +0200
+
+    Added "Add .." to all modules
+
+commit 39f91c36dcff6cbb10fa3603ca3211a363cf5285
+Merge: 3a32436 43fe420
+Author: mariestigen <marie.stigen@hotmail.com>
+Date:   Tue May 25 15:35:29 2021 +0200
+
+    Merge branch 'main' of https://github.com/mariestigen/PRO104-EksamenV2021 into main
+
+commit 3a324360c0583fb37f0303833e6b1b23d8b44063
+Author: mariestigen <marie.stigen@hotmail.com>
+Date:   Tue May 25 15:35:20 2021 +0200
+
+    Added "confirm deletion" in sitewide
+
+commit 43fe42000c3b44ecdc999009b5253a12a05e9a77
+Merge: e005164 007fb13
+Author: Jonas Bratt Hansen <69790914+JonasBrattHansen@users.noreply.github.com>
+Date:   Tue May 25 15:34:57 2021 +0200
+
+    Merge branch 'main' of https://github.com/mariestigen/PRO104-EksamenV2021 into main
+
+commit e0051642182c50527acd9b3e282554a1aab02cd3
+Author: Jonas Bratt Hansen <69790914+JonasBrattHansen@users.noreply.github.com>
+Date:   Tue May 25 15:34:53 2021 +0200
+
+    Update i meny
+    
+    Små endringer i menuModule
+
+commit 007fb139144ba34495944977fdf2bdc7ac25fbd8
+Merge: 02d9a2c 51ff985
+Author: mariestigen <marie.stigen@hotmail.com>
+Date:   Tue May 25 14:58:00 2021 +0200
+
+    Merge branch 'main' of https://github.com/mariestigen/PRO104-EksamenV2021 into main
+
+commit 02d9a2cb36e430c754193ef698bfe0111ff1f2ac
+Author: mariestigen <marie.stigen@hotmail.com>
+Date:   Tue May 25 14:57:58 2021 +0200
+
+    Made restaurant page dynamic
+    
+    No need to have multiple pages, it gets the info from the selected module and updates the page based on the button clicked
+
+commit 51ff985197f49ab26554a3f79ff22259ae4e5e59
+Author: Steffan D. Klausen <sak.sakelig@gmail.com>
+Date:   Tue May 25 13:46:27 2021 +0200
+
+    [Ansatte] Removed progress alert msgs
+
+commit 463d23ec14eed41fb9f8f6f409e157727e812aa7
+Author: Steffan D. Klausen <sak.sakelig@gmail.com>
+Date:   Tue May 25 13:42:06 2021 +0200
+
+    [Ansatte] Startup fully working!
+    
+    Trenger flere ansatte for de forskjellige resturantene :D
+
+commit 5e3871a02dba238bcf973ed92a8f3a9349802338
+Author: Jonas Bratt Hansen <69790914+JonasBrattHansen@users.noreply.github.com>
+Date:   Tue May 25 12:51:40 2021 +0200
+
+    Update
+    
+    Oppdaterte Menyen :)
+
+commit 5234b7f8e4b3329463b6d0c2107571a7f35d994b
+Author: BaronVonHansa <72192066+BaronVonHansa@users.noreply.github.com>
+Date:   Tue May 25 12:42:52 2021 +0200
+
+    Update sales.html
+
+commit e4036b74331efbf3fc2a3fcb1d1e3e736d3c3881
+Merge: 4abae8b c7dea94
+Author: BaronVonHansa <72192066+BaronVonHansa@users.noreply.github.com>
+Date:   Tue May 25 12:10:18 2021 +0200
+
+    Merge branch 'main' of https://github.com/mariestigen/PRO104-EksamenV2021 into main
+
+commit 4abae8b2b282b4fdfd17b5bb88b0a79c1fb4bd8e
+Author: BaronVonHansa <72192066+BaronVonHansa@users.noreply.github.com>
+Date:   Tue May 25 12:10:10 2021 +0200
+
+    Sales
+    
+    La til sales
+
+commit c7dea94c51b3aa523ce09534b3acfd357910bbf8
+Author: Jonas Bratt Hansen <69790914+JonasBrattHansen@users.noreply.github.com>
+Date:   Tue May 25 12:09:50 2021 +0200
+
+    Meny
+    
+    Endret i menymappen
+
+commit e7dbfa485b46f776ef48149a01549a9f2074a9c2
+Merge: e61cbd5 f8d25a2
+Author: BaronVonHansa <72192066+BaronVonHansa@users.noreply.github.com>
+Date:   Tue May 25 11:09:21 2021 +0200
+
+    Merge branch 'main' of https://github.com/mariestigen/PRO104-EksamenV2021 into main
+
+commit e61cbd5581633ddafc7c64cf195fdc373ebc71f4
+Author: BaronVonHansa <72192066+BaronVonHansa@users.noreply.github.com>
+Date:   Tue May 25 11:09:06 2021 +0200
+
+    Create salg.html
+
+commit f8d25a28bbee6e81a3a128ada2f7d03ad4adf898
+Merge: 6e23009 e20c7f7
+Author: Jonas Bratt Hansen <69790914+JonasBrattHansen@users.noreply.github.com>
+Date:   Tue May 25 11:08:30 2021 +0200
+
+    Merge branch 'main' of https://github.com/mariestigen/PRO104-EksamenV2021 into main
+
+commit 6e23009d2d482b3b98e338af2fbdaaaf05bb28c7
+Author: Jonas Bratt Hansen <69790914+JonasBrattHansen@users.noreply.github.com>
+Date:   Tue May 25 11:08:27 2021 +0200
+
+    MenyModule
+    
+    Endret menymodule
+
+commit e20c7f784d6390d0649d43a977bba0e0214366e7
+Author: Steffan D. Klausen <sak.sakelig@gmail.com>
+Date:   Tue May 25 11:02:55 2021 +0200
+
+    [Ansatt] Fully working search :O
+    
+    nå funker alt av search function :D
+
+commit d26685f8aa553c43ad347a3787015e7c345bc1c6
+Merge: bcf9370 1b1504a
+Author: ToMrArcher <syvertcollege@gmail.com>
+Date:   Tue May 25 11:02:20 2021 +0200
+
+    Merge branch 'main' of https://github.com/mariestigen/PRO104-EksamenV2021 into main
+
+commit bcf93705307f48f09fa2425755c12eb951a0959e
+Author: ToMrArcher <syvertcollege@gmail.com>
+Date:   Tue May 25 11:02:17 2021 +0200
+
+    fixes
+
+commit 1b1504a336db99c6286b7d7dc4d7dd16c0aaed20
+Merge: 547ced8 fa58672
+Author: Syvert Andreas Eidjord <syvertcollege@gmail.com>
+Date:   Tue May 25 11:01:34 2021 +0200
+
+    changes
+
+commit 547ced8821b608237557a7e22b152e230a9323b4
+Author: Syvert Andreas Eidjord <syvertcollege@gmail.com>
+Date:   Tue May 25 11:00:35 2021 +0200
+
+    changes
+
+commit d501e2814aed0e83b7b4ec5141088369daa45c3e
+Merge: d443418 fa58672
+Author: ToMrArcher <syvertcollege@gmail.com>
+Date:   Tue May 25 10:46:39 2021 +0200
+
+    Merge branch 'main' of https://github.com/mariestigen/PRO104-EksamenV2021 into main
+
+commit fa586728a13b7c57dbe07eedb08148dddbf024e0
+Author: Jonas Bratt Hansen <69790914+JonasBrattHansen@users.noreply.github.com>
+Date:   Tue May 25 10:42:23 2021 +0200
+
+    Bilder
+    
+    La til bilder
+
+commit 3ccfea2569570f9d514800100234ee4266715beb
+Author: Jonas Bratt Hansen <69790914+JonasBrattHansen@users.noreply.github.com>
+Date:   Tue May 25 10:12:34 2021 +0200
+
+    La til meny
+    
+    Endret
+
+commit 41ec7ede5c63307d853e4696d8d5b4809e018385
+Author: Steffan D. Klausen <sak.sakelig@gmail.com>
+Date:   Mon May 24 23:33:49 2021 +0200
+
+    [Ansatte] Made sort functions for all the fields
+    
+    (With help/tip from Syvert and Marie) :)
+
+commit 1a633ad95c0b70f485d839627e9eaf692273a17d
+Author: Steffan D. Klausen <sak.sakelig@gmail.com>
+Date:   Mon May 24 20:11:08 2021 +0200
+
+    [Ansatte] Adjustements
+
+commit da93425fbb7de896d044813af95ca8eb6919af7a
+Author: mariestigen <marie.stigen@hotmail.com>
+Date:   Mon May 24 18:29:56 2021 +0200
+
+    Merge errors
+
+commit d443418a378e96a6f80160a0e47facc8d853d65d
+Merge: a076fb5 0386084
+Author: ToMrArcher <syvertcollege@gmail.com>
+Date:   Mon May 24 17:14:05 2021 +0200
+
+    Merge branch 'main' of https://github.com/mariestigen/PRO104-EksamenV2021 into main
+
+commit a076fb5eeeaeb356eadae697bcb8a88684334423
+Author: ToMrArcher <syvertcollege@gmail.com>
+Date:   Mon May 24 17:13:57 2021 +0200
+
+    fix?
+
+commit 0386084ecc644c321801a56ed4065138cac6876a
+Author: Sakelig <71970061+Sakelig@users.noreply.github.com>
+Date:   Mon May 24 16:11:54 2021 +0200
+
+    [Ansatte]smol fix
+    
+    Endret på coulmns til å fungere som avtalt
+
+commit 6bbf72f1a51e06a54a71770932920bbb87cc069c
+Author: Sakelig <71970061+Sakelig@users.noreply.github.com>
+Date:   Mon May 24 15:51:49 2021 +0200
+
+    [Ansatt] html+js+module update
+    
+    La til søk knapp, gjorde den funksjonelle og la til flere ansatte
+
+commit b221d894d8e3d12818a7a6fcde69ca4f5bc331fb
+Merge: 7f5bd55 09dbe3d
+Author: Syvert Andreas Eidjord <syvertcollege@gmail.com>
+Date:   Mon May 24 15:39:10 2021 +0200
+
+    fixed conflicts and added stuff
+
+commit 7f5bd55a55ea8c3b72fca3837c7a2e065cc95c39
+Author: Syvert Andreas Eidjord <syvertcollege@gmail.com>
+Date:   Mon May 24 15:38:19 2021 +0200
+
+    added for the day
+
+commit 09dbe3d7a8485bec14c6cf17af456429020fee49
+Author: mariestigen <marie.stigen@hotmail.com>
+Date:   Mon May 24 15:37:35 2021 +0200
+
+    fikset merge conflicts
+
+commit 4c7c573a5fb90bca0e7dce374c5ee27b9002086f
+Merge: 66f22fc 2e368fd
+Author: Syvert Andreas Eidjord <syvertcollege@gmail.com>
+Date:   Mon May 24 15:07:34 2021 +0200
+
+    fix
+
+commit 66f22fc4987b2b7ffad5ec102cfe3de263384d9a
+Author: Syvert Andreas Eidjord <syvertcollege@gmail.com>
+Date:   Mon May 24 15:06:16 2021 +0200
+
+    its a me
+
+commit 2e368fddeb8cc854323a9b2ba58d04accd8cba9b
+Author: mariestigen <marie.stigen@hotmail.com>
+Date:   Mon May 24 15:02:31 2021 +0200
+
+    Added link to restaurant, fixed cards
+
+commit 03c2f20860ce745ec0596b1fb08fb0f84df59a9b
+Author: mariestigen <marie.stigen@hotmail.com>
+Date:   Mon May 24 13:46:23 2021 +0200
+
+    started on restaurant layout, changed the main css-file to one shared css-file
+
+commit feb1adf1c367baaafea8ed134b6e0b01a727fd1e
+Author: Steffan D. Klausen <sak.sakelig@gmail.com>
+Date:   Sun May 23 23:19:21 2021 +0200
+
+    [Ansatt]Fixed better dropdown and card test
+    
+    :)
+
+commit 659647f7c745e0348993d58ef7a61f988f4692e1
+Author: mariestigen <marie.stigen@hotmail.com>
+Date:   Sun May 23 15:17:34 2021 +0200
+
+    Added sales module
+
+commit bddbab39cde58656e3164efcf46686e20cc69495
+Author: mariestigen <marie.stigen@hotmail.com>
+Date:   Sun May 23 15:10:31 2021 +0200
+
+    Added Modules for Meny and Ansatt
+
+commit f99c7dc5a8a1cd2199416b8b33f5e12b5da69f8a
+Author: mariestigen <marie.stigen@hotmail.com>
+Date:   Sat May 22 16:51:31 2021 +0200
+
+    Started generic html/css-document for modules across websites
+
+commit 1ae3b8469467766b835ca6618450f64ec7e6cbcd
+Author: Steffan D. Klausen <sak.sakelig@gmail.com>
+Date:   Fri May 21 12:24:57 2021 +0200
+
+    Adjusted spacing on the elements
+    
+    removed and added som space on elements to better align :)
+
+commit ecbfdfd245c4794256144d7e1086d97d904f1ee0
+Author: Steffan D. Klausen <sak.sakelig@gmail.com>
+Date:   Fri May 21 12:19:29 2021 +0200
+
+    Added LoginPage folder with login.html
+    
+    Bare å endre på den hvis det
+
+commit afa97102f73042656775e2934fdc28157b37a790
+Author: Steffan D. Klausen <sak.sakelig@gmail.com>
+Date:   Fri May 21 12:13:49 2021 +0200
+
+    Ansatt mappe + test
+
+commit 80aeef9567504391aef0f0bd044a20f115621573
+Author: ToMrArcher <syvertcollege@gmail.com>
+Date:   Fri May 21 11:45:51 2021 +0200
+
+    fix fix
+
+commit 83e318cebc5581320808c75c49d9f12f3b98eb26
+Author: ToMrArcher <syvertcollege@gmail.com>
+Date:   Fri May 21 11:35:46 2021 +0200
+
+    Added template
+
+commit 9f26f0e8ef3c577400040aa2a0caf5da2365ee01
+Author: ToMrArcher <syvertcollege@gmail.com>
+Date:   Wed May 19 12:00:56 2021 +0200
+
+    added template
+
+commit 799994a73fa98736bac90f2cee0743b4403ac215
+Author: ToMrArcher <syvertcollege@gmail.com>
+Date:   Wed May 19 10:44:16 2021 +0200
+
+    added bulma and index-template
+
+commit 0fa74eeb6fdad8ce20f1418b4e9d37529959d316
+Author: mariestigen <marie.stigen@hotmail.com>
+Date:   Tue May 18 09:31:12 2021 +0200
+
+    Initial commit
