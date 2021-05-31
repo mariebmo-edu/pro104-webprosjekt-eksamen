@@ -109,6 +109,47 @@ function printHTMLCards(array) {
         </div>
     </div>`;
 	});
+
+	//top chart for sales
+	const charts = [[38, 42, 58, 51, 102, 203, 152],[100, 10, 508, 21, 102, 203, 152],[38, 131, 58, 51, 102, 0, 152],[38, 42, 58, 51, 102, 2000, 152]]
+
+	let counter = 0;
+
+	restaurantWithSale.forEach((restaurant) => {
+		const ctx = document.getElementById(`myChart${restaurant}`).getContext("2d");
+		new Chart(ctx, {
+			type: "line",
+			data: {
+				labels: [
+					"Mandag",
+					"Tirsdag",
+					"Onsdag",
+					"Torsdag",
+					"Fredag",
+					"Lørdag",
+					"Søndag",
+				],
+				datasets: [
+					{
+						label: "Antall transaksjoner",
+						data: charts[counter],
+						backgroundColor: ["rgba(255, 99, 132, 0.2)"],
+						borderColor: [""],
+						borderWidth: 1,
+					},
+				],
+			},
+			options: {
+				scales: {
+					y: {
+						beginAtZero: true,
+					},
+				},
+			},
+		});
+		counter++;
+	});
+
 }
 
 
@@ -164,41 +205,3 @@ function updateSalesInfo() {
 	return salesInfo;
 }
 
-const charts = [[38, 42, 58, 51, 102, 203, 152],[100, 10, 508, 21, 102, 203, 152],[38, 131, 58, 51, 102, 0, 152],[38, 42, 58, 51, 102, 2000, 152]]
-
-let counter = 0;
-
-restaurantWithSale.forEach((restaurant) => {
-	const ctx = document.getElementById(`myChart${restaurant}`).getContext("2d");
-	new Chart(ctx, {
-		type: "line",
-		data: {
-			labels: [
-				"Mandag",
-				"Tirsdag",
-				"Onsdag",
-				"Torsdag",
-				"Fredag",
-				"Lørdag",
-				"Søndag",
-			],
-			datasets: [
-				{
-					label: "Antall transaksjoner",
-					data: charts[counter],
-					backgroundColor: ["rgba(255, 99, 132, 0.2)"],
-					borderColor: [""],
-					borderWidth: 1,
-				},
-			],
-		},
-		options: {
-			scales: {
-				y: {
-					beginAtZero: true,
-				},
-			},
-		},
-	});
-    counter++;
-});
