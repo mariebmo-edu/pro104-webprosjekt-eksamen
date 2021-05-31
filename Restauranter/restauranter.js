@@ -108,6 +108,8 @@ function updateWebpage(locationName){
             }
         })
 
+
+
         //legger til kampanjer
         campaigns.forEach(campaign => {
             campaignCardContainer.innerHTML += CampaignModule.printCampaign(campaign)
@@ -120,6 +122,9 @@ function updateWebpage(locationName){
         <div class="ranking-info-card card column is-full">
             ${sale}
         </div>`)
+
+        addChart(locationName);
+
     }
         
 
@@ -152,7 +157,39 @@ function addRestaurant(){
     })
 }
 
-
+function addChart(location){
+    const ctx = document.getElementById(`myChart${location.toLowerCase()}`).getContext("2d");
+		new Chart(ctx, {
+			type: "line",
+			data: {
+				labels: [
+					"Mandag",
+					"Tirsdag",
+					"Onsdag",
+					"Torsdag",
+					"Fredag",
+					"Lørdag",
+					"Søndag",
+				],
+				datasets: [
+					{
+						label: "Antall transaksjoner",
+						data: Object.values(SalesModule.getSalesByRestaurant(location)[0].itemsSold),
+						backgroundColor: ["rgba(255, 99, 132, 0.2)"],
+						borderColor: [""],
+						borderWidth: 1,
+					},
+				],
+			},
+			options: {
+				scales: {
+					y: {
+						beginAtZero: true,
+					},
+				},
+			},
+        });
+}
 
 
 //pop-up som genereres når knappen trykkes på

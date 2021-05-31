@@ -37,7 +37,7 @@ function printObject(obj) {
         <div class="columns is-multiline">
             <div class="column is-full">
                 <div class="card height-200">
-                    <canvas id="myChart${salesItem.restaurant}" width="10" height="6"></canvas>
+                    <canvas id="myChart${salesItem.restaurant.toLowerCase()}" width="10" height="6"></canvas>
                 </div>
             </div>
             <div class="column is-full">
