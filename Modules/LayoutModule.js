@@ -2,6 +2,7 @@ const LayoutModule = function () {
 
     const printBaseLayout = (siteName) => {
 
+        //For å legge hvit firkant bak riktig ikon
         let backgroundColors = ["transparant-background", "transparant-background", "transparant-background", "transparant-background", "transparant-background",]
 
 

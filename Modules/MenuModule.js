@@ -22,6 +22,7 @@ const MenuModule = function () {
     const addMenuItem = (newCategory, newImage, newName, newPrice, newDescription, newIngredients, newAllergies) => menu.push({ category: newCategory, image: newImage, name: newName, price: newPrice, description: newDescription, ingredients: newIngredients, allergies: newAllergies })
     const printMenuItem = (menuItem) => {
 
+        //for å få mellomrom når arrayene printer ut. Fjerner siste ", " fra stringen
         function splitArrays(inp) {
             let stringOutput = ""
             if (inp === "i") {

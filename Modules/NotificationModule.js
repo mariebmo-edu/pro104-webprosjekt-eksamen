@@ -7,10 +7,10 @@ const NotificationModule = function () {
         { date: new Date("2021-06-05"), restaurant: "Kristiansand", message: "Ansatt (kokk) Bob Bob slutter" },
         { date: new Date("2021-06-05"), restaurant: "Oslo", message: "Sommervikar Trine Trine starter" },
         { date: new Date("2021-06-08"), restaurant: "Oslo", message: "Kampanje Tacotorsdag slutter" },
-        { date: new Date("2021-06-08"), restaurant: "Stavanger", message: "" },
-        { date: new Date("2021-06-13"), restaurant: "Stavanger", message: "" },
-        { date: new Date("2021-06-16"), restaurant: "Oslo", message: "" },
-        { date: new Date("2021-06-16"), restaurant: "Oslo", message: "" }
+        { date: new Date("2021-06-08"), restaurant: "Stavanger", message: "Lisbeth går ut i mammaperm" },
+        { date: new Date("2021-06-13"), restaurant: "Stavanger", message: "Siste frist for å melde seg på julebord" },
+        { date: new Date("2021-06-16"), restaurant: "Oslo", message: "Sjefstur til granka" },
+        { date: new Date("2021-06-16"), restaurant: "Oslo", message: "Guttastemning" }
 
     ]
 

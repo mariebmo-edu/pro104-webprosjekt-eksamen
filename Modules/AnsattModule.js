@@ -28,6 +28,7 @@ const AnsattModule = function(){
 
     const printemployee =(ansatt)=> {
         
+        //legger til riktig statusfarge
         const backgroundColor = checkColor(ansatt.position, ansatt.status)
 
         function checkColor(position, status){
@@ -62,12 +63,12 @@ const AnsattModule = function(){
         <!-- Navn og ansattnummer-->
         <div class="card-content-size card-content">
             <p class="title is-4">${ansatt.name}</p>
-            <p class="subtitle is-6">${ansatt.anr}</p>
+            <p class="subtitle is-6">Anr. ${ansatt.anr}</p>
         </div>
 
         <!-- Stillingsprosent -->
-        <div class="information-content">
-            ${ansatt.percentage}%
+        <div class="information-content is-italic">
+        ${ansatt.status} - ${ansatt.percentage}%
         </div>
 
         <!-- Footer -->
